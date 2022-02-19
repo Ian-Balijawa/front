@@ -1,0 +1,79 @@
+.AuthContainer {
+    margin-top: 13% !important;
+    margin-left: 30px !important;
+    margin-right: 30px !important;
+}
+.Logo {
+    width: 100 !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.LoginBody {
+    padding: 1.5rem;
+}
+.inputTextField {
+    width: 350px;
+}
+.selectDropDown {
+    height: 38px;
+    padding: 0.5em;
+    border: none !important;
+    visibility: visible;
+    min-width: 350px;
+    border-radius: 5px;
+    color: #d4d4d5;
+}
+.textInputBorderRightNone {
+    border-right: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+.textInputBorderLeftNone {
+    border-left: 0px !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+.ui.segment {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.textInput {
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+.textPhoneInput {
+    border: none !important;
+    margin-right: 4px !important;
+}
+.textInputInner {
+    border: none !important;
+    background: none !important;
+    color: #000;
+}
+.btn {
+    width: 100% !important;
+}
+.GPLoader {
+}
+.BnessCount {
+    margin-top: 30px !important;
+    border: 1px solid #000;
+    text-align: center;
+    margin: 10px 0px 10px 10px;
+    width: 70px !important;
+}
