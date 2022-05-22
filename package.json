@@ -52,9 +52,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "semantic-ui-css": "git+https://github.com/Semantic-Org/Semantic-UI-CSS.git",
-    "semantic-ui-react": "^2.1.2"
   }
 }
