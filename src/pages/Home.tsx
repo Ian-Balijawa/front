@@ -1,8 +1,17 @@
-import React from 'react'
+import Box from '@mui/material/Box/Box'
+import GPAppBar from '../components/GPAppBar'
+import GPMain from '../components/GPMain'
+import GPSideBar from '../components/GPSideBar'
 
 function Home() {
   return (
-    <div>Home</div>
+    <Box>
+        <GPAppBar />
+        <GPSideBar />
+        <GPMain>
+          Feels Like Home
+        </GPMain>
+    </Box>
   )
 }
 

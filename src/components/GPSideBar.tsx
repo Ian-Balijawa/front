@@ -24,43 +24,48 @@ import SsidChartOutlinedIcon from '@mui/icons-material/SsidChartOutlined'
 import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined'
 import HomeIcon from '@mui/icons-material/Home'
 
-const links = [
+export const links = [
     {
         name: 'Home',
-        path: '/dashbord/index',
+        path: '/dashboard/home',
         icon: <HomeIcon />,
         component: <Home />,
+        sublinks: []
     },
     {
         name: 'Inventory',
-        path: '/inventory',
+        path: '/dashboard/inventory',
         icon: <Inventory2OutlinedIcon />,
         component: <Inventory />,
+        sublinks: []
     },
     {
         name: 'Sales',
-        path: '/sales',
+        path: '/dashboard/sales',
         icon: <SsidChartOutlinedIcon />,
         component: <Sales />,
+        sublinks: []
     },
     {
         name: 'Reports',
-        path: '/reports',
+        path: '/dashboard/reports',
         icon: <DescriptionOutlinedIcon />,
         component: <Reports />,
+        sublinks: []
     },
     {
         name: 'Settings',
-        path: '/settings',
+        path: '/dashboard/settings',
         icon: <SettingsOutlinedIcon />,
         component: <Settings />,
+        sublinks: []
     },
 ]
 
 function GPSideBar() {
     const { pathname } = useLocation()
     return (
-        <Box sx={{ background: '#18191d', maxWidth: 240,height: '98vh',display: 'grid',gridTemplateRows: '100px 90px 1px auto'}}>
+        <Box sx={{ position: "fixed",background: '#18191d',width: "100%", maxWidth: "240px",height: "100%",display: 'grid',gridTemplateRows: '100px 90px 1px auto'}}>
             {logoSection()}
             {select()}
             <Divider variant="fullWidth" sx={{ background: '#666' }} />

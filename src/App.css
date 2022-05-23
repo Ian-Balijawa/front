@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-size: 1.13rem; 
+    margin: 0;
 }
 a {
     text-decoration: none;
@@ -94,8 +95,8 @@ a.active{
 .btn {
     width: 100% !important;
 }
-.GPLoader {
-}
+/* .GPLoader {
+} */
 .BnessCount {
     margin-top: 30px !important;
     border: 1px solid #000;
