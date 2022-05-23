@@ -66,10 +66,10 @@ function GPSideBar() {
     const { pathname } = useLocation()
     return (
         <Box sx={{ position: "fixed",background: '#18191d',width: "100%", maxWidth: "240px",height: "100%",display: 'grid',gridTemplateRows: '100px 90px 1px auto'}}>
-            {logoSection()}
-            {select()}
+            { logoSection() }
+            { select() }
             <Divider variant="fullWidth" sx={{ background: '#666' }} />
-            {navLinks()}
+            { navLinks() }
         </Box>
     )
 
@@ -84,7 +84,6 @@ function GPSideBar() {
         return <Box sx={{ boxSizing: 'border-box', display:"grid", justifyItems: "center"}}>
                     <FormControl sx={{ m: 0, width: '90%', svg: { color: '#707070', path: {} } }}>
                         <Select sx={{ background: '#303034',height: '45px',color: '#fff',}}>
-                            <MenuItem value=""><em>None</em></MenuItem>
                             <MenuItem value={10}>Mega Standard</MenuItem>
                             <MenuItem value={20}>Harris International</MenuItem>        
                             <MenuItem value={30}>GP Computer Center</MenuItem>
