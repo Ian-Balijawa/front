@@ -9,6 +9,7 @@ import Inventory from '../pages/Inventory'
 import Sales from '../pages/Sales'
 import Reports from '../pages/Reports'
 import Settings from '../pages/Settings'
+import Categories from '../pages/Categories'
 
 const Navigation = () => {
     return (
@@ -23,6 +24,7 @@ const Navigation = () => {
             <Route path="/dashboard/sales" element={<Sales />} />
             <Route path="/dashboard/reports" element={<Reports />} />
             <Route path="/dashboard/settings" element={<Settings />} />
+            <Route path="dashboard/inventory/categories" element={<Categories />} />
         </Routes>
     )
 }

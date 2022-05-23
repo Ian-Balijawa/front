@@ -4,7 +4,6 @@ import {
     FormControl,
     List,
     ListItem,
-    ListItemButton,
     ListItemIcon,
     ListItemText,
     MenuItem,
@@ -23,6 +22,8 @@ import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined'
 import SsidChartOutlinedIcon from '@mui/icons-material/SsidChartOutlined'
 import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined'
 import HomeIcon from '@mui/icons-material/Home'
+import Categories from '../pages/Categories'
+ 
 
 export const links = [
     {
@@ -37,7 +38,9 @@ export const links = [
         path: '/dashboard/inventory',
         icon: <Inventory2OutlinedIcon />,
         component: <Inventory />,
-        sublinks: []
+        sublinks: [
+            
+        ]
     },
     {
         name: 'Sales',

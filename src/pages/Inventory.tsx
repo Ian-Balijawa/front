@@ -1,34 +1,46 @@
-import { Card, CardActionArea, CardContent, CardMedia, Divider, Grid, IconButton, menuItemClasses, Paper, Stack, Typography } from '@mui/material'
-import {Link} from "react-router-dom"
+import { Card, CardActionArea, CardContent, Divider, Stack, Typography } from '@mui/material'
 import Box from '@mui/material/Box/Box'
-import React from 'react'
 import GPAppBar from '../components/GPAppBar'
 import GPMain from '../components/GPMain'
 import GPSideBar from '../components/GPSideBar'
 import search from "../resources/Images/search.svg"
 import special from "../resources/Images/special.svg"
-import vendor from "../resources/Images/vendor-returns.svg"
+import arrow from "../resources/Images/vendorReturns.svg"
 import add from "../resources/Images/add.svg"
 import orders from "../resources/Images/orders.svg"
-import { display } from '@mui/system'
+import importicon from "../resources/Images/importicon.svg"
+import variablepdtsicon from "../resources/Images/variablepdtsicon.svg"
+import categories from "../resources/Images/categories.svg"
+import vendor from "../resources/Images/vendors.svg"
+import vendorreturns from '../resources/Images/vendorReturns.svg'
+import brands from "../resources/Images/brands.svg"
+import attributes from "../resources/Images/attributes.svg"
+import Categories from './Categories'
+import Attributes from './Attributes'
+import Brands from './Brands'
+import Vendors from './Vendors'
+import Returns from './Returns'
+
 const itemsmenu = [
   {
     icon: search,
-    text: "ItemSearch",
+    text: "Item Search",
   },
   {
-    icon: "",
-    text: "NewItem",
+    icon: add,
+    text: "New Item",
   },
   {
-    icon: "",
-    text: "ImportItems",
+    icon: importicon,
+    text: "Import Items",
   },
   {
-    icon: "",
-    text: "VariableItems",
+    icon: variablepdtsicon,
+    text: "Variable Items",
   },
 ]
+
+
 const ordersmenu = [
   {
     icon: orders,
@@ -36,10 +48,10 @@ const ordersmenu = [
   },
   {
     icon: add,
-    text: "NewOrder",
+    text: "New Order",
   },
   {
-    icon: vendor,
+    icon: arrow,
     text: "Vendor Returns",
   },
   {
@@ -48,62 +60,88 @@ const ordersmenu = [
   },
 ]
 
+const categoriesmenu =[
+  {
+    icon: categories,
+    name: 'Categories',
+    path: 'dashboard/inventory/categories',
+    component: <Categories />
+  },
+  {
+    icon: vendor,
+    name: 'Vendor',
+    path: 'dashboard/inventory/vendor',
+    component: <Vendors />
+  },
+  {
+    icon: brands,
+    name: 'Categories',
+    path: 'dashboard/inventory/brands',
+    component: <Brands />
+  
+  },
+  {
+    icon: attributes,
+    name: 'Categories',
+    path: 'dashboard/inventory/attributes',
+    component: <Attributes />
+  },
+  {
+    icon: vendorreturns,
+    name: 'Vendor Returns Reasons',
+    path: 'dashboard/inventory/vendor_returns',
+    component: <Returns />
+  },
+ 
+]
+
 function Inventory() {
   return (
       <Box sx={{ display: 'grid', margin: '0'}}>
           <GPAppBar />
           <GPSideBar />
           <GPMain>
-            <Box sx={{
-              display: "grid",
-              alignItems: "end",
-            }}>
+            <Box sx={{ alignItems: "end", overflowX: "hidden", }}>
               <Box >
-                <Typography variant='h6' mb="10px" sx={{color: "#777"}}>ITEMS</Typography>
+                <Typography variant='body1' mb="10px" sx={{color: "#666", fontWeight: "bold"}}>ITEMS</Typography>
                 <Divider />
                 <Stack  direction='row' spacing={2} sx={{ mt: "20px"}}>
-                  <Card variant='outlined' sx={{height: "10%", width: "auto"}}>
-                  <CardActionArea>
-                    <CardContent sx={{display: "grid", justifyItems: "center"}}>
-                      <img src={search} alt="Add Item" className='svg' />
-                      <Box sx={{ display: "grid", alignContent: "center"}}>
-                        <Typography  variant="caption"
-                        sx={{fontSize: "1rem", display: "grid", wordWrap: "normal"}} p="14px" color="#666" component="h5">
-                          Item Search
-                        </Typography>
-                      </Box>
-                      
-                    </CardContent>
-                  </CardActionArea>
-                  </Card>
-                  <Card variant='outlined' sx={{height: "150px", width: "150px"}}>1</Card>
-                  <Card variant='outlined' sx={{height: "150px", width: "150px"}}>1</Card>
-                  <Card variant='outlined' sx={{height: "150px", width: "150px"}}>1</Card>
+                  {
+                    itemsmenu.map((el) => {
+                      return (
+                        itemsMenu(el)
+                      )
+                    })
+                  }
                 </Stack>
               </Box>
-              {/* <Box>2</Box>
-              <Box>3</Box> */}
+              <Box>
+              <Typography variant='body1' mb="10px" mt={4} sx={{color: "#666", fontWeight: "bold"}}>PURCHASING ORDERS</Typography>
+                <Divider />
+                <Stack  direction='row' spacing={2} sx={{ mt: "20px"}}>
+                  {
+                    ordersmenu.map((el) => {
+                      return (
+                        ordersMenu(el)
+                      )
+                    })
+                  }
+                </Stack>
+              </Box>
+              <Box>
+              <Typography variant='body1' mb="10px" mt={4} sx={{color: "#666", fontWeight: "bold"}}>INVENTORY SETTINGS</Typography>
+                <Divider />
+                <Stack  direction='row' spacing={2} sx={{ mt: "20px"}}>
+                  {
+                    categoriesmenu.map((el) => {
+                      return (
+                          categoriesMenu({ el })
+                      )
+                    })
+                  }
+                </Stack>
+              </Box>
             </Box>
-              {/* <Typography variant="subtitle1" component="h6">
-                  ITEMS
-              </Typography>
-              <Divider />
-              <Grid mt={0} sx={{}} container spacing={2}>
-                  <Grid container spacing={2}>
-                      {itemsmenu.map(item => itemsMenu(item))}
-                  </Grid>
-              </Grid>
-              <Box sx={{background: 'red'}}>
-                  <Typography mt={3} variant="h6" component="h6">
-                      PURCHASING ORDERS
-                  </Typography>
-                  <Divider />
-                  <Grid mt={0} sx={{}} container spacing={2}>
-                      <Grid container spacing={2}>
-                          {ordersmenu.map(menuitem => itemsMenu(menuitem))}
-                      </Grid>
-                  </Grid>
-              </Box> */}
           </GPMain>
       </Box>
   )
@@ -111,32 +149,54 @@ function Inventory() {
 
  
 
-  function itemsMenu(item: { icon: any; text: any }) {
-    return <Grid item>
-      <Card
-        variant='outlined'
-        sx={{
-          height: 120,
-          width: 120,
-          display: 'grid',
-          justifyItems: 'center',
-          gridTemplateRows: '5fr .2fr'
-        }}
-      >
-        <Box display='grid' alignItems='end'>
-          <IconButton>
-            <img src={item.icon} alt="logo" style={{ height: '43px' }} />
-          </IconButton>
-        </Box>
-
-        <CardContent>
-          <Typography textAlign='center' variant="subtitle1" color="text.primary" component="div">
-            {item.text}
-          </Typography>
-        </CardContent>
+  function categoriesMenu({ el }: { el: { icon: string; name: string; path: string; component: JSX.Element}  }): JSX.Element {
+    return (
+       <Card variant='outlined' sx={{ boxShadow: "-4px 4px 10px 1px #eee", height: "170px", width: "50%", whiteSpace: "normal" }}>
+        <CardActionArea>
+          <CardContent sx={{ display: "grid", justifyItems: "center", }}>
+            <img src={el.icon} alt="Add Item" className='svg' />
+            <Box sx={{ display: "grid", alignContent: "center" }}>
+              <Typography variant="caption"
+                sx={{ fontSize: "1.0rem", display: "grid", textAlign: "center", whiteSpace: "normal" }} pt="20px" color="#444" component="h6">
+                {el.name}
+              </Typography>
+            </Box>
+          </CardContent>
+        </CardActionArea>
       </Card>
-    </Grid>
+    )
+  }
+
+  function ordersMenu(el: { icon: string; text: string }): JSX.Element {
+    return <Card variant='outlined' sx={{boxShadow: "-4px 4px 10px 1px #eee", height: "170px", width: "50%" }}>
+      <CardActionArea>
+        <CardContent sx={{ display: "grid", justifyItems: "center" }}>
+          <img src={el.icon} alt="Add Item" className='svg' />
+          <Box sx={{ display: "grid", alignContent: "center" }}>
+            <Typography variant="caption"
+              sx={{ fontSize: "1.0rem", display: "grid", textAlign: "center", wordWrap: "normal" }} p="23px" color="#444" component="h6">
+              {el.text}
+            </Typography>
+          </Box>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+  }
+
+  function itemsMenu(el: { icon: string; text: string }): JSX.Element {
+    return <Card variant='outlined' sx={{boxShadow: "-4px 4px 10px 1px #eee", height: "170px", width: "50%" }}>
+      <CardActionArea>
+        <CardContent sx={{ display: "grid", justifyItems: "center" }}>
+          <img src={el.icon} alt="Add Item" className='svg' />
+          <Box sx={{ display: "grid", alignContent: "center" }}>
+            <Typography variant="caption"
+              sx={{ fontSize: "1.0rem", display: "grid", textAlign: "center", wordWrap: "normal" }} p="23px" color="#444" component="h6">
+              {el.text}
+            </Typography>
+          </Box>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   }
 }
-
 export default Inventory
