@@ -6,8 +6,8 @@ import {useDispatch, useSelector} from 'react-redux'
 import Logo from '../resources/Images/LogoDark.svg'
 import {sendPasswordResetLink} from '../actions'
 import {RootState} from '../store'
-import {GPLoader} from '../components/GPLoader'
-import {GPMessage} from '../components/GPMessage'
+// import {} from '../components/GPLoader'
+// import {} from '../components/GPMessage'
 type PasswordResetInput = {
     emailAddress: string
 }
@@ -129,29 +129,29 @@ const PasswordReset = () => {
                                         color="#FFFF"
                                         width={350}
                                     >
-                                        {loading && (
-                                            <GPLoader
-                                                size="tiny"
-                                                inline="centered"
-                                                active={true}
-                                                className="GPLoader"
-                                                inverted={true}
-                                            />
-                                        )}
+                                        {/* {loading && (
+                                            // <GPLoader
+                                            //     size="tiny"
+                                            //     inline="centered"
+                                            //     active={true}
+                                            //     className="GPLoader"
+                                            //     inverted={true}
+                                            // />
+                                        )} */}
                                     </GPButton>
                                 </div>
                                 <div style={{marginTop: 20}}>
-                                    {error && !response ? (
-                                        <GPMessage
-                                            visible={true}
-                                            error
-                                            headerText="Howdy,"
-                                            message="Email does not exist, Please provide your account email"
-                                        />
+                                    {/* {error && !response ? (
+                                        // <GPMessage
+                                        //     visible={true}
+                                        //     error
+                                        //     headerText="Howdy,"
+                                        //     message="Email does not exist, Please provide your account email"
+                                        // />
                                     ) : (
                                         ''
-                                    )}
-                                    {response ? (
+                                    )} */}
+                                    {/* {response ? (
                                         <GPMessage
                                             visible={true}
                                             info
@@ -160,7 +160,7 @@ const PasswordReset = () => {
                                         />
                                     ) : (
                                         ''
-                                    )}
+                                    )} */}
                                 </div>
                             </form>
                         </div>

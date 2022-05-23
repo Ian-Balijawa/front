@@ -4,9 +4,9 @@ import {useMutation} from '@apollo/client'
 import {useForm, SubmitHandler} from 'react-hook-form'
 import GPButton from '../components/GPButton'
 import Logo from '../resources/Images/LogoDark.svg'
-import {GPMessage} from '../components/GPMessage'
+// import {GPMessage} from '../components/GPMessage'
 import {CHANGE_PASSWORD} from '../gql/registerUser'
-import {GPLoader} from '../components/GPLoader'
+// import {GPLoader} from '../components/GPLoader'
 type PasswordResetinput = {
     password: string
     confirmPassword: string
@@ -93,13 +93,13 @@ export const PasswordReset = () => {
                                     />
                                 </div>
                                 <div style={{marginTop: 5}}>
-                                    {errors.password && (
+                                    {/* {errors.password && (
                                         <GPMessage
                                             error
                                             size="tiny"
                                             message="Please provide a valid password"
                                         />
-                                    )}
+                                    )} */}
                                 </div>
                             </div>
                             <div>
@@ -133,16 +133,16 @@ export const PasswordReset = () => {
                                     />
                                 </div>
                                 <div style={{marginTop: 5}}>
-                                    {errors.confirmPassword && (
+                                    {/* {errors.confirmPassword && (
                                         <GPMessage
                                             error
                                             message="Your password do not match"
                                         />
-                                    )}
+                                    )} */}
                                 </div>
                             </div>
                             <div style={{marginTop: 20}}>
-                                <GPButton
+                                {/* <GPButton
                                     btnText={loading ? '' : 'Reset Password'}
                                     backgroundColor="#35B858"
                                     borderColor="#35B858"
@@ -159,14 +159,14 @@ export const PasswordReset = () => {
                                             inverted={true}
                                         />
                                     )}
-                                </GPButton>
-                                {data && (
+                                </GPButton> */}
+                                {/* {data && (
                                     <GPMessage
                                         info
                                         headerText="Howdy"
                                         message="Your Password was reset successfully"
                                     />
-                                )}
+                                )} */}
                             </div>
                         </form>
                     </div>

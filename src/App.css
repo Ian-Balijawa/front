@@ -1,3 +1,29 @@
+* {
+    box-sizing: border-box;
+    font-size: 1.13rem; 
+}
+a {
+    text-decoration: none;
+    height: 50px;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    color: #ffffff;
+    margin-bottom: 2px;
+    border-radius: 2px;
+}
+a:hover  {
+    background: #aa6f22;
+    transition: all .1s step-end;
+    color: #f7e3ca;
+}
+a.active{
+    cursor: pointer;
+    background: #aa6f22;
+    color: #f5d7bd;    
+}
+
+
 .AuthContainer {
     margin-top: 13% !important;
     margin-left: 30px !important;
@@ -76,4 +102,8 @@
     text-align: center;
     margin: 10px 0px 10px 10px;
     width: 70px !important;
+}
+.logo {
+    display: grid;
+    width: 100%;
 }
