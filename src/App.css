@@ -1,3 +1,33 @@
+* {
+    box-sizing: border-box;
+    font-size: 1.13rem; 
+    margin: 0;
+}
+img > .svg {
+   fill: #aa6f22;
+}
+a {
+    text-decoration: none;
+    height: 50px;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    color: #ffffff;
+    margin-bottom: 2px;
+    border-radius: 2px;
+}
+a:hover  {
+    background: #f6cb941e;
+    transition: all .1s step-end;
+    color: #f7e3ca;
+}
+a.active{
+    cursor: pointer;
+    background: #aa6f22;
+    color: #f5d7bd;    
+}
+
+
 .AuthContainer {
     margin-top: 13% !important;
     margin-left: 30px !important;
@@ -68,12 +98,16 @@
 .btn {
     width: 100% !important;
 }
-.GPLoader {
-}
+/* .GPLoader {
+} */
 .BnessCount {
     margin-top: 30px !important;
     border: 1px solid #000;
     text-align: center;
     margin: 10px 0px 10px 10px;
     width: 70px !important;
+}
+.logo {
+    display: grid;
+    width: 100%;
 }

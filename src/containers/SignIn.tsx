@@ -4,7 +4,7 @@ import GPButton from '../components/GPButton'
 import Logo from '../resources/Images/LogoDark.svg'
 import {useDispatch, useSelector} from 'react-redux'
 import {loginUser} from '../actions/index'
-import {GPLoader} from '../components/GPLoader'
+// import {GPLoader} from '../components/GPLoader'
 import {useForm, SubmitHandler} from 'react-hook-form'
 import {RootState} from '../store'
 type SigninInput = {
@@ -183,7 +183,7 @@ const SignIn = () => {
                                     </div>
                                 </div>
                                 <div style={{marginTop: 20}}>
-                                    <GPButton
+                                    {/* <GPButton
                                         btnText={loading ? '' : 'SignIn'}
                                         backgroundColor="#35B858"
                                         borderColor="#35B858"
@@ -192,15 +192,15 @@ const SignIn = () => {
                                         width={350}
                                     >
                                         {loading && (
-                                            <GPLoader
-                                                size="tiny"
-                                                inline="centered"
-                                                active={true}
-                                                className="GPLoader"
-                                                inverted={true}
-                                            />
-                                        )}
-                                    </GPButton>
+                                        //     <GPLoader
+                                        //         size="tiny"
+                                        //         inline="centered"
+                                        //         active={true}
+                                        //         className="GPLoader"
+                                        //         inverted={true}
+                                        //     />
+                                        // )}
+                                    </GPButton> */}
                                 </div>
                                 {Object.keys(error).length > 0 && (
                                     <div className="ui negative mini message">
