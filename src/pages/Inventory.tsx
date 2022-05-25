@@ -102,7 +102,9 @@ function Inventory() {
             <GPSideBar />
             <GPMain>
                 <Box sx={{alignItems: 'end', overflowX: 'hidden'}}>
-                    <Box>
+                    <Box sx={{
+                        width: {xs: "100"}
+                    }}>
                         <Typography
                             variant="body1"
                             mb="10px"
@@ -111,7 +113,12 @@ function Inventory() {
                             ITEMS
                         </Typography>
                         <Divider />
-                        <Stack direction="row" spacing={2} sx={{mt: '20px'}}>
+                        <Stack direction="row" spacing={2} sx={{
+                            mt: '20px',
+                            width: "100%",
+                            boxSizing: "border-box",
+                            flex: "2"
+                            }}>
                             {itemsmenu.map(el => {
                                 return itemsMenu(el)
                             })}
@@ -164,13 +171,13 @@ function Inventory() {
                 variant="outlined"
                 sx={{
                     boxShadow: '-4px 4px 10px 1px #eee',
-                    height: '170px',
+                    minHeight: '180px',
                     width: '50%',
-                    whiteSpace: 'normal',
+                    display: "flex",
                 }}
             >
                 <CardActionArea>
-                    <CardContent sx={{display: 'grid', justifyItems: 'center'}}>
+                    <CardContent sx={{display: 'grid', justifyItems: 'center', padding: "0px",justifyContent: "center"}}>
                         <img src={el.icon} alt="Add Item" className="svg" />
                         <Box sx={{display: 'grid', alignContent: 'center'}}>
                             <Typography
@@ -200,12 +207,13 @@ function Inventory() {
                 variant="outlined"
                 sx={{
                     boxShadow: '-4px 4px 10px 1px #eee',
-                    height: '170px',
+                    minHeight: '180px',
                     width: '50%',
+                    display: "flex",
                 }}
             >
                 <CardActionArea>
-                    <CardContent sx={{display: 'grid', justifyItems: 'center'}}>
+                    <CardContent sx={{display: 'grid', justifyItems: 'center', padding: "0px",justifyContent: "center"}}>
                         <img src={el.icon} alt="Add Item" className="svg" />
                         <Box sx={{display: 'grid', alignContent: 'center'}}>
                             <Typography
@@ -235,12 +243,14 @@ function Inventory() {
                 variant="outlined"
                 sx={{
                     boxShadow: '-4px 4px 10px 1px #eee',
-                    height: '170px',
+                    minHeight: '180px',
                     width: '50%',
+                    display: "flex",
+                    
                 }}
             >
                 <CardActionArea>
-                    <CardContent sx={{display: 'grid', justifyItems: 'center'}}>
+                    <CardContent sx={{display: 'grid', justifyItems: 'center', padding: "0px",justifyContent: "center"}}>
                         <img src={el.icon} alt="Add Item" className="svg" />
                         <Box sx={{display: 'grid', alignContent: 'center'}}>
                             <Typography
@@ -248,12 +258,11 @@ function Inventory() {
                                 sx={{
                                     fontSize: '1.0rem',
                                     display: 'grid',
-                                    textAlign: 'center',
-                                    wordWrap: 'normal',
+                                    height: "100%"
                                 }}
                                 p="23px"
                                 color="#444"
-                                component="h6"
+                                component="div"
                             >
                                 {el.text}
                             </Typography>

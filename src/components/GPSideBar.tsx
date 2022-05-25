@@ -65,50 +65,89 @@ export const links = [
 ]
 
 function GPSideBar() {
-    const { pathname } = useLocation()
+    const {pathname} = useLocation()
     return (
-        <Box sx={{ position: "fixed",background: '#18191d',width: "100%", maxWidth: "240px",height: "100%",display: 'grid',gridTemplateRows: '100px 90px 1px auto'}}>
-            { logoSection() }
-            { select() }
-            <Divider variant="fullWidth" sx={{ background: '#666' }} />
-            { navLinks() }
+        <Box
+            sx={{
+                position: 'fixed',
+                background: '#18191d',
+                width: {xs:"197px",sm: "197px",md: "auto", lg: "240px", xl: "240px"},
+                maxWidth: "240px",
+                height: '100%',
+                display: 'grid',
+                gridTemplateRows: '100px 90px 1px auto',
+            }}
+        >
+            {logoSection()}
+            {select()}
+            <Divider variant="fullWidth" sx={{background: '#666'}} />
+            {navLinks()}
         </Box>
     )
 
-    
     function logoSection(): JSX.Element {
-        return <Box display="grid" alignContent="center" justifyContent="center" boxSizing="border-box">
+        return (
+            <Box
+                display="grid"
+                alignContent="center"
+                justifyContent="center"
+                boxSizing="border-box"
+            >
                 <img className="logo" src={GPLogo} alt="logo" />
             </Box>
+        )
     }
 
     function select(): JSX.Element {
-        return <Box sx={{ boxSizing: 'border-box', display:"grid", justifyItems: "center"}}>
-                    <FormControl sx={{ m: 0, width: '90%', svg: { color: '#707070', path: {} } }}>
-                        <Select sx={{ background: '#303034',height: '45px',color: '#fff',}}>
-                            <MenuItem value={10}>Mega Standard</MenuItem>
-                            <MenuItem value={20}>Harris International</MenuItem>        
-                            <MenuItem value={30}>GP Computer Center</MenuItem>
-                        </Select>
-                    </FormControl>
-                </Box>
-            }
+        return (
+            <Box sx={{boxSizing: 'border-box',}}>
+                <FormControl
+                    sx={{m: 0, display: "grid", justifyContent: "center"}}
+                >
+                    <Select className='menu'
+                        sx={{
+                            background: '#303034',
+                            height: '45px',
+                            color: '#fff',
+                            width: "180px"  
+                        }}
+                    >
+                        <MenuItem value={10}>Mega Standard</MenuItem>
+                        <MenuItem value={20}>Harris International</MenuItem>
+                        <MenuItem value={30}>GP Computer Center</MenuItem>
+                    </Select>
+                </FormControl>
+            </Box>
+        )
+    }
 
     function navLinks(): JSX.Element {
-        return <Box p={2} mt={2}>
-            <List sx={{ display: 'grid' }}>
-                {links.map(link => (
-                    <Link key={link.name} to={link.path} className={pathname === link.path ? 'active' : ''} >
-                        <ListItem>
-                            <ListItemIcon sx={{display: 'grid',justifyContent: 'center', color: '#f7e3ca',}}>
-                                {link.icon}
-                            </ListItemIcon>
-                            <ListItemText primary={link.name} />
-                        </ListItem>
-                    </Link>
-                ))}
-            </List>
-        </Box>
+        return (
+            <Box p={2} mt={2}>
+                <List sx={{display: 'grid'}}>
+                    {links.map(link => (
+                        <Link
+                            key={link.name}
+                            to={link.path}
+                            className={pathname === link.path ? 'active' : ''}
+                        >
+                            <ListItem>
+                                <ListItemIcon
+                                    sx={{
+                                        display: 'grid',
+                                        justifyContent: 'center',
+                                        color: '#f7e3ca',
+                                    }}
+                                >
+                                    {link.icon}
+                                </ListItemIcon>
+                                <ListItemText primary={link.name} />
+                            </ListItem>
+                        </Link>
+                    ))}
+                </List>
+            </Box>
+        )
     }
 }
 

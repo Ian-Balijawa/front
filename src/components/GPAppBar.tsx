@@ -11,7 +11,13 @@ function GPAppBar() {
             <AppBar
                 position="sticky"
                 sx={{
-                    marginLeft: '240px',
+                    marginLeft: {
+                        xs: '197px',
+                        sm: '197px',
+                        md: '197px',
+                        lg: '240px',
+                        xl: '240px',
+                    },
                     display: 'grid',
                     background: '#fff',
                     color: '#555',
@@ -19,25 +25,40 @@ function GPAppBar() {
                     width: 'auto',
                 }}
             >
-                <Toolbar variant="dense" sx={{display: 'flex'}}>
+                <Toolbar variant="dense" 
+                    sx={{ 
+                        display: 'flex',
+                        
+                    }}>
                     <IconButton edge="start" aria-label="menu" sx={{mr: 2}}>
                         <MenuIcon />
                     </IconButton>
                     <Toolbar variant="dense">
-                        {links.map( link => {
-                           if (pathname === link.path )
-                            return (
-                                <>
-                                <Box key={link.name} sx={{fontSize: "1px"}}>{link.icon}</Box>
-                                <Typography sx={{ml: "10px"}} variant="h5" color="inherit" component="div" >{link.name}</Typography>
-                                {/* <Breadcrumbs
+                        {links.map(link => {
+                            if (pathname === link.path)
+                                return (
+                                    <>
+                                        <Box
+                                            key={link.name}
+                                            sx={{fontSize: '1px'}}
+                                        >
+                                            {link.icon}
+                                        </Box>
+                                        <Typography
+                                            sx={{ml: '10px'}}
+                                            variant="h5"
+                                            color="inherit"
+                                            component="div"
+                                        >
+                                            {link.name}
+                                        </Typography>
+                                        {/* <Breadcrumbs
                                  separator={<NavigateNextIcon fontSize="small" />}aria-label="breadcrumb">
                                 <Box key={link.name}>{link.icon}</Box>
                                 <Typography variant="h6" color="inherit" component="div" >{link.name}</Typography>
                                 </Breadcrumbs> */}
-                                
-                                </>
-                            )
+                                    </>
+                                )
                         })}
                     </Toolbar>
                 </Toolbar>
