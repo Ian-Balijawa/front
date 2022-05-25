@@ -1,4 +1,3 @@
-import React from 'react'
 import SignUp from '../containers/SignUp'
 import SignIn from '../containers/SignIn'
 import ForgotPassword from '../containers/ForgotPassword'

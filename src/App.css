@@ -1,10 +1,9 @@
 * {
-    box-sizing: border-box;
     font-size: 1.13rem; 
     margin: 0;
 }
-img > .svg {
-   fill: #aa6f22;
+.menu svg {
+   fill: rgb(121, 118, 118);
 }
 a {
     text-decoration: none;
@@ -17,7 +16,7 @@ a {
     border-radius: 2px;
 }
 a:hover  {
-    background: #f6cb941e;
+    background: #c7c6c50d;
     transition: all .1s step-end;
     color: #f7e3ca;
 }
