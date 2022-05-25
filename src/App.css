@@ -17,7 +17,7 @@ a {
     border-radius: 2px;
 }
 a:hover  {
-    background: #f6cb941e;
+    background: #c7c6c50d;
     transition: all .1s step-end;
     color: #f7e3ca;
 }

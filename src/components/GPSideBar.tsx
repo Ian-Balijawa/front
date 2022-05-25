@@ -9,34 +9,33 @@ import {
     MenuItem,
     Select,
 } from '@mui/material'
-import logo from '../resources/Images/Goldpos light-logo.svg'
-
+import {
+    GPSettingsIcon,
+    GPReportsIcon,
+    GPSalesIcon,
+    GPInventoryIcon,
+    GPHomeIcon,
+    GPLogo
+} from '../components/GPIconsBase'
 import Home from '../pages/Home'
 import Inventory from '../pages/Inventory'
 import Sales from '../pages/Sales'
 import Reports from '../pages/Reports'
 import Settings from '../pages/Settings'
 import { Link, useLocation } from 'react-router-dom'
-import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
-import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined'
-import SsidChartOutlinedIcon from '@mui/icons-material/SsidChartOutlined'
-import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined'
-import HomeIcon from '@mui/icons-material/Home'
-import Categories from '../pages/Categories'
- 
 
 export const links = [
     {
         name: 'Home',
         path: '/dashboard/home',
-        icon: <HomeIcon />,
+        icon: <GPHomeIcon/>,
         component: <Home />,
         sublinks: []
     },
     {
         name: 'Inventory',
         path: '/dashboard/inventory',
-        icon: <Inventory2OutlinedIcon />,
+        icon: <GPInventoryIcon />,
         component: <Inventory />,
         sublinks: [
             
@@ -45,21 +44,21 @@ export const links = [
     {
         name: 'Sales',
         path: '/dashboard/sales',
-        icon: <SsidChartOutlinedIcon />,
+        icon: <GPSalesIcon />,
         component: <Sales />,
         sublinks: []
     },
     {
         name: 'Reports',
         path: '/dashboard/reports',
-        icon: <DescriptionOutlinedIcon />,
+        icon: <GPReportsIcon />,
         component: <Reports />,
         sublinks: []
     },
     {
         name: 'Settings',
         path: '/dashboard/settings',
-        icon: <SettingsOutlinedIcon />,
+        icon: <GPSettingsIcon />,
         component: <Settings />,
         sublinks: []
     },
@@ -79,7 +78,7 @@ function GPSideBar() {
     
     function logoSection(): JSX.Element {
         return <Box display="grid" alignContent="center" justifyContent="center" boxSizing="border-box">
-                <img className="logo" src={logo} alt="logo" />
+                <img className="logo" src={GPLogo} alt="logo" />
             </Box>
     }
 
