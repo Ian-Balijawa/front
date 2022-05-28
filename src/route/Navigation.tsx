@@ -4,11 +4,11 @@ import ForgotPassword from '../containers/ForgotPassword'
 import Dashboard from '../containers/Dashboard'
 import PasswordReset from '../containers/PasswordReset'
 import {Route, Routes} from 'react-router-dom'
-import Inventory from '../pages/Inventory'
-import Sales from '../pages/Sales'
-import Reports from '../pages/Reports'
-import Settings from '../pages/Settings'
-import Categories from '../pages/Categories'
+import Inventory from '../containers/Inventory'
+import Sales from '../containers/Sales'
+import Reports from '../containers/Reports'
+import Settings from '../containers/Settings'
+import Categories from '../containers/Categories'
 
 const Navigation = () => {
     return (

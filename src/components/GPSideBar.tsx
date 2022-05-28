@@ -15,52 +15,50 @@ import {
     GPSalesIcon,
     GPInventoryIcon,
     GPHomeIcon,
-    GPLogo
+    GPLogo,
 } from '../components/GPIconsBase'
-import Home from '../pages/Home'
-import Inventory from '../pages/Inventory'
-import Sales from '../pages/Sales'
-import Reports from '../pages/Reports'
-import Settings from '../pages/Settings'
-import { Link, useLocation } from 'react-router-dom'
+import Home from '../containers/Home'
+import Inventory from '../containers/Inventory'
+import Sales from '../containers/Sales'
+import Reports from '../containers/Reports'
+import Settings from '../containers/Settings'
+import {Link, useLocation} from 'react-router-dom'
 
 export const links = [
     {
         name: 'Home',
         path: '/dashboard/home',
-        icon: <GPHomeIcon/>,
+        icon: <GPHomeIcon />,
         component: <Home />,
-        sublinks: []
+        sublinks: [],
     },
     {
         name: 'Inventory',
         path: '/dashboard/inventory',
         icon: <GPInventoryIcon />,
         component: <Inventory />,
-        sublinks: [
-            
-        ]
+        sublinks: [],
     },
     {
         name: 'Sales',
         path: '/dashboard/sales',
         icon: <GPSalesIcon />,
         component: <Sales />,
-        sublinks: []
+        sublinks: [],
     },
     {
         name: 'Reports',
         path: '/dashboard/reports',
         icon: <GPReportsIcon />,
         component: <Reports />,
-        sublinks: []
+        sublinks: [],
     },
     {
         name: 'Settings',
         path: '/dashboard/settings',
         icon: <GPSettingsIcon />,
         component: <Settings />,
-        sublinks: []
+        sublinks: [],
     },
 ]
 
@@ -71,8 +69,14 @@ function GPSideBar() {
             sx={{
                 position: 'fixed',
                 background: '#18191d',
-                width: {xs:"197px",sm: "197px",md: "auto", lg: "240px", xl: "240px"},
-                maxWidth: "240px",
+                width: {
+                    xs: '197px',
+                    sm: '197px',
+                    md: 'auto',
+                    lg: '240px',
+                    xl: '240px',
+                },
+                maxWidth: '240px',
                 height: '100%',
                 display: 'grid',
                 gridTemplateRows: '100px 90px 1px auto',
@@ -100,16 +104,17 @@ function GPSideBar() {
 
     function select(): JSX.Element {
         return (
-            <Box sx={{boxSizing: 'border-box',}}>
+            <Box sx={{boxSizing: 'border-box'}}>
                 <FormControl
-                    sx={{m: 0, display: "grid", justifyContent: "center"}}
+                    sx={{m: 0, display: 'grid', justifyContent: 'center'}}
                 >
-                    <Select className='menu'
+                    <Select
+                        className="menu"
                         sx={{
                             background: '#303034',
                             height: '45px',
                             color: '#fff',
-                            width: "180px"  
+                            width: '180px',
                         }}
                     >
                         <MenuItem value={10}>Mega Standard</MenuItem>
