@@ -1,0 +1,68 @@
+.pass-box{
+    width:450px !important;
+    position: fixed !important;
+    top: 30% !important;
+    left: 40% !important;
+    margin-top: -100px !important;
+    margin-left: -100px !important;
+}
+.pass-fields{
+    padding: 10px;
+    width:450px !important;
+    height: auto;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+}
+.pass-logo-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+.pass-logo{
+    width: 306px;
+    height: 54px;
+    
+}
+.pass-title h2{
+    font-size: 22px;
+    text-align: left;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+.pass-title p{
+    font-size: 14px;
+    text-align: left;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+.pass-others{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.pass-link{
+    text-decoration: none;
+    color: #E46036;
+    margin: 5px;
+}
+.pass-link-text-left{
+    font-size: 14px;
+    margin-left: 5px;
+}
+.login-link-text-right{
+    text-align: right;
+    float: right;
+    font-size: 14px;
+}
+.pass-button{
+    background-color: #35B858 !important;
+    outline: none !important;
+    border: none !important;
+}
+
+.pass-form input[type=text]{
+    margin: 5px 0px 10px 0px;
+}
