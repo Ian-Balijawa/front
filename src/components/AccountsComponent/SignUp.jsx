@@ -1,51 +1,76 @@
 import React from 'react';
-import { Container,FormControl, Button }  from '@mui/material';
+import {Box, Divider, Typography, Grid, FormControl, Button, Link} from '@mui/material';
 import logo from '../../resources/Images/LogoDark.svg';
-import './signup.css';
+import useStyles from './AllStyles';
 
-export default function Login() {
+export default function Signin() {
+    const classes = useStyles();
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const data = new FormData(event.currentTarget);
+        console.log({
+          full_name: data.get('full_name'),
+          email: data.get('email'),
+          pnumber: data.get('pnumber'),
+          bname: data.get('bname'),
+          password: data.get('password'),
+          btype: data.get('bype'),
+          blocations: data.get('blocations'),
+        });
+      };
+
   return (
-    <Container maxWidth="sm" className="signup-container">
-        <Container fixed className="signup-box">        
-            <div className="signup-logo-wrapper">
-                <img src={ logo } className="login-logo" alt="gold-post-logo" />
+    <div className={classes.signupWrapper}>
+        <Box className={classes.SignupBox} sx={{width: 400, height: 'auto'}}>
+            <div className={classes.logoWrapper}>
+                <img className={classes.logo} src={logo} alt="GOLDPOS logo" />
             </div>
-            <hr></hr>
-            <div className="signup-title">
-                <h2>Let's create your account</h2>
-                <p>Explore the world's most powerful POS for your business</p>
-            </div>
-            <div className="signup-form">
-                    <FormControl fullWidth>
-                        <input type="text" placeholder="Full name" id="my-input" aria-describedby="my-helper-text" />
-                    </FormControl>
-                    <FormControl fullWidth>
-                        <input type="text" placeholder="Email address" id="my-input" aria-describedby="my-helper-text" />
-                    </FormControl>
-                    <FormControl fullWidth>
-                        <input type="text" placeholder="Phone number" id="my-input" aria-describedby="my-helper-text" />
-                    </FormControl>
-                    <FormControl fullWidth>
-                        <input type="text" placeholder="Business name" id="my-input" aria-describedby="my-helper-text" />
-                    </FormControl>
-                    <FormControl fullWidth>
-                        <input type="text" placeholder="Password" id="my-input" aria-describedby="my-helper-text" />
-                    </FormControl>
-                    <FormControl fullWidth>
-                        <input type="text" placeholder="Business type" id="my-input" aria-describedby="my-helper-text" />
-                    </FormControl>
-                    <FormControl fullWidth>
-                        <input type="text" placeholder="Number of locations" id="my-input" aria-describedby="my-helper-text" />
-                    </FormControl>
-                    <span className="signup-others">
-                        <Button variant="contained" className='sign-button'>Sign Up</Button>
-                        <span className="signup-link-text">
-                            Already have an account?
-                            <a className="signup-link"href='#'>Sign In?</a>
-                        </span>
-                        </span>
-            </div>
-        </Container>
-    </Container>
+
+            <Divider />
+
+            <Box component="form" noValidate onSubmit={handleSubmit} className={classes.form}>
+                <Typography className={classes.signupHead}  variant="h6" align="left">
+                    Lets create your account
+                </Typography>
+                <Typography className={classes.signupPara} sx={{mb: 3}} variant="subtitle2" align="left" gutterBottom>Explore the world's most powerful <br></br>POS for your business</Typography>
+
+                <FormControl fullWidth>
+                    <input className={classes.userInput}  placeholder="Full name" id="full_name" name="full_name" autoFocus required margin="normal" />
+                </FormControl>
+                <FormControl fullWidth>
+                    <input className={classes.userInput}  placeholder="Email address" id="email" name="email" autoFocus required margin="normal"  />
+                </FormControl>
+                <FormControl fullWidth>
+                    <input className={classes.userInput}  placeholder="Phone number" id="pnumber" name="pnumber" autoFocus required margin="normal"  />
+                </FormControl>
+                <FormControl fullWidth>
+                    <input className={classes.userInput}  placeholder="Business name" id="bname" name="bname" autoFocus required margin="normal"  />
+                </FormControl>
+                <FormControl fullWidth>
+                    <input className={classes.userInput}  placeholder="Password" id="password" name="password" autoFocus required margin="normal"  />
+                </FormControl>
+                <FormControl fullWidth>
+                    <input className={classes.userInput}  placeholder="Business type" id="btype" name="btype" autoFocus required margin="normal"  />
+                </FormControl>
+                <FormControl fullWidth>
+                    <input className={classes.userInput}  placeholder="Number of locations" id="blocations" name="blocations" autoFocus required margin="normal"  />
+                </FormControl>
+            </Box>       
+        </Box>
+        <div className={classes.signupOthers}>
+            <Grid container>
+                <Grid item xs>
+                <Button variant="contained" className={classes.signupButton} type="submit">Sign Up</Button>
+                </Grid>
+                <Grid item>
+                    <span>Already have an account?</span>&nbsp;&nbsp;
+                  <Link className={classes.signupLink} href="#" variant="body2">
+                    Sign In?
+                  </Link>
+                </Grid>
+            </Grid>
+        </div>
+    </div>
   )
 }

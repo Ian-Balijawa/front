@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import Login from './components/AccountsComponent/Login';
 import SignUp from './components/AccountsComponent/SignUp';
-import Pass from './components/AccountsComponent/Pass';
+import PassReset from './components/AccountsComponent/PassReset';
+import Signin from './components/AccountsComponent/Signin';
 
 export default class App extends Component {
   render() {
     return (
         <div>
-          {/* <Login /> */}
-          <SignUp />
-          {/* <Pass /> */}
+          {/* <Signin /> */}
+          {/* <SignUp /> */}
+          <PassReset />
         </div>
     )
   }
