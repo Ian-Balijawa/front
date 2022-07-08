@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import './App.css'
+import SignUp from './components/AccountsComponent/SignUp';
+import PassReset from './components/AccountsComponent/PassReset';
+import Signin from './components/AccountsComponent/Signin';
 
 export default class App extends Component {
   render() {
     return (
         <div>
-          <p>Margin:0 and Font-Family Lato</p>
+          {/* <Signin /> */}
+          {/* <SignUp /> */}
+          <PassReset />
         </div>
     )
   }
