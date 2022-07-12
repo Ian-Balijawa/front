@@ -1,10 +1,12 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 import {Box, Divider, Typography, Grid, FormControl, Button, Link} from '@mui/material';
 import logo from '../../resources/Images/LogoDark.svg';
 import useStyles from './AllStyles';
 
 export default function Signin() {
     const classes = useStyles();
+    const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -13,6 +15,7 @@ export default function Signin() {
           email: data.get('email'),
           password: data.get('password'),
         });
+        navigate("dashboard");
       };
 
   return (
