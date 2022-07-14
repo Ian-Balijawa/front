@@ -12,6 +12,13 @@ import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 import SettingsApplicationsIcon from '@mui/icons-material/SettingsApplications';
 import useStyles from "./AllStyles";
 import logo from '../../resources/Images/LogoLight.svg';
+import homeIcon from '../../resources/Images/homeIcon.svg';
+import inventoryIcon from '../../resources/Images/inventoryIcon.svg';
+import reportsIcon from '../../resources/Images/reportsIcon.svg';
+import settingGear from '../../resources/Images/settingGear.svg';
+
+
+
 
 const DashboardLayout = () => {
 
@@ -30,35 +37,33 @@ const DashboardLayout = () => {
                 <img className={classes.logo} src={logo} alt="GOLDPOS logo" />
             </div>
             <div>
-            <ListItemButton onClick={handleClick}>
+            <ListItemButton 
+              className={classes.bakeMyDay} 
+              onClick={handleClick} 
+              sx={{
+                bgcolor: '#303034',  
+                "&:hover": { bgcolor: '#303034'}
+              }}>
               <ListItemText primary="Bake My Day" />
               {open ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
               <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                   <ListItemButton sx={{ pl: 4 }}>
-                    <ListItemIcon>
-                      <CottageIcon style={{ color: 'white' }}/>
-                    </ListItemIcon>
-                    <ListItemText primary="Home" />
+                      <img className={classes.dashboardIcons} src={homeIcon} alt="home icon" />
+                      <ListItemText primary="Home" />
                   </ListItemButton>
                   <ListItemButton sx={{ pl: 4 }}>
-                    <ListItemIcon>
-                      <InventoryIcon style={{ color: 'white' }}/>
-                    </ListItemIcon>
-                    <ListItemText primary="Inventory" />
+                      <img className={classes.dashboardIcons} src={inventoryIcon} alt="inventory icon" />
+                      <ListItemText primary="Inventory" />
                   </ListItemButton>
                   <ListItemButton sx={{ pl: 4 }}>
-                    <ListItemIcon>
-                      <TextSnippetIcon style={{ color: 'white' }}/>
-                    </ListItemIcon>
-                    <ListItemText primary="Reports" />
+                      <img className={classes.dashboardIcons} src={reportsIcon} alt="reports icon" />
+                      <ListItemText primary="Reports" />
                   </ListItemButton>
                   <ListItemButton sx={{ pl: 4 }}>
-                    <ListItemIcon>
-                      <SettingsApplicationsIcon style={{ color: 'white' }}/>
-                    </ListItemIcon>
-                    <ListItemText primary="Settings" />
+                      <img className={classes.dashboardIcons} src={settingGear} alt="setting gear" />
+                      <ListItemText primary="Settings" />
                   </ListItemButton>
                 </List>
               </Collapse>

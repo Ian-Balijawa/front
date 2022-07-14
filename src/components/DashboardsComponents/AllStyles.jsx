@@ -29,6 +29,14 @@ const useStyles = makeStyles((theme) => ({
     },
     logo: {
 
+    },
+    dashboardIcons: {
+        width: '25px',
+        height: '25px',
+        marginRight: '5px'
+    },
+    bakeMyDay: {
+        // borderBottom: '1px solid grey'
     }
 }));
 
