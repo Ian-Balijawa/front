@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import Collapse from '@mui/material/Collapse';
 import List from '@mui/material/List';
@@ -15,15 +16,22 @@ import settingGear from '../../resources/Images/settingGear.svg';
 
 
 
-const DashboardLayout = () => {
+const DashboardLayout = ({children}) => {
+
+    const navigate = useNavigate();
 
     const classes = useStyles();
 
     const [open, setOpen] = useState(true);
+    const [clicked, setclicked] = useState(false)
 
     const handleClick = () => {
       setOpen(!open);
     };
+
+    const handleHomeClick = () => {
+          navigate("home")      
+    }
 
     return(
       <div className={classes.mainDivContainer}>
@@ -44,7 +52,10 @@ const DashboardLayout = () => {
             </ListItemButton>
               <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                  <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemButton 
+                      sx={{ pl: 4 }}
+                      onClick={handleHomeClick} 
+                  >
                       <img className={classes.dashboardIcons} src={homeIcon} alt="home icon" />
                       <ListItemText primary="Home" />
                   </ListItemButton>
@@ -66,7 +77,7 @@ const DashboardLayout = () => {
         </div>
         <div className={classes.mainContent}>
           <div className={classes.topNavBar}>nav bar here</div>
-          <div className={classes.contentArea}>content here</div>
+          <div className={classes.contentArea}>{children}</div>
         </div> 
       </div>
     )
