@@ -1,5 +1,4 @@
 import { makeStyles } from '@mui/styles';
-import { padding } from '@mui/system';
 
 const useStyles = makeStyles((theme) => ({
     mainDivContainer: {
@@ -36,7 +35,11 @@ const useStyles = makeStyles((theme) => ({
         marginRight: '5px'
     },
     bakeMyDay: {
-        // borderBottom: '1px solid grey'
+
+    },
+    dashboardLink: {
+        textDecoration: 'none',
+        color: 'white'
     }
 }));
 

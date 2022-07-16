@@ -6,6 +6,8 @@ import Signin from './components/AccountsComponent/Signin';
 import DashboardLayout from './components/DashboardsComponents/Dashboard';
 import Home from './components/DashboardsComponents/pages/Home';
 import Inventory from './components/DashboardsComponents/pages/Inventory';
+import Reports from './components/DashboardsComponents/pages/Reports';
+import Settings from './components/DashboardsComponents/pages/Settings';
 
 export default class App extends Component {
   render() {
@@ -17,6 +19,8 @@ export default class App extends Component {
               <Route path='/dashboard' element={<DashboardLayout />} />
               <Route path='/dashboard/home' element={<Home />} />
               <Route path='/dashboard/inventory' element={<Inventory />} />
+              <Route path='/dashboard/reports' element={<Reports />} />
+              <Route path='/dashboard/settings' element={<Settings />} />
             </Routes>
           </Router>
           {/* <Signin /> */}

@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useState } from 'react';
 import Collapse from '@mui/material/Collapse';
 import List from '@mui/material/List';
@@ -29,10 +29,6 @@ const DashboardLayout = ({children}) => {
       setOpen(!open);
     };
 
-    const handleHomeClick = () => {
-          navigate("home")      
-    }
-
     return(
       <div className={classes.mainDivContainer}>
         <div className={classes.sideBar}>
@@ -52,31 +48,38 @@ const DashboardLayout = ({children}) => {
             </ListItemButton>
               <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                  <ListItemButton 
-                      sx={{ pl: 4 }}
-                      onClick={handleHomeClick} 
-                  >
-                      <img className={classes.dashboardIcons} src={homeIcon} alt="home icon" />
-                      <ListItemText primary="Home" />
-                  </ListItemButton>
-                  <ListItemButton sx={{ pl: 4 }}>
-                      <img className={classes.dashboardIcons} src={inventoryIcon} alt="inventory icon" />
-                      <ListItemText primary="Inventory" />
-                  </ListItemButton>
-                  <ListItemButton sx={{ pl: 4 }}>
-                      <img className={classes.dashboardIcons} src={reportsIcon} alt="reports icon" />
-                      <ListItemText primary="Reports" />
-                  </ListItemButton>
-                  <ListItemButton sx={{ pl: 4 }}>
-                      <img className={classes.dashboardIcons} src={settingGear} alt="setting gear" />
-                      <ListItemText primary="Settings" />
-                  </ListItemButton>
+                  <Link to='/dashboard/home' className={classes.dashboardLink}>
+                    <ListItemButton 
+                        sx={{ pl: 4 }}
+                    >
+                        <img className={classes.dashboardIcons} src={homeIcon} alt="home icon" />
+                        <ListItemText primary="Home" />
+                    </ListItemButton>
+                  </Link>
+                  <Link to='/dashboard/inventory' className={classes.dashboardLink}>
+                    <ListItemButton sx={{ pl: 4 }}>
+                        <img className={classes.dashboardIcons} src={inventoryIcon} alt="inventory icon" />
+                        <ListItemText primary="Inventory" />
+                    </ListItemButton>
+                  </Link>
+                  <Link to='/dashboard/reports' className={classes.dashboardLink}>
+                    <ListItemButton sx={{ pl: 4 }}>
+                        <img className={classes.dashboardIcons} src={reportsIcon} alt="reports icon" />
+                        <ListItemText primary="Reports" />
+                    </ListItemButton>
+                  </Link>
+                  <Link to='/dashboard/settings' className={classes.dashboardLink}>
+                    <ListItemButton sx={{ pl: 4 }}>
+                        <img className={classes.dashboardIcons} src={settingGear} alt="setting gear" />
+                        <ListItemText primary="Settings" />
+                    </ListItemButton>
+                  </Link>
                 </List>
               </Collapse>
             </div>
         </div>
         <div className={classes.mainContent}>
-          <div className={classes.topNavBar}>nav bar here</div>
+          <div className={classes.topNavBar}>The header here</div>
           <div className={classes.contentArea}>{children}</div>
         </div> 
       </div>
