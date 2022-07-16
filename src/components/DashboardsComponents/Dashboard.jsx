@@ -12,6 +12,7 @@ import homeIcon from '../../resources/Images/homeIcon.svg';
 import inventoryIcon from '../../resources/Images/inventoryIcon.svg';
 import reportsIcon from '../../resources/Images/reportsIcon.svg';
 import settingGear from '../../resources/Images/settingGear.svg';
+import Header from "./Header";
 
 
 
@@ -48,8 +49,8 @@ const DashboardLayout = ({children}) => {
             </ListItemButton>
               <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                  <div className={location.pathname == '/dashboard/home' ? classes.dashboardLinkActive : ''}>
-                    <Link to='/dashboard/home' className={classes.dashboardLink}>
+                  <div className={location.pathname == '/dashboard' ? classes.dashboardLinkActive : ''}>
+                    <Link to='/dashboard' className={classes.dashboardLink}>
                       <ListItemButton 
                           sx={{ pl: 4 }}
                       >
@@ -58,24 +59,24 @@ const DashboardLayout = ({children}) => {
                       </ListItemButton>
                     </Link>
                   </div>
-                  <div className={location.pathname == '/dashboard/inventory' ? classes.dashboardLinkActive : ''}>
-                    <Link to='/dashboard/inventory' className={classes.dashboardLink}>
+                  <div className={location.pathname == '/inventory' ? classes.dashboardLinkActive : ''}>
+                    <Link to='/inventory' className={classes.dashboardLink}>
                       <ListItemButton sx={{ pl: 4 }}>
                           <img className={classes.dashboardIcons} src={inventoryIcon} alt="inventory icon" />
                           <ListItemText primary="Inventory" />
                       </ListItemButton>
                     </Link>
                   </div>
-                  <div className={location.pathname == '/dashboard/reports' ? classes.dashboardLinkActive : ''}>
-                    <Link to='/dashboard/reports' className={classes.dashboardLink}>
+                  <div className={location.pathname == '/reports' ? classes.dashboardLinkActive : ''}>
+                    <Link to='/reports' className={classes.dashboardLink}>
                       <ListItemButton sx={{ pl: 4 }}>
                           <img className={classes.dashboardIcons} src={reportsIcon} alt="reports icon" />
                           <ListItemText primary="Reports" />
                       </ListItemButton>
                     </Link>
                   </div>
-                  <div className={location.pathname == '/dashboard/settings' ? classes.dashboardLinkActive : ''}>
-                    <Link to='/dashboard/settings' className={classes.dashboardLink}>
+                  <div className={location.pathname == '/settings' ? classes.dashboardLinkActive : ''}>
+                    <Link to='/settings' className={classes.dashboardLink}>
                       <ListItemButton sx={{ pl: 4 }}>
                           <img className={classes.dashboardIcons} src={settingGear} alt="setting gear" />
                           <ListItemText primary="Settings" />
@@ -87,7 +88,7 @@ const DashboardLayout = ({children}) => {
             </div>
         </div>
         <div className={classes.mainContent}>
-          <div className={classes.topNavBar}>The header here</div>
+          <div className={classes.topNavBar}><Header /></div>
           <div className={classes.contentArea}>{children}</div>
         </div> 
       </div>

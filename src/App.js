@@ -16,11 +16,10 @@ export default class App extends Component {
           <Router>
             <Routes>
               <Route path='/' element={<Signin />} />
-              <Route path='/dashboard' element={<DashboardLayout />} />
-              <Route path='/dashboard/home' element={<Home />} />
-              <Route path='/dashboard/inventory' element={<Inventory />} />
-              <Route path='/dashboard/reports' element={<Reports />} />
-              <Route path='/dashboard/settings' element={<Settings />} />
+              <Route path='/dashboard' element={<Home />} />
+              <Route path='/inventory' element={<Inventory />} />
+              <Route path='/reports' element={<Reports />} />
+              <Route path='/settings' element={<Settings />} />
             </Routes>
           </Router>
           {/* <Signin /> */}

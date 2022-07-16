@@ -16,7 +16,11 @@ const useStyles = makeStyles((theme) => ({
     },
     topNavBar: {
         height: '87px',
-        backgroundColor: '#FFFFFF'
+        backgroundColor: '#FFFFFF',
+        display: 'flex',
+        flexDirection:'column',
+        justifyContent:'center',
+        padding: '10px'
     },
     contentArea: {
         backgroundColor: '#E5E5E5',
