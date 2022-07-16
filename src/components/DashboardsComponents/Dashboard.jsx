@@ -4,8 +4,6 @@ import Collapse from '@mui/material/Collapse';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
 import useStyles from "./AllStyles";
 import logo from '../../resources/Images/LogoLight.svg';
 import homeIcon from '../../resources/Images/homeIcon.svg';
@@ -22,13 +20,6 @@ const DashboardLayout = ({children}) => {
     const classes = useStyles();
 
     const location = useLocation();
-    console.log(location.pathname,'curr path');
-
-    const [open, setOpen] = useState(true);
-
-    const handleClick = () => {
-      setOpen(!open);
-    };
 
     return(
       <div className={classes.mainDivContainer}>
@@ -39,15 +30,12 @@ const DashboardLayout = ({children}) => {
             <div>
             <ListItemButton 
               className={classes.bakeMyDay} 
-              onClick={handleClick} 
               sx={{
                 bgcolor: '#303034',  
                 "&:hover": { bgcolor: '#303034'}
               }}>
               <ListItemText primary="Bake My Day" />
-              {open ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
-              <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                   <div className={location.pathname == '/dashboard' ? classes.dashboardLinkActive : ''}>
                     <Link to='/dashboard' className={classes.dashboardLink}>
@@ -84,7 +72,6 @@ const DashboardLayout = ({children}) => {
                     </Link>
                   </div>
                 </List>
-              </Collapse>
             </div>
         </div>
         <div className={classes.mainContent}>
