@@ -40,6 +40,9 @@ const useStyles = makeStyles((theme) => ({
     dashboardLink: {
         textDecoration: 'none',
         color: 'white'
+    },
+    dashboardLinkActive: {
+        backgroundColor: '#E46036'
     }
 }));
 

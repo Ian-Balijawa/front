@@ -1,4 +1,4 @@
-import { useNavigate, Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useState } from 'react';
 import Collapse from '@mui/material/Collapse';
 import List from '@mui/material/List';
@@ -18,12 +18,12 @@ import settingGear from '../../resources/Images/settingGear.svg';
 
 const DashboardLayout = ({children}) => {
 
-    const navigate = useNavigate();
-
     const classes = useStyles();
 
+    const location = useLocation();
+    console.log(location.pathname,'curr path');
+
     const [open, setOpen] = useState(true);
-    const [clicked, setclicked] = useState(false)
 
     const handleClick = () => {
       setOpen(!open);
@@ -48,32 +48,40 @@ const DashboardLayout = ({children}) => {
             </ListItemButton>
               <Collapse in={open} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                  <Link to='/dashboard/home' className={classes.dashboardLink}>
-                    <ListItemButton 
-                        sx={{ pl: 4 }}
-                    >
-                        <img className={classes.dashboardIcons} src={homeIcon} alt="home icon" />
-                        <ListItemText primary="Home" />
-                    </ListItemButton>
-                  </Link>
-                  <Link to='/dashboard/inventory' className={classes.dashboardLink}>
-                    <ListItemButton sx={{ pl: 4 }}>
-                        <img className={classes.dashboardIcons} src={inventoryIcon} alt="inventory icon" />
-                        <ListItemText primary="Inventory" />
-                    </ListItemButton>
-                  </Link>
-                  <Link to='/dashboard/reports' className={classes.dashboardLink}>
-                    <ListItemButton sx={{ pl: 4 }}>
-                        <img className={classes.dashboardIcons} src={reportsIcon} alt="reports icon" />
-                        <ListItemText primary="Reports" />
-                    </ListItemButton>
-                  </Link>
-                  <Link to='/dashboard/settings' className={classes.dashboardLink}>
-                    <ListItemButton sx={{ pl: 4 }}>
-                        <img className={classes.dashboardIcons} src={settingGear} alt="setting gear" />
-                        <ListItemText primary="Settings" />
-                    </ListItemButton>
-                  </Link>
+                  <div className={location.pathname == '/dashboard/home' ? classes.dashboardLinkActive : ''}>
+                    <Link to='/dashboard/home' className={classes.dashboardLink}>
+                      <ListItemButton 
+                          sx={{ pl: 4 }}
+                      >
+                          <img className={classes.dashboardIcons} src={homeIcon} alt="home icon" />
+                          <ListItemText primary="Home" />
+                      </ListItemButton>
+                    </Link>
+                  </div>
+                  <div className={location.pathname == '/dashboard/inventory' ? classes.dashboardLinkActive : ''}>
+                    <Link to='/dashboard/inventory' className={classes.dashboardLink}>
+                      <ListItemButton sx={{ pl: 4 }}>
+                          <img className={classes.dashboardIcons} src={inventoryIcon} alt="inventory icon" />
+                          <ListItemText primary="Inventory" />
+                      </ListItemButton>
+                    </Link>
+                  </div>
+                  <div className={location.pathname == '/dashboard/reports' ? classes.dashboardLinkActive : ''}>
+                    <Link to='/dashboard/reports' className={classes.dashboardLink}>
+                      <ListItemButton sx={{ pl: 4 }}>
+                          <img className={classes.dashboardIcons} src={reportsIcon} alt="reports icon" />
+                          <ListItemText primary="Reports" />
+                      </ListItemButton>
+                    </Link>
+                  </div>
+                  <div className={location.pathname == '/dashboard/settings' ? classes.dashboardLinkActive : ''}>
+                    <Link to='/dashboard/settings' className={classes.dashboardLink}>
+                      <ListItemButton sx={{ pl: 4 }}>
+                          <img className={classes.dashboardIcons} src={settingGear} alt="setting gear" />
+                          <ListItemText primary="Settings" />
+                      </ListItemButton>
+                    </Link>
+                  </div>
                 </List>
               </Collapse>
             </div>
