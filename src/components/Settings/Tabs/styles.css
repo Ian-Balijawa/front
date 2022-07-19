@@ -1,0 +1,17 @@
+.TableSpace{
+    width: 600px;
+    margin-top: 20px;
+    height: 200px;
+    background-color: orange;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.lowerSettingsButtons{
+    margin-top: 20px;
+}
+.topPagination{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

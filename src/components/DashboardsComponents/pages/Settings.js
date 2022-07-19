@@ -1,10 +1,11 @@
-import DashboardLayout from "../Dashboard"
+import DashboardLayout from "../Dashboard";
+import SettingsIndex from '../../Settings/SetttingsIndex';
 
 const Settings = () => {
     return(
         <DashboardLayout>
             <div>
-                Settings page
+                <SettingsIndex />
             </div>
         </DashboardLayout>
     )
