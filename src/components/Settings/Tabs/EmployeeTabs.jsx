@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, ContentPasteGo } from '@mui/icons-material';
 import AddIcon from '@mui/icons-material/Add';
 import { TabContext, TabList, TabPanel } from '@mui/lab';
 import './styles.css';
+import SearchBar from '../../DashboardsComponents/HeaderProps/SearchBar';
 
 export default function EmployeeTabs() {
   const [value, setValue] = React.useState('1');
@@ -13,6 +14,7 @@ export default function EmployeeTabs() {
   };
 
   return (
+    <div>
     <Box sx={{ width: '100%', typography: 'body1' }}>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -60,5 +62,6 @@ export default function EmployeeTabs() {
         <TabPanel value="2">Archived</TabPanel>
       </TabContext>
     </Box>
+    </div>
   );
 }
