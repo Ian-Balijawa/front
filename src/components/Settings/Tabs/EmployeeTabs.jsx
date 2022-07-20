@@ -13,6 +13,7 @@ export default function EmployeeTabs() {
   };
 
   return (
+    <div>
     <Box sx={{ width: '100%', typography: 'body1' }}>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -60,5 +61,6 @@ export default function EmployeeTabs() {
         <TabPanel value="2">Archived</TabPanel>
       </TabContext>
     </Box>
+    </div>
   );
 }
