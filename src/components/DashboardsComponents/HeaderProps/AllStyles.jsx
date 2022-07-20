@@ -11,6 +11,11 @@ const useStyles = makeStyles((theme) => ({
     },
     addItemText: {
         color: '#E46036'
+    },
+    buttonIcon: {
+        width: '10px',
+        height: '10px',
+        marginRight: '5px',
     }
 }));
 
