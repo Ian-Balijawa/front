@@ -1,6 +1,7 @@
 import { Divider, Stack, Typography, Link, RadioGroup, FormControlLabel,TextField, Button, Grid, FormControl } from '@mui/material';
 import React from 'react';
 import DashboardLayout from '../../DashboardsComponents/Dashboard'
+import RolesTable from '../Table/RolesTable';
 import useStyles from './SRoleStyles';
 
 
@@ -73,9 +74,7 @@ export default function SettingsRoles() {
                     </Link>
                 </Grid>
                 <Grid fullWidth xs item>
-                    <div className={classes.rolesTable}>
-                        Table Space
-                    </div>          
+                    <RolesTable/>        
                 </Grid>
             </Grid>
             

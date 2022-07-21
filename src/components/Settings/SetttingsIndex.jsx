@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Tabs, Tab, Typography, Box, Container } from '@mui/material';
 import EmployeeTabs from './Tabs/EmployeeTabs';
 import EmployeeRolesTabs from './Tabs/EmployeeRolesTabs';
+import './settingStyles.css';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -42,7 +43,7 @@ export default function VerticalTabs() {
     <Box className="SettingsWrapper" sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: "100%" }}>
 
       <div sx={{flex: 1,}}>
-        <Tabs orientation="vertical"  value={value} onChange={handleChange} aria-label="Vertical tabs example" sx={{ borderRight: 1, marginLeft: "20%" }}>
+        <Tabs className="verticalTabs" orientation="vertical"  value={value} onChange={handleChange} aria-label="Vertical tabs example" sx={{ borderPadding: "2px", borderRight: "solid 1px orange", marginLeft: "20%", textTransform: "capitalize" }}>
           <Tab className="Tab" label="Employees" {...a11yProps(0)} />
           <Tab className="Tab" label="Employee Roles" {...a11yProps(1)} />
           <Tab className="Tab" label="Reports" {...a11yProps(2)} />

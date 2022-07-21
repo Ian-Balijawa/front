@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, ContentPasteGo } from '@mui/icons-material';
 import AddIcon from '@mui/icons-material/Add';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
+import ERTable from '../Table/ERTable';
 import TabPanel from '@mui/lab/TabPanel';
 import './styles.css';
 
@@ -44,9 +45,7 @@ export default function EmployeeTabs() {
                 </Grid>
           </Grid>
           <Grid fulWidth>
-              <div className="TableSpace">
-                <p>This is for the table Employee Roles</p>
-              </div>
+              <ERTable />
           </Grid>
           <Grid container className="lowerSettingsButtons">
                 <Grid item xs>
