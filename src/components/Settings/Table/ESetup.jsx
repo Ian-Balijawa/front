@@ -23,8 +23,8 @@ export default function ESetup() {
                     <td>Active</td>
                     <td>
                         <Grid sx={{display:'flex'}}>
-                            <Grid item><Link><EditIcon /></Link></Grid>
-                            <Grid item><Link><MoreHorizIcon /></Link></Grid>
+                            <Grid item><Link><EditIcon sx={{fontSize:'22px', color:'#7a7a7a', mr: 2}}/></Link></Grid>
+                            <Grid item><Link><MoreHorizIcon sx={{fontSize:'24px', color:'#e46036'}}/></Link></Grid>
                         </Grid>
                     </td>
                 </tr>
@@ -36,8 +36,8 @@ export default function ESetup() {
                     <td>Active</td>
                     <td>
                         <Grid sx={{display:'flex'}}>
-                            <Grid item><Link><EditIcon /></Link></Grid>
-                            <Grid item><Link><MoreHorizIcon /></Link></Grid>
+                            <Grid item><Link><EditIcon sx={{fontSize:'22px', color:'#7a7a7a', mr: 2}}/></Link></Grid>
+                            <Grid item><Link><MoreHorizIcon sx={{fontSize:'24px', color:'#e46036'}}/></Link></Grid>
                         </Grid>
                     </td>
                 </tr>
@@ -49,8 +49,8 @@ export default function ESetup() {
                     <td>Active</td>
                     <td>
                         <Grid sx={{display:'flex'}}>
-                            <Grid item><Link><EditIcon /></Link></Grid>
-                            <Grid item><Link><MoreHorizIcon /></Link></Grid>
+                            <Grid item><Link><EditIcon sx={{fontSize:'22px', color:'#7a7a7a', mr: 2}}/></Link></Grid>
+                            <Grid item><Link><MoreHorizIcon sx={{fontSize:'24px', color:'#e46036'}}/></Link></Grid>
                         </Grid>
                     </td>
                 </tr>
@@ -62,8 +62,8 @@ export default function ESetup() {
                     <td>Active</td>
                     <td>
                         <Grid sx={{display:'flex'}}>
-                            <Grid item><Link><EditIcon /></Link></Grid>
-                            <Grid item><Link><MoreHorizIcon /></Link></Grid>
+                            <Grid item><Link><EditIcon sx={{fontSize:'22px', color:'#7a7a7a', mr: 2}}/></Link></Grid>
+                            <Grid item><Link><MoreHorizIcon sx={{fontSize:'24px', color:'#e46036'}}/></Link></Grid>
                         </Grid>
                     </td>
                 </tr>
@@ -75,8 +75,8 @@ export default function ESetup() {
                     <td>Active</td>
                     <td>
                         <Grid sx={{display:'flex'}}>
-                            <Grid item><Link><EditIcon /></Link></Grid>
-                            <Grid item><Link><MoreHorizIcon /></Link></Grid>
+                            <Grid item><Link><EditIcon sx={{fontSize:'22px', color:'#7a7a7a', mr: 2}}/></Link></Grid>
+                            <Grid item><Link><MoreHorizIcon sx={{fontSize:'24px', color:'#e46036'}}/></Link></Grid>
                         </Grid>
                     </td>
                 </tr>
@@ -88,8 +88,8 @@ export default function ESetup() {
                     <td>Active</td>
                     <td>
                         <Grid sx={{display:'flex'}}>
-                            <Grid item><Link><EditIcon /></Link></Grid>
-                            <Grid item><Link><MoreHorizIcon /></Link></Grid>
+                            <Grid item><Link><EditIcon sx={{fontSize:'22px', color:'#7a7a7a', mr: 2}}/></Link></Grid>
+                            <Grid item><Link><MoreHorizIcon sx={{fontSize:'24px', color:'#e46036'}}/></Link></Grid>
                         </Grid>
                     </td>
                 </tr>

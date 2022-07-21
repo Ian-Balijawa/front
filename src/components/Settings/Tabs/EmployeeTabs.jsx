@@ -15,41 +15,41 @@ export default function EmployeeTabs() {
 
   return (
     <div>
-    <Box sx={{ width: '100%', typography: 'body1' }}>
+    <Box>
       <TabContext value={value}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <TabList onChange={handleChange} aria-label="lab API tabs example">
+        <Box className="employeeTabListBox" sx={{ borderBottom: 1, borderColor: 'divider', width: '750px' }} component="div">
+          <TabList onChange={handleChange} aria-label="lab API tabs example" sx={{m: '0px', p: '0px'}}>
             <Tab label="Active" value="1" />
             <Tab label="Archived" value="2" />
           </TabList>
         </Box>
         <TabPanel value="1">
-            <Grid container className="HomeContentButtonGroups">
+            <Grid container className="employeeTabButtonGroups" sx={{ml: '-10px'}}>
                 <Grid item xs >
                   <span className="topPagination">
-                      <Typography variant="body1" sx={{mr:1}}>4 Results</Typography>
+                      <Typography variant="body1" sx={{mr:1, color: '#7a7a7a', fontSize:'14px'}}>4 Results</Typography>
                       <ButtonGroup variant="outlined" aria-label="outlined primary button group">
-                      <Button><ArrowLeft /></Button>
-                      <Button></Button>
-                      <Button><ArrowRight /></Button>
+                      <Button className="leftArrowButton"><ArrowLeft sx={{color: '#7a7a7a'}}/></Button>
+                      <Button className="pageRangeButton">1-4</Button>
+                      <Button className="rightArrowButton"><ArrowRight sx={{color: '#7a7a7a'}}/></Button>
                       </ButtonGroup>
-                      <Typography variant="body1" sx={{ml:1}}>20 PER PAGE</Typography>
+                      <Typography variant="body1" sx={{ml:1, fontSize: "14px", color: '#000'}}>20 PER PAGE</Typography>
                     </span>
                 </Grid>
                 <Grid item>
-                    <ButtonGroup disableElevation variant="outlined">
-                    <Button startIcon={<ContentPasteGo />}>Import</Button>
-                    <Button startIcon={<ContentPasteGo />}>Export</Button>
+                    <ButtonGroup className="importExportButtonGroup" variant="outlined">
+                    <Button className="importButton" startIcon={<ContentPasteGo sx={{color: '#7a7a7a'}}/>}>Import</Button>
+                    <Button className="exportButton" startIcon={<ContentPasteGo sx={{color: '#7a7a7a'}}/>}>Export</Button>
                     </ButtonGroup>
                 </Grid>
             </Grid>
-            <Grid fulWidth>
+            <Grid className="employeeSetupTableWrapper" fulWidth>
                 <ESetup />
             </Grid>
             <Grid container className="lowerSettingsButtons">
                 <Grid item xs>
-                    <Button variant="outlined" href="/addrole" color="error" startIcon={<AddIcon />}>New Employee Role</Button>
-                    <Button variant="outlined" color="error" sx={{ml:2}}>Edit</Button>
+                    <Button className="LSBaddRole" variant="outlined" href="/addrole" color="error" startIcon={<AddIcon className="addroleIcon"/>}>New Employee Role</Button>
+                    <Button className="LSBeditRole"variant="outlined" color="error" sx={{ml:2}}>Edit</Button>
                 </Grid>
                 <Grid item>
                     

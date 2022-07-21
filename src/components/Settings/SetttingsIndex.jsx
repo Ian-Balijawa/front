@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { Tabs, Tab, Typography, Box, Container } from '@mui/material';
+import { Tabs, Tab, Typography, Box, Container, Grid } from '@mui/material';
 import EmployeeTabs from './Tabs/EmployeeTabs';
 import EmployeeRolesTabs from './Tabs/EmployeeRolesTabs';
 import './settingStyles.css';
@@ -40,18 +40,18 @@ export default function VerticalTabs() {
   };
 
   return (
-    <Box className="SettingsWrapper" sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: "100%" }}>
+    <Box className="SettingsWrapper" sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: "970px" }}>
 
-      <div sx={{flex: 1,}}>
-        <Tabs className="verticalTabs" orientation="vertical"  value={value} onChange={handleChange} aria-label="Vertical tabs example" sx={{ borderPadding: "2px", borderRight: "solid 1px orange", marginLeft: "20%", textTransform: "capitalize" }}>
+      <div className="settingsIndexTabs" sx={{flex: 1,}}>
+        <Tabs className="verticalTabs" orientation="vertical"  value={value} onChange={handleChange} aria-label="Vertical tabs example" sx={{}}>
           <Tab className="Tab" label="Employees" {...a11yProps(0)} />
           <Tab className="Tab" label="Employee Roles" {...a11yProps(1)} />
           <Tab className="Tab" label="Reports" {...a11yProps(2)} />
         </Tabs>
       </div>
 
-      <Container sx={{flex: 4, marginLeft: '20%'}}>
-        <TabPanel value={value} index={0}>
+      <Grid fullWidth className="verticalTabsPane" sx={{}}>
+        <TabPanel fullWidth sx={{m: 0, p: 0}} value={value} index={0}>
           <EmployeeTabs />
         </TabPanel>
         <TabPanel value={value} index={1}>
@@ -60,7 +60,7 @@ export default function VerticalTabs() {
         <TabPanel value={value} index={2}>
           Item Three
         </TabPanel>
-      </Container>
+      </Grid>
     </Box>
   );
 }

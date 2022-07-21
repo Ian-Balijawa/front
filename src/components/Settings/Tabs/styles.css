@@ -8,10 +8,71 @@
     align-items: center;
 }
 .lowerSettingsButtons{
-    margin-top: 20px;
+    margin-top: 18px;
+    margin-left: -47px;
 }
 .topPagination{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+.MuiTabs-root .MuiButtonBase-root {
+    text-transform: capitalize !important;
+    color: black !important;
+    white-space: nowrap;
+    font-size: 18px;
+}
+.employeeTabListBox .MuiTabs-root .MuiTabs-indicator{
+    background-color: #e46036 !important;
+    margin-left: 6px !important;
+    margin-left: 0px !important;
+    
+
+}
+.employeeTabListBox{
+    margin-left: -24px !important;
+}
+.employeeTabButtonGroups{
+    /* background-color: blanchedalmond !important; */
+    width: 750px !important;
+    margin-left: -48px !important;
+    margin-top: -15px !important;
+}
+.employeeSetupTableWrapper{
+    margin-left: -48px !important;
+    margin-top: 10px;
+    /* background-color: brown; */
+    width: 750px;
+}
+.leftArrowButton, .rightArrowButton{
+    border-color: #7a7a7a !important;
+    width: 2px !important;
+    border-radius: 0px !important;
+}
+.pageRangeButton{
+    border-color: #7a7a7a !important;
+    border-radius: 0px !important;
+    color: #e46036 !important;
+    background: #e2edf8 !important;
+}
+.importExportButtonGroup{
+    background: #e2edf8 !important;
+    
+}
+.importButton{
+    border-color: #7a7a7a !important;
+    border-radius: 0px !important;
+    text-transform: lowercase !important;
+    color: #e46036 !important;
+}
+.exportButton{
+    border-color: #7a7a7a !important;
+    border-radius: 0px !important;
+    text-transform: lowercase !important;
+    color: #e46036 !important;
+}
+.LSBaddRole, .LSBeditRole{
+    border-color: #7a7a7a !important;
+    color: #e46036 !important;
+    text-transform: capitalize !important;
 }
