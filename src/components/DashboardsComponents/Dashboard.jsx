@@ -75,7 +75,6 @@ const DashboardLayout = ({children}) => {
             </div>
         </div>
         <div className={classes.mainContent}>
-          <div className={classes.topNavBar}><Header /></div>
           <div className={classes.contentArea}>{children}</div>
         </div> 
       </div>
