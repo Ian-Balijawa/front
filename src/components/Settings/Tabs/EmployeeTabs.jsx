@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Box, Grid, Button, ButtonGroup, Tab, Container, Typography } from '@mui/material';
 import { ArrowLeft, ArrowRight, ContentPasteGo } from '@mui/icons-material';
 import AddIcon from '@mui/icons-material/Add';
+import ESetup from '../Table/ESetup';
 import { TabContext, TabList, TabPanel } from '@mui/lab';
 import './styles.css';
 
@@ -43,10 +44,7 @@ export default function EmployeeTabs() {
                 </Grid>
             </Grid>
             <Grid fulWidth>
-                {/* <Index/> */}
-                <div className="TableSpace">
-                  <p>This is for the table Employee</p>
-                </div>
+                <ESetup />
             </Grid>
             <Grid container className="lowerSettingsButtons">
                 <Grid item xs>
