@@ -32,7 +32,7 @@
 .employeeTabListBox{
     margin-left: -24px !important;
 }
-.employeeTabButtonGroups{
+.employeeTabButtonGroups, .RolesTabButtonGroups{
     /* background-color: blanchedalmond !important; */
     width: 750px !important;
     margin-left: -48px !important;

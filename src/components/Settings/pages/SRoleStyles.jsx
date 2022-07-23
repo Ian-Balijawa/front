@@ -30,18 +30,34 @@ const SRoleStyles = makeStyles((theme) => ({
     RadioLabelGroup1: {
         display: 'flex',
         alignItems: 'flex-start',
-        marginLeft: '82px'
+        marginLeft: '82px',
+        marginBottom :'10px',
+        marginTop: '15px'
+    },
+    RadioLabelGroupCashier1: {
+        display: 'flex',
+        alignItems: 'flex-start',
+        marginLeft: '88px',
+        marginBottom :'10px',
+        marginTop: '2px'
     },
     RadioLabel: {
         display: 'block',
         marginLeft: '5em',
         marginTop: '3px',
-    },  
+    },
+    
     RadioLabels: {
         marginLeft: '-60px',
     },
+    RadioLabelsCashier: {
+        marginLeft: '-55px',
+    },
     RoleDefaultPay: {
         marginLeft: '4em'
+    },
+    RadioLabelLabel: {
+        
     },
     rolesTable: {
         width: '600px',
@@ -52,6 +68,18 @@ const SRoleStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         marginLeft: '10px',
+    },
+    userPermissions: {
+        marginBottom: '-2px !important', 
+        marginRight:'25px !important',
+        marginLeft: '-18px !important'
+    },
+    userPermissionsLink: {
+        color: '#e46036 !important',
+        marginLeft: '11px !important'
+    },
+    permissionsTable: {
+        width: '750px !important'
     },
 }));
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { Tabs, Tab, Typography, Box, Container, Grid } from '@mui/material';
+import { Tabs, Tab, Typography, Box, Grid } from '@mui/material';
 import EmployeeTabs from './Tabs/EmployeeTabs';
 import EmployeeRolesTabs from './Tabs/EmployeeRolesTabs';
 import './settingStyles.css';
