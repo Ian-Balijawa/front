@@ -10,24 +10,44 @@ import Reports from './components/DashboardsComponents/pages/Reports';
 import Settings from './components/DashboardsComponents/pages/Settings';
 import AddRole from './components/Settings/pages/AddRole';
 
-export default class App extends Component {
-  render() {
-    return (
-        <div>
-          <Router>
-            <Routes>
-              <Route path='/' element={<Signin />} />
-              <Route path='/dashboard' element={<Home />} />
-              <Route path='/inventory' element={<Inventory />} />
-              <Route path='/reports' element={<Reports />} />
-              <Route path='/settings' element={<Settings />} />
-              <Route path='/addrole' element={<AddRole />} />
-            </Routes>
-          </Router>
-          {/* <Signin /> */}
-          {/* <SignUp /> */}
-          {/* <PassReset /> */}
-        </div>
-    )
-  }
+import * as ROUTES from "./constants/routes";
+
+// export default class App extends Component {
+//   render() {
+//     return (
+//       <div>
+//         <Router>
+//           <Routes>
+//             <Route path={ROUTES.HOME} element={<Signin />} />
+//             <Route path={ROUTES.SIGNUP} element={<SignUp/>} />
+//             <Route path={ROUTES.PASS_RESET} element={<PassReset/>} />
+//             <Route path={ROUTES.DASHBOARD} element={<Home />} />
+//             <Route path={ROUTES.INVENTORY} element={<Inventory />} />
+//             <Route path={ROUTES.REPORTS} element={<Reports />} />
+//             <Route path={ROUTES.SETTINGS} element={<Settings />} />
+//             <Route path={ROUTES.ADDROLE} element={<AddRole />} />
+//           </Routes>
+//         </Router>
+//       </div>
+//     )
+//   }
+// }
+
+export default function App() {
+  return (
+    <div>
+      <Router>
+        <Routes>
+          <Route path={ROUTES.HOME} element={<Signin />} />
+          <Route path={ROUTES.SIGNUP} element={<SignUp/>} />
+          <Route path={ROUTES.PASS_RESET} element={<PassReset/>} />
+          <Route path={ROUTES.DASHBOARD} element={<Home />} />
+          <Route path={ROUTES.INVENTORY} element={<Inventory />} />
+          <Route path={ROUTES.REPORTS} element={<Reports />} />
+          <Route path={ROUTES.SETTINGS} element={<Settings />} />
+          <Route path={ROUTES.ADDROLE} element={<AddRole />} />
+        </Routes>
+      </Router>
+    </div>
+  )
 }

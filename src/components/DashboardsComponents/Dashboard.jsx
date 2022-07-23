@@ -13,8 +13,6 @@ import settingGear from '../../resources/Images/settingGear.svg';
 import Header from "./Header";
 
 
-
-
 const DashboardLayout = ({children}) => {
 
     const classes = useStyles();
@@ -37,7 +35,7 @@ const DashboardLayout = ({children}) => {
               <ListItemText primary="Bake My Day" />
             </ListItemButton>
                 <List component="div" disablePadding>
-                  <div className={location.pathname == '/dashboard' ? classes.dashboardLinkActive : ''}>
+                  <div className={location.pathname === '/dashboard' ? classes.dashboardLinkActive : ''}>
                     <Link to='/dashboard' className={classes.dashboardLink}>
                       <ListItemButton 
                           sx={{ pl: 4 }}
@@ -47,7 +45,7 @@ const DashboardLayout = ({children}) => {
                       </ListItemButton>
                     </Link>
                   </div>
-                  <div className={location.pathname == '/inventory' ? classes.dashboardLinkActive : ''}>
+                  <div className={location.pathname === '/inventory' ? classes.dashboardLinkActive : ''}>
                     <Link to='/inventory' className={classes.dashboardLink}>
                       <ListItemButton sx={{ pl: 4 }}>
                           <img className={classes.dashboardIcons} src={inventoryIcon} alt="inventory icon" />
@@ -55,7 +53,7 @@ const DashboardLayout = ({children}) => {
                       </ListItemButton>
                     </Link>
                   </div>
-                  <div className={location.pathname == '/reports' ? classes.dashboardLinkActive : ''}>
+                  <div className={location.pathname === '/reports' ? classes.dashboardLinkActive : ''}>
                     <Link to='/reports' className={classes.dashboardLink}>
                       <ListItemButton sx={{ pl: 4 }}>
                           <img className={classes.dashboardIcons} src={reportsIcon} alt="reports icon" />
@@ -63,7 +61,7 @@ const DashboardLayout = ({children}) => {
                       </ListItemButton>
                     </Link>
                   </div>
-                  <div className={location.pathname == '/settings' ? classes.dashboardLinkActive : ''}>
+                  <div className={location.pathname === '/settings' ? classes.dashboardLinkActive : ''}>
                     <Link to='/settings' className={classes.dashboardLink}>
                       <ListItemButton sx={{ pl: 4 }}>
                           <img className={classes.dashboardIcons} src={settingGear} alt="setting gear" />
