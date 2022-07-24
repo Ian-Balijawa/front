@@ -2,6 +2,8 @@ import { Divider, Stack, Typography, Link, RadioGroup, FormControlLabel,TextFiel
 import React from 'react';
 import DashboardLayout from '../../DashboardsComponents/Dashboard'
 import Header from '../../DashboardsComponents/Header';
+import ButtonSaveChanges from '../../DashboardsComponents/HeaderComponents/ButtonsSaveChanges';
+import ButtonSaveStartNew from '../../DashboardsComponents/HeaderComponents/ButtonSaveStartNew';
 import RolesTable from '../Table/RolesTable';
 import useStyles from './SRoleStyles';
 
@@ -10,6 +12,16 @@ export default function SettingsRoles() {
     const classes = useStyles();
   return (
     <DashboardLayout>
+        <Header>
+            <Grid container fullWidth sx={{ borderBottom: 'solid 1px #7A7A7A', padding: '8px'}}>
+                <Grid item></Grid>
+                <Grid item sx={{ display: 'flex'}}>
+                    <div className='buttonSaveChanges'><ButtonSaveChanges text='Save Changes' color='#E46036'/></div>
+                    <div><ButtonSaveStartNew text='Save and Start New'/></div>
+                </Grid>
+                <Grid item xs></Grid>
+            </Grid> 
+        </Header>
         <div className={classes.SettingsRoles}>
         <div className={classes.SettingsRolesForm}>         
             <Typography variant="h6" gutterBottom component="div">

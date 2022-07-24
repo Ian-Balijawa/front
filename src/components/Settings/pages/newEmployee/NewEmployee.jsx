@@ -12,15 +12,15 @@ export default function NewEmployee() {
   return (
     <DashboardLayout>
         <Header>
-                    <Grid container fullWidth sx={{ borderBottom: 'solid 1px #7A7A7A', padding: '8px'}}>
-                        <Grid item></Grid>
-                        <Grid item sx={{ display: 'flex'}}>
-                            <div className='buttonSaveChanges'><ButtonSaveChanges text='Save Changes' color='#E46036'/></div>
-                            <div><ButtonSaveStartNew text='Save and Start New'/></div>
-                        </Grid>
-                        <Grid item xs></Grid>
-                    </Grid> 
-                </Header>
+            <Grid container fullWidth sx={{ borderBottom: 'solid 1px #7A7A7A', padding: '8px'}}>
+                <Grid item></Grid>
+                <Grid item sx={{ display: 'flex'}}>
+                    <div className='buttonSaveChanges'><ButtonSaveChanges text='Save Changes' color='#E46036'/></div>
+                    <div><ButtonSaveStartNew text='Save and Start New'/></div>
+                </Grid>
+                <Grid item xs></Grid>
+            </Grid> 
+        </Header>
         <div className="newEmployeWrapper">
         <div className="newEmployeeFormTitle">
             <Typography variant="h6" component="div">

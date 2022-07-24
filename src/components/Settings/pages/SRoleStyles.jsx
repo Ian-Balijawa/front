@@ -4,7 +4,7 @@ import { fontSize, width } from '@mui/system';
 const SRoleStyles = makeStyles((theme) => ({
     SettingsRoles: {
         flex: '4',
-        backgroundColor: 'white',
+        // backgroundColor: 'white',
     },
     SettingsRolesForm: {
         width: '90%',
