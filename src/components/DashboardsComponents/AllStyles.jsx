@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
         width: '80%'
     },
     topNavBar: {
-        height: '87px',
+        height: '40px',
         backgroundColor: '#FFFFFF',
         display: 'flex',
         flexDirection:'column',

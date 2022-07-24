@@ -11,7 +11,14 @@ const Settings = () => {
     return(
         <DashboardLayout>
             <div>
-                <Header> 
+                <Header>
+                    <Grid container fullWidth sx={{ borderBottom: 'solid 1px #7A7A7A', padding: '8px'}}>
+                        <Grid item xs></Grid>
+                        <Grid item>
+                            <SearchBar />
+                        </Grid>
+                        <Grid item xs></Grid>
+                    </Grid> 
                 </Header>
                 <SettingsIndex />
             </div>
