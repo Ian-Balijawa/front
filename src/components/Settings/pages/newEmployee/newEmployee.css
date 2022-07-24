@@ -143,3 +143,7 @@
     letter-spacing: 2px;
     line-height: 14px !important;
 }
+
+.buttonSaveChanges{
+    margin-right: 5px;
+}
