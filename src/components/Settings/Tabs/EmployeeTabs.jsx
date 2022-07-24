@@ -48,12 +48,10 @@ export default function EmployeeTabs() {
             </Grid>
             <Grid container className="lowerSettingsButtons">
                 <Grid item xs>
-                    <Button className="LSBaddRole" variant="outlined" href="/addrole" color="error" startIcon={<AddIcon className="addroleIcon"/>}>New Employee Role</Button>
-                    <Button className="LSBeditRole"variant="outlined" color="error" sx={{ml:2}}>Edit</Button>
+                    <Button className="LSBaddRole" variant="outlined" href="/addemployee" color="error" startIcon={<AddIcon className="addroleIcon"/>}>New Employee</Button>
+                    <Button className="LSBeditRole" variant="outlined" color="error" sx={{ml:2}}>Edit</Button>
                 </Grid>
-                <Grid item>
-                    
-                </Grid>
+                <Grid item></Grid>
             </Grid>
         </TabPanel>
         <TabPanel value="2">Archived</TabPanel>

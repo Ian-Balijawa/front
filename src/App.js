@@ -9,6 +9,7 @@ import Inventory from './components/DashboardsComponents/pages/Inventory';
 import Reports from './components/DashboardsComponents/pages/Reports';
 import Settings from './components/DashboardsComponents/pages/Settings';
 import AddRole from './components/Settings/pages/AddRole';
+import NewEmployee from './components/Settings/pages/newEmployee/NewEmployee';
 
 export default class App extends Component {
   render() {
@@ -22,6 +23,7 @@ export default class App extends Component {
               <Route path='/reports' element={<Reports />} />
               <Route path='/settings' element={<Settings />} />
               <Route path='/addrole' element={<AddRole />} />
+              <Route path='/addemployee' element={<NewEmployee />} />
             </Routes>
           </Router>
           {/* <Signin /> */}
