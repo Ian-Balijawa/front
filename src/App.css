@@ -2,3 +2,10 @@
 	background-color: whitesmoke;
 	color: black;
 }
+
+input{
+	padding: 5px;
+	border:1px solid #eee;
+	outline: none;
+	border-radius: 5px;
+}

@@ -10,8 +10,13 @@ import ListItemText from '@mui/material/ListItemText'
 import InboxIcon from '@mui/icons-material/MoveToInbox'
 import MailIcon from '@mui/icons-material/Mail'
 import Logo from './Logo'
+import {NEW_RECIPE} from '../constants/routes'
+import {useLocation} from 'react-router-dom'
 
 const SideBar = ({drawerWidth}) => {
+    const {pathname} = useLocation()
+
+    console.log(pathname)
     return (
         <Drawer
             sx={{
@@ -20,7 +25,7 @@ const SideBar = ({drawerWidth}) => {
                 '& .MuiDrawer-paper': {
                     width: drawerWidth,
                     boxSizing: 'border-box',
-                    background: '#1e1414',
+                    background: '#18191D',
                     color: 'white',
                     padding: '1rem',
                 },
@@ -31,26 +36,30 @@ const SideBar = ({drawerWidth}) => {
             <Logo />
             <Box
                 sx={{
-                    padding: '5px',
-                    background: 'gray',
+                    padding: '8px',
+                    background: '#303034',
                     margin: '5px 10px',
-                    borderRadius: '4px',
+                    borderRadius: '2px',
                 }}
             >
-                <Typography variant="h5">Bake My Day</Typography>
+                <Typography variant="paragraph">Bake My Day</Typography>
             </Box>
             <Divider />
             <List>
                 {['Home', 'Inventory', 'Reports', 'Settings'].map(
                     (text, index) => (
-                        <ListItem key={text} disablePadding>
+                        <ListItem key={index} disablePadding>
                             <ListItemButton
                                 sx={{
                                     color: 'white',
+                                    '&:hover': {
+                                        background: '#E46036',
+                                    },
                                     background:
+                                        pathname === NEW_RECIPE &&
                                         text === 'Inventory'
-                                            ? '#ff4400'
-                                            : '#1e1414',
+                                            ? '#E46036'
+                                            : '#18191D',
                                 }}
                             >
                                 <ListItemIcon

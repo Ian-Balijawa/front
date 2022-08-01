@@ -1,11 +1,15 @@
-import TextField from '@mui/material/TextField'
-import Typography from '@mui/material/Typography'
-import Stack from '@mui/material/Stack'
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
+import {
+    TextField,
+    Typography,
+    Stack,
+    Box,
+    Grid,
+    FormControl,
+} from '@mui/material'
 import {IngredientsContainer} from '.'
+import {SelectField} from '../components'
 
-export default function InventoryContainer() {
+export default function ProductionContainer() {
     return (
         <Box
             sx={{
@@ -18,33 +22,41 @@ export default function InventoryContainer() {
             <Grid container spacing={3}>
                 <Grid item xs={4}>
                     <Stack spacing={4} direction="column">
-                        <Stack spacing={2} direction="row">
-                            <Typography paragraph>EAN/UPC</Typography>
+                        <Stack spacing={3.5} direction="row">
+                            <Typography paragraph>Cuisine</Typography>
                             <TextField
                                 size="small"
                                 id="outlined-basic"
                                 variant="outlined"
-                                placeholder="Barcode"
+                                placeholder="E.g. French, Indian,Italian..."
                             />
                         </Stack>
                         <Stack spacing={2} direction="row">
-                            <Typography paragraph>System ID</Typography>
+                            <Typography paragraph>Shell Life</Typography>
                             <TextField
                                 size="small"
                                 id="outlined-basic"
                                 variant="outlined"
-                                placeholder=""
+                                placeholder="Number of Days"
                             />
                         </Stack>
                         <Stack spacing={2} direction="row">
-                            <Typography paragraph>Custom ID </Typography>
-                            <TextField
-                                size="small"
+                            <Typography paragraph>Difficulty</Typography>
+                            <SelectField
                                 id="outlined-basic"
                                 variant="outlined"
-                                placeholder="Custom ID"
+                                label="----------------"
                             />
                         </Stack>
+                    </Stack>
+                </Grid>
+                l{' '}
+                <Grid item xs={8}>
+                    <Stack spacing={2} direction="row">
+                        <Typography paragraph>Extra Information</Typography>
+                        <FormControl fullWidth sx={{m: 1}}>
+                            <TextField id="outlined-basic" variant="outlined" />
+                        </FormControl>
                     </Stack>
                 </Grid>
             </Grid>

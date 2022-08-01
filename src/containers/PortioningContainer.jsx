@@ -6,6 +6,7 @@ import {
     Grid,
     FormControl,
 } from '@mui/material'
+import {IngredientsContainer} from '.'
 import {SelectField} from '../components'
 
 export default function PortioningContainer() {
@@ -59,6 +60,7 @@ export default function PortioningContainer() {
                     </Stack>
                 </Grid>
             </Grid>
+            <IngredientsContainer />
         </Box>
     )
 }

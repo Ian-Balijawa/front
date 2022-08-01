@@ -1,6 +1,6 @@
 import React from 'react'
 import {Typography, Button, TextField, Stack} from '@mui/material'
-import {Opertaions} from '../components'
+import {RecipeTabContextOperations} from '../components'
 
 export default function RecipeContainer() {
     return (
@@ -19,7 +19,7 @@ export default function RecipeContainer() {
                 />
             </Stack>
             <br />
-            <Opertaions />
+            <RecipeTabContextOperations />
         </React.Fragment>
     )
 }

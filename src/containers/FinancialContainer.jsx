@@ -10,7 +10,7 @@ import {IngredientsContainer} from '.'
 import {SelectField} from '../components'
 import {tabPanelSx} from '../constants/tab-styles'
 
-export default function General() {
+export default function FinancialContainer() {
     return (
         <Box
             sx={{

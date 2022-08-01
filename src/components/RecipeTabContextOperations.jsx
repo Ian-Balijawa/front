@@ -6,6 +6,10 @@ import {
     GeneralContainer,
     InventoryContainer,
     PortioningContainer,
+    ProductionContainer,
+    OutletsContainer,
+    FinancialContainer,
+    ImagesContainer,
 } from '../containers'
 
 const operations = [
@@ -13,7 +17,7 @@ const operations = [
     'Inventory',
     'Portioning',
     'Production',
-    'Finacial',
+    'Financial',
     'Outlets',
     'Images',
 ]
@@ -51,7 +55,7 @@ function a11yProps(index) {
     }
 }
 
-export default function Operations() {
+export default function RecipeTabContextOperations() {
     const [value, setValue] = React.useState(0)
 
     const handleChange = (event, newValue) => {
@@ -97,6 +101,14 @@ export default function Operations() {
                         <InventoryContainer />
                     ) : text === 'Portioning' ? (
                         <PortioningContainer />
+                    ) : text === 'Production' ? (
+                        <ProductionContainer />
+                    ) : text === 'Outlets' ? (
+                        <OutletsContainer />
+                    ) : text === 'Financial' ? (
+                        <FinancialContainer />
+                    ) : text === 'Images' ? (
+                        <ImagesContainer />
                     ) : (
                         text
                     )}
