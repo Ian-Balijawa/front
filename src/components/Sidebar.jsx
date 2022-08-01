@@ -31,7 +31,7 @@ const SideBar = ({drawerWidth}) => {
             <Logo />
             <Box
                 sx={{
-                    padding: '1rem',
+                    padding: '5px',
                     background: 'gray',
                     margin: '5px 10px',
                     borderRadius: '4px',

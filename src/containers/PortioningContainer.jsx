@@ -5,7 +5,7 @@ import {
     Box,
     Grid,
     FormControl,
-} from '@mui/material/TextField'
+} from '@mui/material'
 import {SelectField} from '../components'
 
 export default function PortioningContainer() {

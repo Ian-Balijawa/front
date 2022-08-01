@@ -5,9 +5,9 @@ import {
     Box,
     Paper,
     Grid,
-} from '@mui/material/TextField'
+    FormControl
+} from '@mui/material'
 import {styled} from '@mui/material/styles'
-import FormControl from '@mui/material/FormControl'
 import {SelectField} from '../components'
 
 const Item = styled(Paper)(({theme}) => ({

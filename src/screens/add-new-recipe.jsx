@@ -1,11 +1,6 @@
-import Box from '@mui/material/Box'
-import CssBaseline from '@mui/material/CssBaseline'
-import AppBar from '@mui/material/AppBar'
-import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
-import SideBar from '../Components/Sidebar'
+import {AppBar,Toolbar,Typography,Box,CssBaseline} from '@mui/material'
 import {RecipeContainer} from '../containers'
-import {BreadCrumbs} from '../components'
+import {BreadCrumbs,SideBar} from '../components'
 
 export default function AddNewRecipe() {
     const drawerWidth = 240

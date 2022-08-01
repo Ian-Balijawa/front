@@ -1,5 +1,5 @@
-import { Breadcrumbs, Typography, Link } from '@mui/material';
-import { MailIcon, ListItemIcon } from '@mui/icons-material';
+import { Breadcrumbs, Typography, Link, ListItemIcon } from '@mui/material';
+import MailIcon from '@mui/icons-material/Mail';
 
 function handleClick(event) {
 	event.preventDefault();

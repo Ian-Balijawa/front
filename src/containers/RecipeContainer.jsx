@@ -1,5 +1,5 @@
 import React from 'react'
-import {Typography, Button, TextField, Stack} from '@mui/material/Typography'
+import {Typography, Button, TextField, Stack} from '@mui/material'
 import {Opertaions} from '../components'
 
 export default function RecipeContainer() {
