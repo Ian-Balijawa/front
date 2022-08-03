@@ -1,24 +1,8 @@
-import {
-    TextField,
-    Stack,
-    Button,
-    Divider,
-    ButtonGroup,
-    FormGroup,
-    FormControlLabel,
-    Checkbox,
-    AppBar,
-    Toolbar,
-    Typography,
-    Box,
-    CssBaseline,
-} from '@mui/material'
-import * as React from 'react'
-
-import {SearchIngredientsContainer} from '../containers'
+import {AppBar, Toolbar, Typography, Box, CssBaseline} from '@mui/material'
+import {SelectOutContainer} from '../containers'
 import {BreadCrumbs, SideBar} from '../components'
 
-export default function AddNewRecipe() {
+export default function SelectOutLet() {
     const drawerWidth = 240
 
     return (
@@ -34,7 +18,11 @@ export default function AddNewRecipe() {
             >
                 <Toolbar>
                     <Typography variant="h6" noWrap component="div">
-                        <BreadCrumbs from="Inventory" to="Ingredients" />
+                        <BreadCrumbs
+                            from="Inventory"
+                            through="Preparations"
+                            to="Outlets"
+                        />
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -44,7 +32,7 @@ export default function AddNewRecipe() {
                 sx={{flexGrow: 1, bgcolor: 'background.default', p: 3}}
             >
                 <Toolbar />
-                <SearchIngredientsContainer />
+                <SelectOutContainer />
             </Box>
         </Box>
     )

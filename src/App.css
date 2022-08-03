@@ -9,3 +9,7 @@ input{
 	outline: none;
 	border-radius: 5px;
 }
+
+.MuiSvgIcon-root .MuiSvgIcon-fontSizeMedium .css-khetrb-MuiSvgIcon-root{
+	height: 3rem;
+}

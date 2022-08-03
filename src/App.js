@@ -8,7 +8,12 @@ import Reports from './components/DashboardsComponents/pages/Reports'
 import Settings from './components/DashboardsComponents/pages/Settings'
 import AddRole from './components/Settings/pages/AddRole'
 import * as ROUTES from './constants/routes'
-import {AddNewRecipe, SearchForRecipe, SearchForIngredients} from './screens'
+import {
+    AddNewRecipe,
+    SearchForRecipe,
+    SearchForIngredients,
+    SelectOutLet,
+} from './screens'
 import './App.css'
 
 export default function App() {
@@ -24,6 +29,7 @@ export default function App() {
                     path={ROUTES.SEARCH_INGREDIENTS}
                     element={<SearchForIngredients />}
                 />
+                <Route path={ROUTES.SELECT_OUTLET} element={<SelectOutLet />} />
                 <Route path={ROUTES.HOME} element={<Signin />} />
                 <Route path={ROUTES.SIGNUP} element={<SignUp />} />
                 <Route path={ROUTES.PASS_RESET} element={<PassReset />} />
