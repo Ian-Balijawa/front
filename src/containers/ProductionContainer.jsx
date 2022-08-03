@@ -1,15 +1,20 @@
-import {
-    TextField,
-    Typography,
-    Stack,
-    Box,
-    Grid,
-    FormControl,
-} from '@mui/material'
+import {TextField, Typography, Stack, Box, Grid} from '@mui/material'
 import {IngredientsContainer} from '.'
-import {SelectField} from '../components'
+import {tabPanelSx} from '../constants/tab-styles'
 
 export default function ProductionContainer() {
+    const productions = [
+        {
+            topText: 'Production Prep Time',
+            bottomText: ' Preparation time for 1 Portion',
+        },
+        {
+            topText: 'Production Cooking time',
+            bottomText: 'Cooking time for 1 Portion',
+        },
+        {topText: 'Plating time', bottomText: 'Plating time for 1 Portion'},
+    ]
+
     return (
         <Box
             sx={{
@@ -19,46 +24,35 @@ export default function ProductionContainer() {
                 justifyContent: 'space-between',
             }}
         >
-            <Grid container spacing={3}>
-                <Grid item xs={4}>
-                    <Stack spacing={4} direction="column">
-                        <Stack spacing={3.5} direction="row">
-                            <Typography paragraph>Cuisine</Typography>
-                            <TextField
-                                size="small"
-                                id="outlined-basic"
-                                variant="outlined"
-                                placeholder="E.g. French, Indian,Italian..."
-                            />
+            <Grid container spacing={3} sx={tabPanelSx}>
+                {productions.map((production, index) => (
+                    <Grid item xs={4} key={index}>
+                        <Stack spacing={2} direction="column">
+                            <Stack spacing={1} direction="column">
+                                <Typography sx={{fontWeight: 'light'}}>
+                                    {production.topText}
+                                </Typography>
+                                <Stack spacing={1} direction="row">
+                                    <TextField
+                                        size="small"
+                                        id="outlined-basic"
+                                        variant="outlined"
+                                        placeholder="mins"
+                                    />
+                                    <TextField
+                                        size="small"
+                                        id="outlined-basic"
+                                        variant="outlined"
+                                        placeholder="secs"
+                                    />
+                                </Stack>
+                                <Typography sx={{fontWeight: 'light'}}>
+                                    {production.bottomText}
+                                </Typography>
+                            </Stack>
                         </Stack>
-                        <Stack spacing={2} direction="row">
-                            <Typography paragraph>Shell Life</Typography>
-                            <TextField
-                                size="small"
-                                id="outlined-basic"
-                                variant="outlined"
-                                placeholder="Number of Days"
-                            />
-                        </Stack>
-                        <Stack spacing={2} direction="row">
-                            <Typography paragraph>Difficulty</Typography>
-                            <SelectField
-                                id="outlined-basic"
-                                variant="outlined"
-                                label="----------------"
-                            />
-                        </Stack>
-                    </Stack>
-                </Grid>
-                l{' '}
-                <Grid item xs={8}>
-                    <Stack spacing={2} direction="row">
-                        <Typography paragraph>Extra Information</Typography>
-                        <FormControl fullWidth sx={{m: 1}}>
-                            <TextField id="outlined-basic" variant="outlined" />
-                        </FormControl>
-                    </Stack>
-                </Grid>
+                    </Grid>
+                ))}
             </Grid>
             <IngredientsContainer />
         </Box>

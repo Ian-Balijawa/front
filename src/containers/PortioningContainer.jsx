@@ -4,10 +4,12 @@ import {
     Stack,
     Box,
     Grid,
-    FormControl,
+    FormControlLabel,
+    FormGroup,
+    Checkbox,
 } from '@mui/material'
 import {IngredientsContainer} from '.'
-import {SelectField} from '../components'
+import {tabPanelSx} from '../constants/tab-styles'
 
 export default function PortioningContainer() {
     return (
@@ -19,44 +21,97 @@ export default function PortioningContainer() {
                 justifyContent: 'space-between',
             }}
         >
-            <Grid container spacing={3}>
+            <Grid container spacing={3} sx={tabPanelSx}>
                 <Grid item xs={4}>
-                    <Stack spacing={4} direction="column">
-                        <Stack spacing={3.5} direction="row">
-                            <Typography paragraph>Cuisine</Typography>
-                            <TextField
-                                size="small"
-                                id="outlined-basic"
-                                variant="outlined"
-                                placeholder="E.g. French, Indian,Italian..."
-                            />
-                        </Stack>
+                    <Stack spacing={2} direction="column">
                         <Stack spacing={2} direction="row">
-                            <Typography paragraph>Shell Life</Typography>
-                            <TextField
-                                size="small"
-                                id="outlined-basic"
-                                variant="outlined"
-                                placeholder="Number of Days"
-                            />
-                        </Stack>
-                        <Stack spacing={2} direction="row">
-                            <Typography paragraph>Difficulty</Typography>
-                            <SelectField
-                                id="outlined-basic"
-                                variant="outlined"
-                                label="----------------"
-                            />
+                            <FormGroup>
+                                <FormControlLabel
+                                    control={<Checkbox defaultChecked />}
+                                    label="This is a semi-finished produtct"
+                                />
+                                <Typography
+                                    paragraph
+                                    marginLeft="2rem"
+                                    fontWeight="light"
+                                >
+                                    When checked, the recipe can be used as a
+                                    sub recipe in other recipes{' '}
+                                </Typography>
+                            </FormGroup>
                         </Stack>
                     </Stack>
                 </Grid>
-                l{' '}
-                <Grid item xs={8}>
-                    <Stack spacing={2} direction="row">
-                        <Typography paragraph>Extra Information</Typography>
-                        <FormControl fullWidth sx={{m: 1}}>
-                            <TextField id="outlined-basic" variant="outlined" />
-                        </FormControl>
+
+                <Grid item xs={3}>
+                    <Stack spacing={1} direction="column">
+                        <Typography paragraph sx={{marginBottom: '0.5rem'}}>
+                            #Portions(Required)
+                        </Typography>
+                        <TextField
+                            size="small"
+                            id="outlined-basic"
+                            variant="outlined"
+                        />
+                        <Typography>
+                            Number of portions or servings this recipe is
+                            designed for
+                        </Typography>
+                    </Stack>
+                </Grid>
+
+                <Grid item xs={4}>
+                    <Stack spacing={2} direction="column">
+                        <Stack spacing={1}>
+                            <Typography
+                                paragraph
+                                fontWeight="bold"
+                                sx={{marginBottom: '0.5rem'}}
+                            >
+                                Net measurement Info (Required)
+                            </Typography>
+                            <FormGroup>
+                                <FormControlLabel
+                                    control={<Checkbox defaultChecked />}
+                                    label="I want to enter weight and volume manually"
+                                />
+                            </FormGroup>
+                        </Stack>
+                        <Stack spacing={1} direction="column">
+                            <Typography>Weight</Typography>
+                            <Stack spacing={1} direction="row">
+                                <TextField
+                                    size="small"
+                                    id="outlined-basic"
+                                    variant="outlined"
+                                    placeholder="100,000..."
+                                />
+                                <TextField
+                                    size="small"
+                                    id="outlined-basic"
+                                    variant="outlined"
+                                    placeholder="g,Kg,..."
+                                />
+                            </Stack>
+                        </Stack>
+
+                        <Stack spacing={1} direction="column">
+                            <Typography>Volume</Typography>
+                            <Stack spacing={1} direction="row">
+                                <TextField
+                                    size="small"
+                                    id="outlined-basic"
+                                    variant="outlined"
+                                    placeholder="100,000..."
+                                />
+                                <TextField
+                                    size="small"
+                                    id="outlined-basic"
+                                    variant="outlined"
+                                    placeholder="ml,ltr,..."
+                                />
+                            </Stack>
+                        </Stack>
                     </Stack>
                 </Grid>
             </Grid>

@@ -1,9 +1,8 @@
-import TextField from '@mui/material/TextField'
-import Typography from '@mui/material/Typography'
-import Stack from '@mui/material/Stack'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import {IngredientsContainer} from '.'
+import {FormGroup, FormControlLabel, Checkbox} from '@mui/material'
+import {tabPanelSx} from '../constants/tab-styles'
 
 export default function InventoryContainer() {
     return (
@@ -15,37 +14,14 @@ export default function InventoryContainer() {
                 justifyContent: 'space-between',
             }}
         >
-            <Grid container spacing={3}>
+            <Grid container spacing={3} sx={tabPanelSx}>
                 <Grid item xs={4}>
-                    <Stack spacing={4} direction="column">
-                        <Stack spacing={2} direction="row">
-                            <Typography paragraph>EAN/UPC</Typography>
-                            <TextField
-                                size="small"
-                                id="outlined-basic"
-                                variant="outlined"
-                                placeholder="Barcode"
-                            />
-                        </Stack>
-                        <Stack spacing={2} direction="row">
-                            <Typography paragraph>System ID</Typography>
-                            <TextField
-                                size="small"
-                                id="outlined-basic"
-                                variant="outlined"
-                                placeholder=""
-                            />
-                        </Stack>
-                        <Stack spacing={2} direction="row">
-                            <Typography paragraph>Custom ID </Typography>
-                            <TextField
-                                size="small"
-                                id="outlined-basic"
-                                variant="outlined"
-                                placeholder="Custom ID"
-                            />
-                        </Stack>
-                    </Stack>
+                    <FormGroup>
+                        <FormControlLabel
+                            control={<Checkbox defaultChecked />}
+                            label="Set Recipe Stockable"
+                        />
+                    </FormGroup>
                 </Grid>
             </Grid>
             <IngredientsContainer />

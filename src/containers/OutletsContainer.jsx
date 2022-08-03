@@ -1,13 +1,14 @@
 import {
-    TextField,
     Typography,
     Stack,
     Box,
     Grid,
-    FormControl,
+    FormGroup,
+    FormControlLabel,
+    Checkbox,
 } from '@mui/material'
 import {IngredientsContainer} from '.'
-import {SelectField} from '../components'
+import {tabPanelSx} from '../constants/tab-styles'
 
 export default function OutletsContainer() {
     return (
@@ -19,46 +20,30 @@ export default function OutletsContainer() {
                 justifyContent: 'space-between',
             }}
         >
-            <Grid container spacing={3}>
-                <Grid item xs={4}>
-                    <Stack spacing={4} direction="column">
-                        <Stack spacing={3.5} direction="row">
-                            <Typography paragraph>Cuisine</Typography>
-                            <TextField
-                                size="small"
-                                id="outlined-basic"
-                                variant="outlined"
-                                placeholder="E.g. French, Indian,Italian..."
-                            />
-                        </Stack>
-                        <Stack spacing={2} direction="row">
-                            <Typography paragraph>Shell Life</Typography>
-                            <TextField
-                                size="small"
-                                id="outlined-basic"
-                                variant="outlined"
-                                placeholder="Number of Days"
-                            />
-                        </Stack>
-                        <Stack spacing={2} direction="row">
-                            <Typography paragraph>Difficulty</Typography>
-                            <SelectField
-                                id="outlined-basic"
-                                variant="outlined"
-                                label="----------------"
-                            />
-                        </Stack>
-                    </Stack>
-                </Grid>
-                l{' '}
-                <Grid item xs={8}>
+            <Grid container spacing={1} sx={tabPanelSx}>
+                <Stack spacing={2} direction="column" sx={{padding: '2rem'}}>
+                    <Typography
+                        paragraph
+                        sx={{marginBottom: '-.6rem', fontWeight: 'bold'}}
+                    >
+                        Select outlet in which this Recipe will be accessible
+                        and active
+                    </Typography>
                     <Stack spacing={2} direction="row">
-                        <Typography paragraph>Extra Information</Typography>
-                        <FormControl fullWidth sx={{m: 1}}>
-                            <TextField id="outlined-basic" variant="outlined" />
-                        </FormControl>
+                        <FormGroup>
+                            <FormControlLabel
+                                control={<Checkbox />}
+                                label="Bake My Day Entebbe "
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <FormControlLabel
+                                control={<Checkbox defaultChecked />}
+                                label="Bake My Day Ntinda"
+                            />
+                        </FormGroup>
                     </Stack>
-                </Grid>
+                </Stack>
             </Grid>
             <IngredientsContainer />
         </Box>

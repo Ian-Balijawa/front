@@ -7,10 +7,11 @@ import TableContainer from '@mui/material/TableContainer'
 import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
+import {tabPanelSx} from '../constants/tab-styles'
 
 export default function IngredientContainer() {
     return (
-        <Box sx={{padding: '2rem'}}>
+        <Box sx={{tabPanelSx}}>
             <Typography>Ingredients</Typography>
             <IngredientsTable />
         </Box>
