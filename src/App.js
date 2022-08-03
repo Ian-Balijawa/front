@@ -13,8 +13,8 @@ import {
     SearchForRecipe,
     SearchForIngredients,
     SelectOutLet,
+    ViewPreparations,
 } from './screens'
-import './App.css'
 
 export default function App() {
     return (
@@ -28,6 +28,10 @@ export default function App() {
                 <Route
                     path={ROUTES.SEARCH_INGREDIENTS}
                     element={<SearchForIngredients />}
+                />
+                <Route
+                    path={ROUTES.VIEW_PREPARATIONS}
+                    element={<ViewPreparations />}
                 />
                 <Route path={ROUTES.SELECT_OUTLET} element={<SelectOutLet />} />
                 <Route path={ROUTES.HOME} element={<Signin />} />
