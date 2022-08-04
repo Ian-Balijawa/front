@@ -13,7 +13,8 @@ import {
     SearchForRecipe,
     SearchForIngredients,
     SelectOutLet,
-    ViewPreparations,
+    BakeMyDayNtinda,
+    BakeMyDayEntebbe,
 } from './screens'
 
 export default function App() {
@@ -30,8 +31,12 @@ export default function App() {
                     element={<SearchForIngredients />}
                 />
                 <Route
-                    path={ROUTES.VIEW_PREPARATIONS}
-                    element={<ViewPreparations />}
+                    path={ROUTES.BAKE_MY_DAY_NTINDA}
+                    element={<BakeMyDayNtinda />}
+                />
+                <Route
+                    path={ROUTES.BAKE_MY_DAY_ENTEBBE}
+                    element={<BakeMyDayEntebbe />}
                 />
                 <Route path={ROUTES.SELECT_OUTLET} element={<SelectOutLet />} />
                 <Route path={ROUTES.HOME} element={<Signin />} />

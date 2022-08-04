@@ -3,23 +3,7 @@ import * as React from 'react'
 import {DataGrid} from '@mui/x-data-grid'
 import {AddOutlined} from '@mui/icons-material'
 
-export default function PreparationsContainer() {
-    const btnStyles = {
-        minWidth: '40px',
-        maxWidth: '150px',
-        maxHeight: '100px',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-around',
-        margin: '1rem',
-        color: 'black',
-        borderRadius: '4px',
-        border: 'none',
-        boxShadow: '-1px 1px 7px 5px #eee;',
-        '&:hover': {
-            border: 'none',
-        },
-    }
+export default function BakeMyDayEntebbeContainer() {
     return (
         <React.Fragment>
             <Stack direction="row" justifyContent="space-between">

@@ -1,8 +1,8 @@
 import {AppBar, Toolbar, Typography, Box, CssBaseline} from '@mui/material'
-import {PreparationsContainer} from '../containers'
+import {BakeMyDayNtindaContainer} from '../containers'
 import {BreadCrumbs, SideBar} from '../components'
 
-export default function ViewPreparations() {
+export default function BakeMyDayNtinda() {
     const drawerWidth = 240
 
     return (
@@ -32,7 +32,7 @@ export default function ViewPreparations() {
                 sx={{flexGrow: 1, bgcolor: 'background.default', p: 3}}
             >
                 <Toolbar />
-                <PreparationsContainer />
+                <BakeMyDayNtindaContainer />
             </Box>
         </Box>
     )
