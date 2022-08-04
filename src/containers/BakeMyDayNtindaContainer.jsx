@@ -3,6 +3,21 @@ import * as React from 'react'
 import {tabPanelSx} from '../constants/tab-styles'
 
 export default function BakeMyDayNtindaContainer() {
+    const preparedItems = [
+        {
+            stockItem: 'Home made lemon mayonnaise  per killo (1 kg)',
+            quantity: 1,
+            totalQty: 0.5,
+            remarks: 'N/A',
+        },
+        {
+            stockItem: 'Home made lemon mayonnaise  bottle (70 g)',
+            quantity: 0.5,
+            totalQty: 0.5,
+            remarks: 'N/A',
+        },
+    ]
+
     return (
         <React.Fragment>
             <Stack direction="row" sx={{marginBottom: '1rem'}}>
@@ -86,23 +101,82 @@ export default function BakeMyDayNtindaContainer() {
                     </Stack>
                 </Stack>
 
-                <Stack direction="column" sx={{marginTop: '1rem'}}>
-                    <Typography>List of Prepared Items</Typography>
-                    <Divider />
-                    <Box
-                        sx={{
-                            align: 'center',
-                            padding: '1rem',
-                            margin: '0 auto',
-                        }}
-                        direction="row"
-                    >
-                        <Typography>
-                            No preparation events registered yet
-                        </Typography>
-                    </Box>
-                    <Divider />
-                </Stack>
+                <Typography>List of Prepared Items</Typography>
+
+                <Divider />
+                {preparedItems.length === 0 ? (
+                    <Stack direction="column" sx={{marginTop: '1rem'}}>
+                        <Box
+                            sx={{
+                                align: 'center',
+                                padding: '1rem',
+                                margin: '0 auto',
+                            }}
+                            direction="row"
+                        >
+                            <Typography>
+                                No preparation events registered yet
+                            </Typography>
+                        </Box>
+                        <Divider />
+                    </Stack>
+                ) : (
+                    preparedItems.map((item, index) => (
+                        <Stack
+                            direction="row"
+                            spacing={1}
+                            sx={{
+                                padding: '5px',
+                                '&:nth-child(odd)': {
+                                    background: 'rgba(227, 227, 227, 0.6)',
+                                },
+                            }}
+                        >
+                            <Stack sx={{width: '50%'}}>
+                                <Typography>{item.stockItem}</Typography>
+                            </Stack>
+
+                            <Stack
+                                spacing={6}
+                                direction="row"
+                                sx={{
+                                    width: '50%',
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                    justifyContent: 'space-between',
+                                }}
+                            >
+                                <Stack
+                                    direction="row"
+                                    spacing={1}
+                                    sx={{
+                                        width: '50%',
+                                        justifyContent: 'space-evenly',
+                                    }}
+                                >
+                                    <Typography>{item.quantity}</Typography>
+                                    <Typography>{item.totalQty}</Typography>
+                                </Stack>
+                                <Stack direction="row" spacing={15}>
+                                    <Typography>{item.remarks}</Typography>
+                                    <Button
+                                        variant="contained"
+                                        sx={{
+                                            border: '1px solid #cccc',
+                                            color: 'black',
+                                            background: '#ffff',
+                                            '&:hover': {
+                                                background: '#cccc',
+                                            },
+                                        }}
+                                    >
+                                        Remove
+                                    </Button>
+                                </Stack>
+                            </Stack>
+                        </Stack>
+                    ))
+                )}
             </Box>
             <br />
         </React.Fragment>
