@@ -77,7 +77,15 @@ export default function BakeMyDayNtindaContainer() {
                 </Stack>
                 <Divider />
 
-                <Stack direction="row" spacing={1} sx={{padding: '5px'}}>
+                <Stack
+                    direction="row"
+                    spacing={1}
+                    sx={{
+                        padding: '5px',
+                        marginTop: '.5em',
+                        marginBottom: '.5em',
+                    }}
+                >
                     <Stack sx={{width: '50%'}}>
                         <TextField
                             size="small"
@@ -103,9 +111,9 @@ export default function BakeMyDayNtindaContainer() {
 
                 <Typography>List of Prepared Items</Typography>
 
-                <Divider />
+                <Divider sx={{marginBottom: 'rem'}} />
                 {preparedItems.length === 0 ? (
-                    <Stack direction="column" sx={{marginTop: '1rem'}}>
+                    <Stack direction="column">
                         <Box
                             sx={{
                                 align: 'center',
