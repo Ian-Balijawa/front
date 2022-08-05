@@ -1,69 +1,43 @@
-import {
-    TextField,
-    Typography,
-    Stack,
-    Box,
-    Grid,
-    FormControl,
-} from '@mui/material'
-import {IngredientsContainer} from '.'
-import {SelectField} from '../components'
+import {Typography, Stack, Box, Grid} from '@mui/material'
 import * as React from 'react'
-import {tabPanelSx} from '../constants/tab-styles'
 
 export default function PackagesAndPricingContainer() {
     return (
         <React.Fragment>
             <Grid
                 container
-                spacing={5}
+                spacing={2}
                 sx={{
-                    flexGrow: 1,
                     display: 'flex',
                     flexDirection: 'row',
                     boxShadow: '-1px 1px 7px 5px #eee;',
-                    justifyContent: 'space-between',
-                    marginTop: '-1rem',
-                    marginLeft: '-1rem',
                     borderTop: 'none',
                     padding: '2rem',
                     borderRadius: '4px',
+                    margin: 'auto',
                 }}
             >
-                <Stack direction="column" sx={{width: '40%'}}>
+                <Stack
+                    direction="column"
+                    sx={{width: '45%', marginRight: '4em'}}
+                >
                     <Typography paragraph>Package Information</Typography>
-                    <TableHeader />
+                    <PackageInformationTableHeader />
                     <PackagesSection />
                     <ConversionAndWaste />
                 </Stack>
-
-                <Stack spacing={2} direction="column" sx={{width: '50%'}}>
-                    <Stack spacing={2} direction="colum">
-                        <Typography paragraph>EAN/UPC</Typography>
-                        <TextField
-                            size="small"
-                            id="outlined-basic"
-                            variant="outlined"
-                            placeholder="Barcode"
-                        />
-                    </Stack>
-                    <Stack spacing={2} direction="column">
-                        <Typography paragraph>System ID</Typography>
-                        <TextField
-                            size="small"
-                            id="outlined-basic"
-                            variant="outlined"
-                            placeholder=""
-                        />
-                    </Stack>
+                <Stack direction="column" sx={{width: '45%'}}>
+                    <Typography paragraph>Suppliers and Pricing</Typography>
+                    <SuppliersAndPricingTableHeader />
+                    <SuppliersAndPricingSection />
                 </Stack>
             </Grid>
-            <IngredientsContainer />
+            <IngredientsContainerForPackagesAndPricing />
         </React.Fragment>
     )
 }
 
-const TableHeader = () => {
+const PackageInformationTableHeader = () => {
     return (
         <Stack
             direction="row"
@@ -72,6 +46,28 @@ const TableHeader = () => {
                 borderBottom: '2px solid #000000',
                 background: '#FFE5DC',
                 margin: 'auto',
+            }}
+        >
+            <Typography>Content</Typography>
+            <Typography>Supplier</Typography>
+            <Typography>Product Name</Typography>
+            <Typography>Price</Typography>
+            <Typography>Price/ Unit</Typography>
+            <Typography>Edit</Typography>
+        </Stack>
+    )
+}
+
+const SuppliersAndPricingTableHeader = () => {
+    return (
+        <Stack
+            direction="row"
+            spacing={4}
+            sx={{
+                borderBottom: '2px solid #000000',
+                background: '#FFE5DC',
+                margin: '0 auto',
+                marginTop: '-0.1em',
             }}
         >
             <Typography>Package Type</Typography>
@@ -95,12 +91,34 @@ const PackagesSection = () => {
                 alignContent: 'center',
                 borderBottom: '1px solid #000000',
                 padding: '5px',
-                width: '29.3em',
+                width: '28em',
             }}
         >
             {packagesList.length === 0 && (
                 <Typography sx={{margin: 'auto'}}>
                     No Packages linked to this Ingredient
+                </Typography>
+            )}
+        </Stack>
+    )
+}
+const SuppliersAndPricingSection = () => {
+    const suppliersAndPricingList = []
+    return (
+        <Stack
+            direction="columns"
+            sx={{
+                display: 'flex',
+                alignItems: 'center',
+                alignContent: 'center',
+                borderBottom: '1px solid #000000',
+                padding: '5px',
+                width: '28em',
+            }}
+        >
+            {suppliersAndPricingList.length === 0 && (
+                <Typography sx={{margin: 'auto'}}>
+                    No Supplier Packages linked to this Ingredient
                 </Typography>
             )}
         </Stack>
@@ -117,7 +135,7 @@ const ConversionAndWaste = () => {
             >
                 Conversions & Waste
             </Typography>
-            <hr />
+            <hr style={{width: '28em'}} />
             <Stack
                 direction="columns"
                 sx={{
@@ -143,5 +161,107 @@ const ConversionAndWaste = () => {
                 </Stack>
             </Stack>
         </Box>
+    )
+}
+
+const IngredientsContainerForPackagesAndPricing = () => {
+    const ingredientsAndSubRecipesList = [
+        {
+            ingredientAndSubRecipes: 'Mayonnaise',
+            supplier: 'Nic&Nico Supplies',
+            netQty: '60 ml',
+            grossQty: '60 ml',
+            waste: '0%',
+        },
+        {
+            ingredientAndSubRecipes: 'Lemon Juice',
+            supplier: 'Juices by Nic',
+            netQty: '6 ml',
+            grossQty: '6 ml',
+            waste: '0%',
+        },
+        {
+            ingredientAndSubRecipes: 'Lemon Zest',
+            supplier: 'Nic&Nico Supplies',
+            netQty: '4 g',
+            grossQty: '4 g',
+            waste: '0%',
+        },
+    ]
+
+    return (
+        <Stack
+            direction="column"
+            sx={{
+                marginTop: '2rem',
+                boxShadow: '-1px 1px 7px 5px #eee;',
+                borderTop: 'none',
+                padding: '2rem',
+                borderRadius: '4px',
+            }}
+        >
+            <IngredientsContainerForPackagesAndPricingHeader />
+            {ingredientsAndSubRecipesList.map((ingredient, index) => (
+                <IngredientsContainerForPackagesAndPricingRow
+                    key={index}
+                    ingredientAndSubRecipes={ingredient.ingredientAndSubRecipes}
+                    supplier={ingredient.supplier}
+                    netQty={ingredient.netQty}
+                    grossQty={ingredient.grossQty}
+                    waste={ingredient.waste}
+                />
+            ))}
+        </Stack>
+    )
+}
+
+const IngredientsContainerForPackagesAndPricingHeader = () => {
+    return (
+        <Stack
+            direction="row"
+            sx={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                borderBottom: '1px solid #000000',
+                background: '#FFE5DC',
+                fontWeight: 'bold',
+                alignItems: 'center',
+                alignContent: 'center',
+                textAlign: 'left',
+                padding: '0 1em',
+                marginBottom: '-3px',
+            }}
+        >
+            <Typography paragraph>Ingredient and Sub Recipes</Typography>
+            <Typography paragraph>Supplier</Typography>
+            <Typography paragraph>Net Qty.</Typography>
+            <Typography paragraph>Gross Qty</Typography>
+            <Typography paragraph>Waste %</Typography>
+        </Stack>
+    )
+}
+
+const IngredientsContainerForPackagesAndPricingRow = props => {
+    const {ingredientAndSubRecipes, supplier, netQty, grossQty, waste} = props
+
+    return (
+        <Stack
+            direction="row"
+            sx={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                borderBottom: '0.5px solid rgba(122, 122, 122, 0.8)',
+                '&:nth-child(odd)': {
+                    background: 'rgba(227, 227, 227, 0.6)',
+                },
+                textAlign: 'left',
+            }}
+        >
+            <Typography paragraph>{ingredientAndSubRecipes}</Typography>
+            <Typography paragraph>{supplier}</Typography>
+            <Typography paragraph>{netQty}</Typography>
+            <Typography paragraph>{grossQty}</Typography>
+            <Typography paragraph>{waste}</Typography>
+        </Stack>
     )
 }
