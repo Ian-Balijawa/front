@@ -39,7 +39,6 @@ export default function General() {
                                 id="outlined-basic"
                                 variant="outlined"
                                 placeholder=""
-                                disabled
                             />
                         </Stack>
                         <Stack spacing={2} direction="row">

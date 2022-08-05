@@ -1,17 +1,12 @@
 import React from 'react'
 import {Box, Typography, Stack, TextField} from '@mui/material'
 import {tabPanelSx} from '../constants/tab-styles'
+import {AddOutlined} from '@mui/icons-material'
 
 export default function IngredientContainer() {
     return (
         <>
             <IngredientsTable />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
             <br />
             <br />
             <br />
@@ -66,11 +61,15 @@ function IngredientsTable() {
 
 const Header = () => {
     return (
-        <Stack direction="row" spacing={2}>
-            <Stack width={'50%'}>
+        <Stack direction="row" spacing={2} sx={{marginLeft: '2rem'}}>
+            <Stack width={'40%'}>
                 <Typography>[I]Ingredient or [R]Recipe name</Typography>
             </Stack>
-            <Stack direction="row" spacing={2}>
+            <Stack
+                direction="row"
+                spacing={5}
+                sx={{width: '30%', marginLeft: '2em'}}
+            >
                 <Typography>Net Qty.</Typography>
                 <Typography>Unit</Typography>
                 <Typography>Prep Waste %</Typography>
@@ -78,7 +77,7 @@ const Header = () => {
             <Stack
                 direction={'row'}
                 spacing={2}
-                sx={{justifyContent: 'space-between', width: '25%'}}
+                sx={{justifyContent: 'space-evenly', width: '30%'}}
             >
                 <Typography>Remarks</Typography>
                 <Stack direction="row">
@@ -92,24 +91,29 @@ const Header = () => {
 const TableRow = ({netQty, unit, prepWaste, remarks, actions}) => {
     return (
         <Stack direction="row" spacing={2} sx={{marginTop: '1em'}}>
-            <Stack width={'50%'}>
+            <Stack sx={{width: '50%'}}>
                 <TextField size="small" disabled />
             </Stack>
-            <Stack direction="row" spacing={2}>
-                <TextField size="small" placeholder={netQty} />
-                <TextField size="small" placeholder={unit} />
-                <TextField size="small" placeholder={prepWaste} />
-            </Stack>
+            <TextField size="small" sx={{width: '7rem'}} placeholder={netQty} />
+            <TextField size="small" sx={{width: '7rem'}} placeholder={unit} />
+            <TextField
+                size="small"
+                sx={{width: '7rem'}}
+                placeholder={prepWaste}
+            />
             <Stack
                 direction={'row'}
                 spacing={2}
-                sx={{justifyContent: 'space-between'}}
+                sx={{justifyContent: 'space-evenly', width: '30%'}}
             >
-                <TextField size="small" placeholder={remarks} />
-
-                <Stack direction="row" spacing={2} width="50%">
-                    <TextField size="small" placeholder={actions} />
-                    <TextField size="small" placeholder={actions} />
+                <TextField
+                    size="small"
+                    sx={{width: '6rem'}}
+                    placeholder={remarks}
+                />
+                <Stack direction="row">
+                    <AddOutlined />
+                    <AddOutlined />
                 </Stack>
             </Stack>
         </Stack>

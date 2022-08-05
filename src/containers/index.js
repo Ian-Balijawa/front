@@ -12,3 +12,4 @@ export {default as SearchIngredientsContainer} from './SearchIngredientsContaine
 export {default as SelectOutContainer} from './SelectOutContainer'
 export {default as BakeMyDayEntebbeContainer} from './BakeMyDayEntebbeContainer'
 export {default as BakeMyDayNtindaContainer} from './BakeMyDayNtindaContainer'
+export {default as PackagesAndPricingContainer} from './PackagesAndPricingContainer'

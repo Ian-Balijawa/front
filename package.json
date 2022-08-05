@@ -9,8 +9,11 @@
         "eject": "react-scripts eject"
     },
     "dependencies": {
+        "@emotion/hash": "^0.9.0",
         "@emotion/react": "^11.9.3",
         "@emotion/styled": "^11.9.3",
+        "@material-ui/core": "^4.12.4",
+        "@mui/core": "^5.0.0-alpha.54",
         "@mui/icons-material": "^5.8.4",
         "@mui/joy": "^5.0.0-alpha.38",
         "@mui/lab": "^5.0.0-alpha.91",

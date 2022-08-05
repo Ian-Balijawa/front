@@ -10,10 +10,12 @@ import {
     OutletsContainer,
     FinancialContainer,
     ImagesContainer,
+    PackagesAndPricingContainer,
 } from '../containers'
 
 const operations = [
     'General',
+    'Packages-and-Pricing',
     'Inventory',
     'Portioning',
     'Production',
@@ -109,6 +111,8 @@ export default function RecipeTabContextOperations() {
                         <FinancialContainer />
                     ) : text === 'Images' ? (
                         <ImagesContainer />
+                    ) : text === 'Packages-and-Pricing' ? (
+                        <PackagesAndPricingContainer />
                     ) : (
                         text
                     )}
