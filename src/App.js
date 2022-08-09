@@ -1,68 +1,30 @@
-<<<<<<< HEAD
-import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
-import Login from "./content/Auth/Login";
-import Register from "./content/Auth/Register";
-import ForgotPassword from "./content/Auth/ForgotPassword";
-import ResetPassword from "./content/Auth/ResetPassword";
-import Dashboard from "./content/Dashboard";
-import Settings from "./content/Settings";
-import Inventory from "./content/Inventory";
-import Reports from "./content/Reports";
+import './App.css'
+import {Routes, Route, Link} from 'react-router-dom'
+import Login from './content/Auth/Login'
+import Register from './content/Auth/Register'
+import ForgotPassword from './content/Auth/ForgotPassword'
+import ResetPassword from './content/Auth/ResetPassword'
+import Dashboard from './content/Dashboard'
+import Settings from './content/Settings'
+import Inventory from './content/Inventory'
+import Reports from './content/Reports'
 
 function App() {
-  return (
-    <div className="App">
-      <Routes>
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
-        <Route path="forgot-password" element={<ForgotPassword />} />
-        <Route path="reset-password" element={<ResetPassword />} />
-
-        <Route path="/" element={<Dashboard />} />
-        <Route path="settings" element={<Settings />} />
-        <Route path="inventory" element={<Inventory />} />
-        <Route path="reports" element={<Reports />} />
-      </Routes>
-    </div>
-  );
-}
-
-export default App;
-=======
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import SignUp from './components/AccountsComponent/SignUp';
-import PassReset from './components/AccountsComponent/PassReset';
-import Signin from './components/AccountsComponent/Signin';
-import DashboardLayout from './components/DashboardsComponents/Dashboard';
-import Home from './components/DashboardsComponents/pages/Home';
-import Inventory from './components/DashboardsComponents/pages/Inventory';
-import Reports from './components/DashboardsComponents/pages/Reports';
-import Settings from './components/DashboardsComponents/pages/Settings';
-import AddRole from './components/Settings/pages/AddRole';
-import NewEmployee from './components/Settings/pages/newEmployee/NewEmployee';
-
-export default class App extends Component {
-  render() {
     return (
-        <div>
-          <Router>
+        <div className="App">
             <Routes>
-              <Route path='/' element={<Signin />} />
-              <Route path='/dashboard' element={<Home />} />
-              <Route path='/inventory' element={<Inventory />} />
-              <Route path='/reports' element={<Reports />} />
-              <Route path='/settings' element={<Settings />} />
-              <Route path='/addrole' element={<AddRole />} />
-              <Route path='/addemployee' element={<NewEmployee />} />
+                <Route path="login" element={<Login />} />
+                <Route path="register" element={<Register />} />
+                <Route path="forgot-password" element={<ForgotPassword />} />
+                <Route path="reset-password" element={<ResetPassword />} />
+
+                <Route path="/" element={<Dashboard />} />
+                <Route path="settings" element={<Settings />} />
+                <Route path="inventory" element={<Inventory />} />
+                <Route path="reports" element={<Reports />} />
             </Routes>
-          </Router>
-          {/* <Signin /> */}
-          {/* <SignUp /> */}
-          {/* <PassReset /> */}
         </div>
     )
-  }
 }
->>>>>>> 2bc6d5e5718e636d6f81447713d7f77fff3d1eb0
+
+export default App
