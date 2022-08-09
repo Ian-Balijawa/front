@@ -25,6 +25,10 @@ a {
     background: #e46036 !important;
 }
 
+.text-theme {
+    color: #e46036 !important;
+}
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -124,4 +128,8 @@ a {
 .form-select {
     border: 0.7px solid #7a7a7a !important;
     border-radius: 4px !important;
+}
+
+label {
+    display: flow-root !important;
 }

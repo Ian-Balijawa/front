@@ -1,0 +1,32 @@
+.search {
+    position: relative;
+}
+
+.search input {
+    height: 50px;
+    text-indent: 25px;
+    background: #ffffff;
+    border: 0.5px solid #7a7a7a;
+    border-radius: 50px;
+    width: 50vw;
+    padding-left: 25px;
+    color: #7a7a7a;
+}
+
+.search input:focus {
+    color: #000000;
+}
+
+.search .icon {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    color: #a5a5a5;
+    font-size: 1.5rem;
+}
+
+.search button {
+    position: absolute;
+    top: 10px;
+    right: 35px;
+}

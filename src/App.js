@@ -8,6 +8,7 @@ import Dashboard from './content/Dashboard'
 import Settings from './content/Settings'
 import Inventory from './content/Inventory'
 import Reports from './content/Reports'
+import EmployeeSetup from './content/Settings/EmployeeSetup/EmployeeSetup'
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
 
                 <Route path="/" element={<Dashboard />} />
                 <Route path="settings" element={<Settings />} />
+                <Route path="employee-setup" element={<EmployeeSetup />} />
                 <Route path="inventory" element={<Inventory />} />
                 <Route path="reports" element={<Reports />} />
             </Routes>
