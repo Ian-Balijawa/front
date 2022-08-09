@@ -1,44 +1,45 @@
 .register_header {
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  /* line-height: 72px; */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    /* line-height: 72px; */
 }
 
 .border_color {
-  border-color: #7a7a7a !important;
+    border: 0.7px solid #7a7a7a !important;
+    border-radius: 4px !important;
 }
 
 hr.divider {
-  border-bottom: 1px solid rgba(122, 122, 122, 0.8) !important;
-  padding: 0;
+    border-bottom: 1px solid rgba(122, 122, 122, 0.8) !important;
+    padding: 0;
 }
 
 .passandforgot {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .passandforgot span {
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  cursor: pointer;
-  color: #e46036;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+    color: #e46036;
 }
 
 .forgotBtn {
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  /* identical to box height */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
 
-  text-align: center;
+    text-align: center;
 
-  color: #ffffff;
+    color: #ffffff;
 }
