@@ -1,12 +1,12 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 
-const GPCard = ({children,className}) => {
+const GPCard = ({children,classes}) => {
   return (
 
       <Card
         style={styles.card}
-        className={className}
+        className={`btn ${classes}`}
       >  
         <Card.Body>
             {children}

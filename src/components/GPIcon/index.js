@@ -58,9 +58,10 @@ export const InventoryIcon = () => {
 }
 
 export const ReportIcon = () => {
-    return (
-        <>
-            <img src={Report} width={20} height={20} className="m-2" alt="" />
-        </>
-    )
-}
+  return (
+    <>
+      <img src={Report} width={20} height={20} className="m-2" alt="" />
+    </>
+  );
+};
+
