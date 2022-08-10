@@ -1,9 +1,13 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 
-const GPCard = ({children}) => {
+const GPCard = ({children,className}) => {
   return (
-      <Card>  
+
+      <Card
+        style={styles.card}
+        className={className}
+      >  
         <Card.Body>
             {children}
         </Card.Body>
@@ -12,3 +16,15 @@ const GPCard = ({children}) => {
 }
 
 export default GPCard
+
+const styles = {
+   card:{
+     backgroundColor:"#FFFEFE",
+     border:"0.5px solid #CBCBCB",
+     borderRadius:"6px",
+     boxShadow:"0px 6px 15px 3px rgba(84, 84, 84, 0.1)",
+     width:"100%"
+
+
+   }
+}
