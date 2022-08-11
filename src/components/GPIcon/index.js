@@ -1,24 +1,9 @@
-import Home from '../../assets/icons/home.svg'
-import Inventory from '../../assets/icons/inventoryIcon.svg'
-import Report from '../../assets/icons/reportsIcon.svg'
-import Setting from '../../assets/icons/settingGear.svg'
-import ImportI from '../../assets/icons/importicon.svg'
-import './gp_icon.css'
-
-export const ImportIcon = () => {
-    return (
-        <>
-            <img
-                style={{color: '#232A3B'}}
-                src={ImportI}
-                width={20}
-                height={20}
-                className="m-2 svg-black"
-                alt=""
-            />
-        </>
-    )
-}
+import Home from "../../assets/icons/home.svg";
+import Inventory from "../../assets/icons/inventoryIcon.svg";
+import Report from "../../assets/icons/reportsIcon.svg";
+import Close from "../../assets/icons/closeIcon.svg";
+import Setting from "../../assets/icons/settingGear.svg";
+import "./gp_icon.css";
 
 export const SettingIcon = () => {
     return (
@@ -61,6 +46,14 @@ export const ReportIcon = () => {
   return (
     <>
       <img src={Report} width={20} height={20} className="m-2" alt="" />
+    </>
+  );
+};
+
+export const CloseIcon = () => {
+  return (
+    <>
+      <img src={Close} width={20} height={20} className="m-2" alt="" />
     </>
   );
 };

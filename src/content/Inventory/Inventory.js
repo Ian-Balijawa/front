@@ -1,9 +1,18 @@
-import React from "react";
+import React,{useState} from "react";
 import GPCard from "../../components/GPCard/GPCard";
 import GPLayout from "../../components/GPLayout";
 import GPModal from "../../components/GPModal/GPModal";
 
+import { Button } from "react-bootstrap";
+
 function Inventory() {
+
+
+  const [show, setShow] = useState(false)
+  const handleClose =()=>{
+      setShow(false)
+  }
+
   return (
     <GPLayout>
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
@@ -26,15 +35,25 @@ function Inventory() {
 
            Modal
 
+          
+           <Button onClick={()=>setShow(true)}>
+             Show
+           </Button>
+
            <GPModal
               title="find all the tings"
+              buttonText="Add Package"
+              show={show}
+              handleClose={()=>handleClose()}
             >
 
-              {
-              "I am a Modal"
-              }
+              
+                Pass children here
+              
 
            </GPModal>
+
+
 
       </main>
     </GPLayout>

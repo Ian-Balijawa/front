@@ -2,30 +2,33 @@
 import React,{useState} from 'react'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-
-const GPModal = ({title,children}) => {
-
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+import { CloseIcon } from "../GPIcon";
 
 
+const GPModal = ({
+      title,
+      children,
+      show,
+      handleClose,
+      onActionButtonClick,
+      buttonText="Save"
+    }) => {
 
     return (
-        <>
-        <Button variant="primary" onClick={handleShow}>
-          Modal
-        </Button>
-  
+      
         <Modal show={show} onHide={handleClose}>
-          <Modal.Header >
+          <Modal.Header style={styles.header} >
           
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title style={styles.title}> {title}</Modal.Title>
             <Button
                 style={styles.closeBtn}
                 onClick={()=>{handleClose()}}
-                 > X </Button>
+                 > 
+                 {
+                  <CloseIcon/>
+                 }
+
+                 </Button>
             
           </Modal.Header>
           
@@ -35,16 +38,17 @@ const GPModal = ({title,children}) => {
             }
           </Modal.Body>
           
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
+          <Modal.Footer style={styles.footer}>
+            <Button style={styles.cancelBtn} onClick={handleClose}>
               Cancel
             </Button>
-            <Button variant="primary" onClick={handleClose}>
-              Save
+            <Button style={styles.saveBtn} onClick={()=> onActionButtonClick()}>
+              {
+                buttonText
+              }
             </Button>
           </Modal.Footer>
         </Modal>
-      </>
 
     )
 }
@@ -58,14 +62,45 @@ const styles = {
     },
     title:{
         width:"100%",
-        fontSize:"28px",
+        fontSize:"20px",
         fontWeight:700,
     },
+    footer:{
+      height:"85px",
+      backgroundColor:"#F1EDE5"
+  },
     closeBtn:{
       width:"50px",
       height:"50px",
       background:"#CBCBCB",
-      borderRadius:"4px"
+      borderRadius:"4px",
+      display:"flex",
+      justifyContent:"center",
+      alignItem:"center"
 
+    },
+    cancelBtn:{
+        width:"110px",
+        height:"50px",
+        border:"0.7px solid #000000",
+        borderRadius:"6px",
+        background:"transparent",
+        fontSize:"20px",
+        fontWeight:500,
+        color:"#000000",
+        textAlign:"center"
+
+
+    },
+    saveBtn:{
+      minWidth:"110px",
+      height:"50px",
+      border:0,
+      borderRadius:"6px",
+      background:"#E46036",
+      fontSize:"20px",
+      fontWeight:500,
+      color:"#ffffff",
+      textAlign:"center"
     }
 }
