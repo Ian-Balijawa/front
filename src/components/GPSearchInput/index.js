@@ -1,2 +1,3 @@
-import GPSearchInput from './GPSearchInput'
+import GPSearchInput from "./GPSearchInput";
+
 export default GPSearchInput

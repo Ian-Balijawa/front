@@ -4,6 +4,8 @@ import GPLayout from "../../components/GPLayout";
 import GPModal from "../../components/GPModal/GPModal";
 
 import { Button } from "react-bootstrap";
+import GPSearchInput from "../../components/GPSearchInput/GPSearchInput";
+
 
 function Inventory() {
 
@@ -26,19 +28,21 @@ function Inventory() {
             >
                <div style={{width:"100%",height:"100%"}} >
    
-                  Children
+                Children
    
                </div>
    
-           </GPCard>
+        </GPCard>
 
 
-           Modal
+                Modal
 
           
            <Button onClick={()=>setShow(true)}>
              Show
            </Button>
+ 
+           
 
            <GPModal
               title="find all the tings"
@@ -52,6 +56,13 @@ function Inventory() {
               
 
            </GPModal>
+
+
+           
+
+           <GPSearchInput />
+
+          
 
 
 
