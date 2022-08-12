@@ -5,6 +5,7 @@ import GPModal from "../../components/GPModal/GPModal";
 
 import { Button } from "react-bootstrap";
 import GPSearchInput from "../../components/GPSearchInput/GPSearchInput";
+import GPCheckBox from "../../components/GPCheckBox";
 
 
 function Inventory() {
@@ -58,9 +59,15 @@ function Inventory() {
            </GPModal>
 
 
-           
 
-           <GPSearchInput />
+
+           <GPSearchInput 
+              placeholder="Enter Email"
+              label="#"
+            />
+
+
+            <GPCheckBox />
 
           
 

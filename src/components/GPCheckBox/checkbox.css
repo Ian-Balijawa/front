@@ -1,0 +1,18 @@
+/* custom styles here */
+
+
+  /* custom styles here */
+.form-check-input{
+    width:23px;
+    height:23px;
+    border:0.5px solid #7A7A7A
+  }
+  
+  .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before{
+     background-color:#e46036;
+     border-color: #e46036;
+  }
+
+  .x{
+    background-color: red;
+  }

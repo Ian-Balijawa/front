@@ -27,3 +27,9 @@ function GPSearchInput({...props}) {
 }
 
 export default GPSearchInput
+
+const styles = {
+    label: {
+        color: "#7A7A7A"
+    }
+}
