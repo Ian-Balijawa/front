@@ -1,0 +1,15 @@
+.fz-12 {
+    font-size: 12px;
+}
+
+.employees_tabs {
+    border-radius: 0 !important;
+    border-left: 3px solid #000000 !important;
+    background-color: none !important;
+    color: #000000 !important;
+    padding-top: 15px !important;
+}
+a.employees_tabs.active {
+    background-color: transparent !important;
+    border-left: 3px solid #e46036 !important;
+}
