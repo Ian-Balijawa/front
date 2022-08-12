@@ -104,7 +104,7 @@ function App() {
     ]
 
     return (
-        <div className="App">
+        <div className="auth-bg">
             <section className="vh-100">
                 <div className="container py-5 h-100">
                     <div className="row d-flex justify-content-center align-items-center h-100">
@@ -197,7 +197,7 @@ function App() {
                                         <div className="d-flex justify-content-between mt-5">
                                             <GPBlockButton
                                                 type="submit"
-                                                classes="bg-theme outline-dark px-5 bg-theme border-0 text-white"
+                                                gpClassName="bg-theme outline-dark px-5 bg-theme border-0 text-white"
                                                 title="Sign Up"
                                             />
 

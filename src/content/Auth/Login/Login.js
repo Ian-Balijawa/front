@@ -68,7 +68,7 @@ export default function Login() {
     }
 
     return (
-        <section className="vh-100">
+        <section className="vh-100 auth-bg">
             <div className="container py-5 h-100">
                 <div className="row d-flex justify-content-center align-items-center h-100">
                     <div className="col-12 col-md-8 col-lg-6 col-xl-4">
@@ -105,7 +105,7 @@ export default function Login() {
                                         type="submit"
                                         title="Sign In"
                                         variant="primary"
-                                        classes="btn-primary mt-3 bg-theme border-0 text-white btn-md"
+                                        gpClassName="btn-primary mt-3 bg-theme border-0 text-white btn-md"
                                     />
                                 </Form>
                             </div>

@@ -55,7 +55,7 @@ function ResetPassword() {
     console.log('errors => ', errors)
 
     return (
-        <div className="">
+        <div className="auth-bg">
             <section className="vh-100">
                 <div className="container py-5 h-100">
                     <div className="row d-flex justify-content-center align-items-center h-100">
@@ -95,14 +95,14 @@ function ResetPassword() {
                                             <div className="col-6">
                                                 <GPBlockButton
                                                     title="Back to Sign In"
-                                                    classes="btn-light border p-2"
+                                                    gpClassName="btn-light border p-2"
                                                 />
                                             </div>
                                             <div className="col-6 text-white">
                                                 <GPBlockButton
                                                     title="Reset Password"
                                                     type="submit"
-                                                    classes="btn outline-dark bg-theme border-0
+                                                    gpClassName="btn outline-dark bg-theme border-0
                       text-white forgotBtn p-2 btn btn-primary"
                                                 />
                                             </div>

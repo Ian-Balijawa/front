@@ -2,18 +2,12 @@
     --bs-primary: #e46036;
 }
 
-* {
-    font-family: 'Lato', sans-serif;
-    margin: 0;
-    padding: 0;
+.auth-bg {
+    background: #f1ede5 !important;
 }
 
-body {
-    margin: 0;
-    font-family: 'Lato', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background: #e5e5e5 !important;
+.bg-success {
+    background-color: #35b858 !important;
 }
 
 a {
@@ -132,4 +126,17 @@ a {
 
 label {
     display: flow-root !important;
+}
+
+.form-check-input:checked {
+    background-color: #ff5722 !important;
+    border-color: #e46036 !important;
+}
+
+.form-check-input {
+    border-color: #7a7a7a !important;
+}
+
+.input-group-text {
+    background-color: #eeeeee !important;
 }

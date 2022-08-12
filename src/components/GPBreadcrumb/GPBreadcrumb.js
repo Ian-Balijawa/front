@@ -15,7 +15,7 @@ function GPBreadcrumb(props) {
                     aria-label="breadcrumb top-crumbs"
                     style={{marginTop: '13px', marginLeft: '25px'}}
                 >
-                    <ol class="breadcrumb">
+                    <ol className="breadcrumb">
                         <FontAwesomeIcon icon={props.breadIcon} size="2x" />
                         {props.crumbs.map((crumb, index) => {
                             const active = isLast(index)

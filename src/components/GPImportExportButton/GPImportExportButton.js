@@ -13,14 +13,14 @@ function GPImportExportButton({importClick, exportClick, ...props}) {
                 type="button"
                 title={'Import'}
                 onClick={importClick}
-                classes="btn border-1 rounded-0 i-e-btn"
+                gpClassName="btn border-1 rounded-0 i-e-btn"
                 icon={faFileImport}
             />
             <GPIconButton
                 type="button"
                 title={'Export'}
                 onClick={exportClick}
-                classes="btn border-1 rounded-0 i-e-btn"
+                gpClassName="btn border-1 rounded-0 i-e-btn"
                 icon={faFileExport}
             />
         </div>

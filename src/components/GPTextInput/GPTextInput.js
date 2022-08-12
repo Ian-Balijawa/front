@@ -4,7 +4,7 @@ import {Col, Form} from 'react-bootstrap'
 function GPTextInput({id, label, gpClassName, register, errors, ...props}) {
     return (
         <>
-            <Form.Group as={Col} className={gpClassName} controlId={id}>
+            <Form.Group className={gpClassName} controlId={id}>
                 {label && <Form.Label>{label}</Form.Label>}
 
                 <Form.Control {...props} {...register(id)} />

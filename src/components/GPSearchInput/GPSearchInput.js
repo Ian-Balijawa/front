@@ -19,7 +19,7 @@ function GPSearchInput({...props}) {
                 />
                 <GPBlockButton
                     title={'Search'}
-                    classes="bg-theme border-0 btn-sm"
+                    gpClassName="bg-theme border-0 btn-sm"
                 />
             </div>
         </div>
