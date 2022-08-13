@@ -1,0 +1,20 @@
+.font-input {
+    margin-left: -6.5em !important;
+    border-left: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    height: 41px!important;
+    border-top: 1px solid #7a7a7a !important;
+    border-right:1px solid #7a7a7a !important;
+    border-bottom:1px solid #7a7a7a !important;
+
+}
+.form-select-phone{
+    border-right: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    height: 41px!important;
+    border-top: 1px solid #7a7a7a !important;
+    border-left:1px solid #7a7a7a !important;
+    border-bottom:1px solid #7a7a7a !important;
+}

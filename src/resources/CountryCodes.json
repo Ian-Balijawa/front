@@ -1,0 +1,48 @@
+[
+    {
+        "name": "South Sudan",
+        "dial_code": "+211",
+        "code": "SS"
+    },
+    {
+        "name": "Uganda",
+        "dial_code": "+256",
+        "code": "UG",
+        "image":"https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/UG.svg"
+    },
+    {
+        "name": "Kenya",
+        "dial_code": "+254",
+        "code": "KE"
+    },
+    {
+        "name": "Tanzania, United Republic of Tanzania",
+        "dial_code": "+255",
+        "code": "TZ"
+    },
+    {
+        "name": "Rwanda",
+        "dial_code": "+250",
+        "code": "RW"
+    },
+    {
+        "name": "Burundi",
+        "dial_code": "+257",
+        "code": "BI"
+    },
+    {
+        "name": "Zambia",
+        "dial_code": "+260",
+        "code": "ZM"
+    },
+    {
+        "name": "Zimbabwe",
+        "dial_code": "+263",
+        "code": "ZW"
+    },
+    {
+        "name": "United States",
+        "dial_code": "+1",
+        "code": "US"
+    }
+]

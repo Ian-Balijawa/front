@@ -3,19 +3,15 @@ import {Link} from 'react-router-dom'
 import {useForm} from 'react-hook-form'
 import * as yup from 'yup'
 import {requiredValidation, useYupValidationResolver} from '../../../constant'
-
 import {routes} from '../../../routes'
-
 import Logo from '../../../assets/LogoDark.svg'
 import './register.css'
 import GPTextInput from '../../../components/GPTextInput/GPTextInput'
 import GPSelectInput from '../../../components/GPSelectInput.js/GPSelectInput'
 import GPPhoneInput from '../../../components/GPPhoneInput/GPPhoneInput'
-
 import CountrySelect from 'react-bootstrap-country-select'
 import {Form} from 'react-bootstrap'
 import GPBlockButton from '../../../components/GPBlockButton'
-
 function App() {
     const [validated, setValidated] = useState(false)
 
@@ -167,7 +163,7 @@ function App() {
                                             errors={errors}
                                             gpClassName="mb-3"
                                         />
-
+                                        <GPPhoneInput/>
                                         <GPTextInput
                                             type="password"
                                             id="password"
