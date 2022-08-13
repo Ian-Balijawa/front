@@ -1,10 +1,9 @@
 import React from "react";
 import './GPPhoneInput.css'
-import {useForm} from 'react-hook-form'
 import CountryCodes from '../../resources/CountryCodes.json'
-const  GPPhoneInput =React.forwardRef(({name, placeholder, handleChange, handleSelectChange},ref)=> {
+const  GPPhoneInput =React.forwardRef(({name, placeholder, handleChange, handleSelectChange, className},ref)=> {
     return (
-      <div className="row">
+      <div className={`row mb-3 ${className}`}>
         <div className=" col-4">
         <select
             data-show-content="true"
@@ -16,7 +15,7 @@ const  GPPhoneInput =React.forwardRef(({name, placeholder, handleChange, handleS
           >
             {CountryCodes.map((country)=>{
               return(
-              <option value={country.dial_code} data-content="Gallary" >
+              <option value={country.dial_code}>
                 {country.dial_code}
               </option>
               )
