@@ -1,0 +1,29 @@
+.gbDashCard {
+    width: 175px;
+    height: 175px;
+
+    background: #ffffff;
+    align-items: center;
+
+    border: 0.5px solid #7a7a7a;
+    box-shadow: 0px 3px 15px rgba(152, 152, 152, 0.6);
+    border-radius: 5px;
+}
+
+.dash-icon-bg {
+    color: #232a3b;
+}
+
+.gp-card-title {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 28px;
+    color: #232a3b;
+}
+
+.gp-card-title a {
+    color: #232a3b !important;
+}

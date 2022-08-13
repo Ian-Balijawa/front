@@ -1,37 +1,24 @@
-import React, { Component } from "react";
-import Form from "react-bootstrap/Form";
+function GPSelectInput(props) {
+    const {label, placeholder, name, arrayOfData, error, ...rest} = props
 
-class GPSelectInput extends Component {
-  constructor(props) {
-    super(props);
-  }
+    const handleChange = event => {
+        console.log('event.target.value => ', event.target.value)
+    }
 
-  //On the change event for the select box pass the selected value back to the parent
-  handleChange = (event) => {
-    let selectedValue = event.target.value;
-    this.props.onSelectChange(selectedValue);
-  };
-
-  render() {
-    let arrayOfData = this.props.arrayOfData;
-    let options = arrayOfData.map((data) => (
-      <option key={data.id} value={data.id}>
-        {data.name}
-      </option>
-    ));
+    const options = () => {
+        console.log('first')
+    }
 
     return (
-      <div>
-        <Form.Select
-          className="border border_color mb-2 mt-3 form-select"
-          aria-label="Default select example"
-          onChange={this.handleChange}
-        >
-          {options}
-        </Form.Select>
-      </div>
-    );
-  }
+        <>
+            {label && <label htmlFor={name}>{label}</label>}
+            <select name={name} onChange={handleChange} {...rest}>
+                <option value="">{placeholder}</option>
+                {options}
+            </select>
+            {error && <div className="error">{error}</div>}
+        </>
+    )
 }
 
-export default GPSelectInput;
+export default GPSelectInput

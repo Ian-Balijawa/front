@@ -1,0 +1,16 @@
+.rolesTableWrapper > table {
+    border-collapse: collapse !important;
+    /* margin-left: 15px; */
+    width: 580px !important;
+  }
+  
+  td, th {
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    padding: 5px !important;
+    font-size: 14px !important;
+  }
+  
+  tr:nth-child(n(n+1)) {
+    background-color: #dddddd !important;
+  }

@@ -1,0 +1,149 @@
+.newEmployeWrapper{
+    flex: 4 !important;
+    width: 750px;
+    margin-left: 14em;
+    margin-top: 5em;
+}
+.newEmployeeRegForm{
+    margin-top: 15px;
+    margin-left: 6em;
+}
+.formGrids{
+    margin-top: 20px;
+}
+/* .formGrid{
+
+} */
+.formGridLabel1{
+    margin-right: 17px;
+}
+.formGridLabel2{
+    margin-right: 17px;
+}
+.formGridLabel3{
+    margin-right: 19px;
+}
+.formGridInput1{
+    width: 185px;
+    height: 25px;
+    border: solid 1px #7a7a7a;
+    border-radius: 5px;
+}
+.formGridInput2{
+    width: 185px;
+    height: 25px !important;
+    border: solid 1px #7a7a7a;
+    border-radius: 5px;
+}
+.formGridInput3{
+    width: 195px;
+    height: 30px !important;
+    border: solid 1px #7a7a7a;
+    border-radius: 5px;
+}
+.styledButton{
+    /* border-radius: 0px !important; */
+    height: 29px;
+    text-transform: capitalize !important;
+    box-shadow: none !important;
+    border:solid 1px #7a7a7a !important;
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    background-color: #eeeeee !important;
+    color: black !important;
+}
+.styledInput{
+    border-radius: 0px !important;
+    width: 486px;
+    border: solid 1px #7a7a7a;
+    height: 25px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+}
+.styledInput2{
+    border-radius: 0px !important;
+    border: solid 1px #7a7a7a;
+    width: 427px;
+    height: 25px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+}
+.gridFormPayLable{
+    margin-left: 3.2em;
+    margin-right: 1.2em;
+}
+.gridFormPhoneLable{
+    margin-left: -20px;
+    margin-right: 1.2em;
+}
+.gridFormPassLabel{
+    margin-right: 1.2em;
+    margin-left: 11px;
+}
+.gridFormPassInput{
+    width: 550px;
+    height: 25px;
+    border: solid 1px #7a7a7a;
+    border-radius: 5px;
+}
+.gridFormEmailLabel{
+    margin-right: 1.2em;
+    margin-left: -23px;
+}
+.gridFormEmailInput{
+    width: 550px;
+    height: 25px;
+    border: solid 1px #7a7a7a;
+    border-radius: 5px;
+}
+.gridFormTINLabel{
+    margin-right: 1.2em;
+    margin-left: -6.58em;
+}
+.gridFormTINInput{
+    width: 550px !important;
+    height: 25px;
+    border: solid 1px #7a7a7a;
+    border-radius: 5px;
+}
+.gridFormNinLabel{
+    margin-right: 1.2em;
+    margin-left: -4.1em;
+}
+.gridFormNinInput{
+    width: 550px !important;
+    height: 25px;
+    border: solid 1px #7a7a7a;
+    border-radius: 5px;
+}
+.gridFormAddressLabel{
+    margin-right: 1.2em;
+    margin-left: 1.2em;
+}
+.gridFormAddressInput{
+    width: 550px !important;
+    /* height: 40px; */
+    border: solid 1px #7a7a7a;
+    border-radius: 5px;
+}
+.countryCode{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.passCodeDefText{
+    margin-left: -11.5em !important;
+    font-size: 12px !important;
+    letter-spacing: 2px;
+    line-height: 14px !important;
+}
+
+.buttonSaveChanges{
+    margin-right: 5px;
+}

@@ -1,0 +1,36 @@
+.SettingsWrapper{
+    /* margin-top: 10% !important; */
+    /* width: 970px !important; */
+    /* background-color: red !important; */
+}
+.verticalTabs{
+    margin-left: 30px !important;
+
+}   
+.verticalTabsPane{
+    width: 750px !important;
+    margin-top: -15px;
+    margin-left: 6em !important;
+
+}
+.settingsIndexTabs .MuiTabs-vertical .MuiButtonBase-root {
+    text-transform: capitalize !important;
+    color: #e46036 !important;
+    white-space: nowrap;
+    font-size: 16px;
+    align-items: flex-start;
+    margin-top: -5px !important;
+    border-left: solid 2px black;
+    border-left-width: 2px;
+}
+.settingsIndexTabs .MuiTabs-vertical .MuiTabs-indicator{
+    background-color: #e46036 !important;
+    margin-left: 6px !important;
+    left: 0px;
+    margin-left: 0px !important;
+    justify-content: center;
+    height: 16px !important;
+    margin-top: 15px !important;
+    
+
+}
