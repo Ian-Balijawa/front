@@ -6,16 +6,12 @@ import {
   requiredValidation,
   useYupValidationResolver,
 } from "../../../constant";
-
 import { routes } from "../../../routes";
-
 import Logo from "../../../assets/LogoDark.svg";
 import "./register.css";
 import GPTextInput from "../../../components/GPTextInput/GPTextInput";
 import GPSelectInput from "../../../components/GPSelectInput.js/GPSelectInput";
 import GPPhoneInput from "../../../components/GPPhoneInput/GPPhoneInput";
-
-import CountrySelect from "react-bootstrap-country-select";
 import { Form } from "react-bootstrap";
 import GPBlockButton from "../../../components/GPBlockButton";
 
@@ -192,7 +188,7 @@ function App() {
                       errors={errors}
                     />
 
-                    <GPPhoneInput arrayOfData={ctycode} />
+                    <GPPhoneInput/>
                     <GPTextInput
                       type="text"
                       id="businessname"
