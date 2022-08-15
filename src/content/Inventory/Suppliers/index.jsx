@@ -1,7 +1,11 @@
 import React from 'react'
 import GPIconButton from '../../../components/GPIconButton'
 import GPImportExportButton from '../../../components/GPImportExportButton/GPImportExportButton'
+import {faFileExport, faFileImport} from '@fortawesome/free-solid-svg-icons'
+
 import "../inventory.css"
+import CustomPlusIconButton from '../../../components/CustomPlusIconButton'
+import GPCard from '../../../components/GPCard/GPCard'
 
 const Suppliers = () => {
   return (
@@ -11,13 +15,21 @@ const Suppliers = () => {
 
             <GPImportExportButton />
 
-            <GPIconButton
-               title="Add New Supplier"
-               icon="FaApple"
+            <CustomPlusIconButton
+               title={"Add New Supplier"}
+               onClick={()=> alert("add supplier")}
              />
+
+
         </div>
 
         <div className='supplier-search-container'>
+            <GPCard
+              classes="search-card"
+            >
+
+
+            </GPCard>
 
         </div>
 

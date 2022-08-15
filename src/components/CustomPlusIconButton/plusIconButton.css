@@ -1,0 +1,24 @@
+.btn-main {
+    min-width:100px;
+    height:52;
+    display: flex;
+    justify-content:flex-start;
+    justify-items: flex-start;
+    align-items: center;
+    padding-left: 4;
+    padding-right: 4;
+}
+
+.btn-icon{
+    font-size:16px;
+    color: #E46036;
+    width:40;
+    height:40;
+    margin-right: 9px;
+    
+}
+
+.btn-text{
+    font-size:16px;
+    color: #E46036;
+}

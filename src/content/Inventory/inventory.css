@@ -13,3 +13,13 @@
     padding-top: 11px;
     box-sizing: border-box;
 }
+
+.no-bg-btn {
+    background:transparent;
+
+}
+
+.search-card{
+    min-height: 137px;
+    background:pink
+}
