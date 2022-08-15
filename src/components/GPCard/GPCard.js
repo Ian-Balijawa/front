@@ -4,14 +4,14 @@ import Card from 'react-bootstrap/Card';
 const GPCard = ({children,classes}) => {
   return (
 
-      <Card
+      <div
         style={styles.card}
-        className={`btn ${classes}`}
+        className={`${classes}`}
       >  
-        <Card.Body>
+        <div>
             {children}
-        </Card.Body>
-      </Card>
+        </div>
+      </div>
   )
 }
 

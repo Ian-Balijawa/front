@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import './checkbox.css'
 
 
-const GPCheckBox = () => {
+const GPCheckBox = ({label,labelTop}) => {
   return (
    
 
@@ -11,10 +11,14 @@ const GPCheckBox = () => {
     <Form>
       
         <div key={`reverse-checkbox`} className="mb-3">
-          <div className="x">Billions</div>
+          <div style={{color:"#7a7a7a",fontSize:"14px"}}>
+            {
+             labelTop ? label : null
+            }
+          </div>
           <Form.Check
             custom
-            label="SEEE x"
+            label={!labelTop?label:null}
             name="group1"
             type="checkbox"
             id={`reverse-checkbox-1`}

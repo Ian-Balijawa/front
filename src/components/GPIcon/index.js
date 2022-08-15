@@ -1,4 +1,5 @@
 import Home from "../../assets/icons/home.svg";
+import ArrowD from "../../assets/icons/arrowDown.svg";
 import Inventory from "../../assets/icons/inventoryIcon.svg";
 import Report from "../../assets/icons/reportsIcon.svg";
 import Close from "../../assets/icons/closeIcon.svg";
@@ -26,6 +27,14 @@ export const HomeIcon = () => {
             <img src={Home} width={20} height={20} className="m-2" alt="" />
         </>
     )
+}
+
+export const ArrowDown = () => {
+  return (
+      <>
+          <img src={ArrowD} width={14} height={14} className="m-2" alt="" />
+      </>
+  )
 }
 
 export const InventoryIcon = () => {
