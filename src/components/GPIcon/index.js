@@ -1,5 +1,8 @@
 import Home from "../../assets/icons/home.svg";
 import ArrowD from "../../assets/icons/arrowDown.svg";
+import LeftArrow from "../../assets/icons/paginationLeftArrow.svg";
+import RightArrow from "../../assets/icons/paginationRightArrow.svg";
+
 import Inventory from "../../assets/icons/inventoryIcon.svg";
 import Report from "../../assets/icons/reportsIcon.svg";
 import Close from "../../assets/icons/closeIcon.svg";
@@ -33,6 +36,22 @@ export const ArrowDown = () => {
   return (
       <>
           <img src={ArrowD} width={14} height={14} className="m-2" alt="" />
+      </>
+  )
+}
+
+export const PaginationLeftArrow = () => {
+  return (
+      <>
+          <img src={LeftArrow} width={16} height={16} className="m-2" alt="" />
+      </>
+  )
+}
+
+export const PaginationRightArrow = () => {
+  return (
+      <>
+          <img src={RightArrow} width={16} height={16} className="m-2" alt="" />
       </>
   )
 }

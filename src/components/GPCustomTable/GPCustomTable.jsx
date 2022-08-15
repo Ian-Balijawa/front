@@ -1,12 +1,13 @@
 import React from 'react'
 import GPCard from '../GPCard/GPCard'
+import GPPagination from '../GPPagination/GPPagination'
 
 import './gp-custom-table.css'
 
 const GPCustomTable = ({colums,data}) => {
 
 
-    
+
   return (
     <GPCard
       classes={"custom-table-card"}
@@ -14,7 +15,7 @@ const GPCustomTable = ({colums,data}) => {
 
         {/* pagination container */}
         <div className='pagination-container'>
-
+           <GPPagination />
         </div>
 
         {/* table */}
