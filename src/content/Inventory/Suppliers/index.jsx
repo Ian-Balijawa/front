@@ -6,6 +6,7 @@ import {faFileExport, faFileImport} from '@fortawesome/free-solid-svg-icons'
 import "../inventory.css"
 import CustomPlusIconButton from '../../../components/CustomPlusIconButton'
 import GPCard from '../../../components/GPCard/GPCard'
+import GPSearchFilterCard from '../../../components/GPSearchFilterCard/GPSearchFilterCard'
 
 const Suppliers = () => {
   return (
@@ -24,13 +25,7 @@ const Suppliers = () => {
         </div>
 
         <div className='supplier-search-container'>
-            <GPCard
-              classes="search-card"
-            >
-
-
-            </GPCard>
-
+           <GPSearchFilterCard />
         </div>
 
         <div className='supplier-table-container'>
