@@ -1,35 +1,45 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import GPIconButton from '../../../components/GPIconButton'
 import GPImportExportButton from '../../../components/GPImportExportButton/GPImportExportButton'
-import {faFileExport, faFileImport} from '@fortawesome/free-solid-svg-icons'
+import { faFileExport, faFileImport } from '@fortawesome/free-solid-svg-icons'
 
 import "../inventory.css"
 import CustomPlusIconButton from '../../../components/CustomPlusIconButton'
 import GPSearchFilterCard from '../../../components/GPSearchFilterCard/GPSearchFilterCard'
 import GPCustomTable from '../../../components/GPCustomTable'
 import AddNewSupplier from './AddNewSupplier'
+import GPLayout from '../../../components/GPLayout'
 
 const Suppliers = () => {
 
- const [addNewSupplier, setAddNewSupplier] = useState(false)
+  const crumbs = [
+    {
+      text: 'Settings',
+      href: '/settings',
+    },
+  ]
+
+  const [addNewSupplier, setAddNewSupplier] = useState(false)
 
   return (
-    <div className='supplier-main-wrapper'>
+    <GPLayout >
+      <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div className='supplier-main-wrapper'>
 
         <div className='supplier-top-container'>
 
-            <GPImportExportButton />
+          <GPImportExportButton />
 
-            <CustomPlusIconButton
-               title={"Add New Supplier"}
-               onClick={()=> setAddNewSupplier(true)}
-             />
+          <CustomPlusIconButton
+            title={"Add New Supplier"}
+            onClick={() => setAddNewSupplier(true)}
+          />
 
 
         </div>
 
         <div className='supplier-search-container'>
-           <GPSearchFilterCard />
+          <GPSearchFilterCard />
         </div>
 
         <div className='supplier-table-container'>
@@ -39,11 +49,13 @@ const Suppliers = () => {
         </div>
 
         {/* new supplier modal */}
-        <AddNewSupplier show={addNewSupplier} handleClose={()=>setAddNewSupplier(false)} /> 
-        
-      
+        <AddNewSupplier show={addNewSupplier} handleClose={() => setAddNewSupplier(false)} />
 
-    </div>
+
+
+      </div>
+      </main>
+    </GPLayout>
   )
 }
 
