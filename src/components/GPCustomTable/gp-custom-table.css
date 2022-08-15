@@ -1,4 +1,22 @@
 .custom-table-card{
     min-height: 300px;
-    width:100%;
+    min-width:100%;
+    width:'auto'
+
+}
+
+.table-main{
+    margin:13px;
+    width: 100%;
+    max-width: 100%;
+}
+.gp-th-main{
+    background-color: #FFE5DC;
+    border-bottom: 1px solid #000000;
+}
+
+.gp-th{
+    border:none;
+    border-style:hidden;
+    height:100%;
 }
