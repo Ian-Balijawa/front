@@ -1,8 +1,19 @@
-import React from 'react'
+import React,{useEffect} from 'react'
+import GPModal from '../../../components/GPModal/GPModal'
 
-const AddNewSupplier = () => {
+const AddNewSupplier = ({show,handleClose}) => {
+
+
   return (
-    <div>AddNewSupplier</div>
+    <GPModal
+       show={show}
+       title={"Add New Supplier"}
+       handleClose={handleClose}
+         
+     >
+
+
+     </GPModal>
   )
 }
 

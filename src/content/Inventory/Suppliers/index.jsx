@@ -1,15 +1,18 @@
-import React from 'react'
+import React,{useState} from 'react'
 import GPIconButton from '../../../components/GPIconButton'
 import GPImportExportButton from '../../../components/GPImportExportButton/GPImportExportButton'
 import {faFileExport, faFileImport} from '@fortawesome/free-solid-svg-icons'
 
 import "../inventory.css"
 import CustomPlusIconButton from '../../../components/CustomPlusIconButton'
-import GPCard from '../../../components/GPCard/GPCard'
 import GPSearchFilterCard from '../../../components/GPSearchFilterCard/GPSearchFilterCard'
 import GPCustomTable from '../../../components/GPCustomTable'
+import AddNewSupplier from './AddNewSupplier'
 
 const Suppliers = () => {
+
+ const [addNewSupplier, setAddNewSupplier] = useState(false)
+
   return (
     <div className='supplier-main-wrapper'>
 
@@ -19,7 +22,7 @@ const Suppliers = () => {
 
             <CustomPlusIconButton
                title={"Add New Supplier"}
-               onClick={()=> alert("add supplier")}
+               onClick={()=> setAddNewSupplier(true)}
              />
 
 
@@ -34,6 +37,10 @@ const Suppliers = () => {
           <GPCustomTable />
 
         </div>
+
+        {/* new supplier modal */}
+        <AddNewSupplier show={addNewSupplier} handleClose={()=>setAddNewSupplier(false)} /> 
+        
       
 
     </div>
