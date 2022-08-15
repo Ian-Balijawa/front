@@ -1,0 +1,15 @@
+.supplier-main-wrapper {
+    width:100%;
+    min-height: 100vh;
+    padding-right: 76px;
+    padding-left: 76px;
+}
+.supplier-top-container{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    height:84px;
+    padding-bottom: 11px;
+    padding-top: 11px;
+    box-sizing: border-box;
+}
