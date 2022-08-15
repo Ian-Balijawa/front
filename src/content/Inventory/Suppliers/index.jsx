@@ -7,6 +7,7 @@ import "../inventory.css"
 import CustomPlusIconButton from '../../../components/CustomPlusIconButton'
 import GPCard from '../../../components/GPCard/GPCard'
 import GPSearchFilterCard from '../../../components/GPSearchFilterCard/GPSearchFilterCard'
+import GPCustomTable from '../../../components/GPCustomTable'
 
 const Suppliers = () => {
   return (
@@ -29,6 +30,8 @@ const Suppliers = () => {
         </div>
 
         <div className='supplier-table-container'>
+
+          <GPCustomTable />
 
         </div>
       
