@@ -11,12 +11,13 @@ const GPModal = ({
       show,
       handleClose,
       onActionButtonClick,
-      buttonText="Save"
+      buttonText="Save",
+      size
     }) => {
 
     return (
       
-        <Modal show={show} onHide={handleClose}>
+        <Modal show={show} onHide={handleClose} size={size}>
           <Modal.Header style={styles.header} >
           
             <Modal.Title style={styles.title}> {title}</Modal.Title>
@@ -32,7 +33,7 @@ const GPModal = ({
             
           </Modal.Header>
           
-          <Modal.Body>
+          <Modal.Body >
             {
               children
             }
