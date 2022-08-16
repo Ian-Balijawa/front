@@ -27,7 +27,6 @@ function App() {
                 <Route path="register" element={<Register />} />
                 <Route path="forgot-password" element={<ForgotPassword />} />
                 <Route path="reset-password" element={<ResetPassword />} />
-
                 <Route path="/" element={<Dashboard />} />
                 <Route path="settings" element={<Settings />} />
                 <Route path="employee-setup" element={<EmployeeSetup />} />
