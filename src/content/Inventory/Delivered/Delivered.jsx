@@ -1,55 +1,74 @@
 import React from 'react'
 import CustomDeliveredIconCard from '../../../components/CustomDeliveredIconCard/CustomDeliveredIconCard'
 import GPCard from '../../../components/GPCard/GPCard'
-import { BlueCalenderIcon, BlueSupplierIcon, HashIcon, OrangeCalenderIcon } from '../../../components/GPIcon'
+import { BlueCalenderIcon, BlueSupplierIcon, HashIcon, OrangeCalenderIcon, OrangeUserIcon } from '../../../components/GPIcon'
 import GPLayout from '../../../components/GPLayout/GPLayout'
+import GPSelectInput from '../../../components/GPSelectInput.js/GPSelectInput'
 
 const Delivered = () => {
 
   return (
-      <GPLayout>
-          
-          <GPCard 
-             classes="delivered-card-styles"
-          >
+    <GPLayout>
 
-            <div className='delivered-content-wrapper-md'>
-            
-              <CustomDeliveredIconCard
-                 title="Purchase order number"
-                 value="#3800034543"
-                 renderIcon={HashIcon}
-              />
+      <GPCard
+        classes="delivered-card-styles"
+      >
 
-<CustomDeliveredIconCard
-                 title="Supplier"
-                 value="Nic&Nico Suppliers"
-                 renderIcon={BlueSupplierIcon}
-              />
+        <div className='delivered-content-wrapper-md'>
 
-<CustomDeliveredIconCard
-                 title="Ordered On"
-                 value="21/07/2022 12:00"
-                 renderIcon={BlueCalenderIcon}
-              />
+          <CustomDeliveredIconCard
+            title="Purchase order number"
+            value="#3800034543"
+            renderIcon={HashIcon}
+          />
 
-            </div>
-            <div className='delivered-content-wrapper-md'>
+          <CustomDeliveredIconCard
+            title="Supplier"
+            value="Nic&Nico Suppliers"
+            renderIcon={BlueSupplierIcon}
+          />
 
-            </div>
-            <div className='delivered-content-wrapper-md'>
+          <CustomDeliveredIconCard
+            title="Ordered On"
+            value="21/07/2022 12:00"
+            renderIcon={BlueCalenderIcon}
+          />
 
-            </div>
-            <div className='delivered-table-area-wrapper-md'>
+        </div>
+        <div className='delivered-content-wrapper-md'>
 
-            </div>
-            <div className='delivered-button-area-wrapper'>
+          <CustomDeliveredIconCard
+            title="Ordered By"
+            value="21/07/2022 12:00"
+            renderIcon={OrangeUserIcon}
+            transparent={true}
+          />
 
-            </div>
 
-          </GPCard>
+          <CustomDeliveredIconCard
+            title="Expected Delivery Date"
+            value="21/07/2022 12:00"
+            renderIcon={OrangeCalenderIcon}
+            transparent={true}
+          />
 
-      </GPLayout>
+        </div>
+
+        <div className='delivered-input-area-wrapper-md'>
+
+          <GPSelectInput label="Invoice Status" placeholder="Not Yet Recieved" />
+
+        </div>
+        <div className='delivered-table-area-wrapper-md'>
+
+        </div>
+        <div className='delivered-button-area-wrapper'>
+
+        </div>
+
+      </GPCard>
+
+    </GPLayout>
   )
 }
 

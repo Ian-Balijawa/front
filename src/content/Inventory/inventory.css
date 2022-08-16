@@ -133,3 +133,12 @@
     justify-content: flex-start;
     align-items: baseline;
 }
+
+.delivered-input-area-wrapper-md{
+    width:100%;
+    height:138px;
+    margin-top: 5px;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}

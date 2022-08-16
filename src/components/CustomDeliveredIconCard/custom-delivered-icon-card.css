@@ -1,3 +1,10 @@
+.delivered-card-styles{
+    padding: 40px;
+    margin-top: 52px;
+    margin-bottom: 52px;
+    
+}
+
 .delivered-icon-card-main{
     min-width:240px;
     height:60px;

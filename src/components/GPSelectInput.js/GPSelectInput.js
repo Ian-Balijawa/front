@@ -1,22 +1,24 @@
-function GPSelectInput(props) {
-    const {label, placeholder, name, arrayOfData, error, ...rest} = props
+import React from "react"
+import Form from 'react-bootstrap/Form';
 
-    const handleChange = event => {
-        console.log('event.target.value => ', event.target.value)
-    }
+function GPSelectInput({ handleChange, label, placeholder, name, arrayOfData, error, ...rest }) {
 
-    const options = () => {
-        console.log('first')
-    }
 
     return (
         <>
-            {label && <label htmlFor={name} style={{fontSize:"14px",color:"#7a7a7a"}}>{label}</label>}
-            <select name={name} onChange={handleChange} {...rest}>
-                <option value="">{placeholder}</option>
-                {options}
-            </select>
-            {error && <div className="error">{error}</div>}
+
+            <Form.Group>
+                {label && <Form.Label style={{ fontSize: "14px", color: "#7a7a7a" }}>{label}</Form.Label>}
+                <Form.Select onChange={handleChange} {...rest}>
+                    <option>
+                        {placeholder}
+                    </option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </Form.Select>
+                {error && <div className="error">{error}</div>}
+            </Form.Group>
         </>
     )
 }
