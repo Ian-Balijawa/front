@@ -4,15 +4,19 @@ import {
   faBook,
   faGear,
   faPersonCirclePlus,
-  faUserLock,
-  faBookAtlas,
+  faSitemap,
+  faBarcode,
+  faAlignJustify,
   faBookMedical,
+  faCartShopping,
+  faPlus,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './inventory.css'
 import { Link } from 'react-router-dom'
 import GPDashCard from '../../components/GPDashCard'
 import GPDashTitle from '../../components/GPDashTitle'
+import { CountIcon, CreateIcon, IngredientsIcon, StockIcon } from '../../components/GPIcon'
 
 
 function Inventory() {
@@ -33,13 +37,13 @@ function Inventory() {
           <GPDashTitle gpTitle={'Items'} />
           <div className="col-md-12 text-center d-flex">
             <GPDashCard
-              gpIcon={faBook}
+              renderIcon={IngredientsIcon}
               gpTitle={'Ingredients'}
               gpLink={'#'}
             />
 
             <GPDashCard
-              gpIcon={faPersonCirclePlus}
+              gpIcon={faSitemap}
               gpTitle={'Recipes'}
               gpLink={'/view-supplier'}
               gpClassName={'mx-4'}
@@ -53,13 +57,13 @@ function Inventory() {
           <GPDashTitle gpTitle={'Procurement'} />
           <div className="col-md-12 text-center d-flex">
             <GPDashCard
-              gpIcon={faBookMedical}
+              gpIcon={faCartShopping}
               gpTitle={'Suppliers'}
               gpLink={'/suppliers'}
             />
 
             <GPDashCard
-              gpIcon={faPersonCirclePlus}
+              gpIcon={faPlus}
               gpTitle={'New Order'}
               gpLink={'/orders'}
               gpClassName={'mx-4'}
@@ -71,34 +75,34 @@ function Inventory() {
           <GPDashTitle gpTitle={'Inventory Management'} />
           <div className="col-md-12 text-center d-flex">
             <GPDashCard
-              gpIcon={faBookMedical}
+              renderIcon={StockIcon}
               gpTitle={'Stock'}
               gpLink={'#'}
             />
 
             <GPDashCard
-              gpIcon={faPersonCirclePlus}
+              renderIcon={CountIcon}
               gpTitle={'Count'}
               gpLink={'#'}
               gpClassName={'mx-4'}
             />
 
             <GPDashCard
-              gpIcon={faPersonCirclePlus}
+              renderIcon={CreateIcon}
               gpTitle={'Create'}
               gpLink={'#'}
               gpClassName={'mx-4'}
             />
 
             <GPDashCard
-              gpIcon={faPersonCirclePlus}
+              renderIcon={StockIcon}
               gpTitle={'Transfer'}
               gpLink={'#'}
               gpClassName={'mx-4'}
             />
 
             <GPDashCard
-              gpIcon={faPersonCirclePlus}
+              renderIcon={StockIcon}
               gpTitle={'Waste'}
               gpLink={'#'}
               gpClassName={'mx-4'}

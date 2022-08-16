@@ -2,6 +2,13 @@ import Home from "../../assets/icons/home.svg";
 import ArrowD from "../../assets/icons/arrowDown.svg";
 import LeftArrow from "../../assets/icons/paginationLeftArrow.svg";
 import RightArrow from "../../assets/icons/paginationRightArrow.svg";
+import Ingredients from "../../assets/icons/IngredientsIcon.svg";
+import Stock from "../../assets/icons/StockIcon.svg";
+import Count from "../../assets/icons/CountIcon.svg";
+import Create from "../../assets/icons/CreateIcon.svg";
+
+
+
 
 import Inventory from "../../assets/icons/inventoryIcon.svg";
 import Report from "../../assets/icons/reportsIcon.svg";
@@ -86,3 +93,38 @@ export const CloseIcon = () => {
   );
 };
 
+
+export const IngredientsIcon = () => {
+  return (
+    <>
+      <img src={Ingredients} width={60} height={60} className="m-2" alt="" />
+    </>
+  );
+};
+
+
+export const StockIcon = () => {
+  return (
+    <>
+      <img src={Stock} width={60} height={60} className="m-2" alt="" />
+    </>
+  );
+};
+
+
+export const CountIcon = () => {
+  return (
+    <>
+      <img src={Count} width={60} height={60} className="m-2" alt="" />
+    </>
+  );
+};
+
+
+export const CreateIcon = () => {
+  return (
+    <>
+      <img src={Create} width={60} height={60} className="m-2" alt="" />
+    </>
+  );
+};
