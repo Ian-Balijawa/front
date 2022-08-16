@@ -1,12 +1,18 @@
 .btn-main {
-    min-width:100px;
-    height:52;
+    min-width:200px;
+    height:40px;
     display: flex;
-    justify-content:flex-start;
-    justify-items: flex-start;
+    justify-content:center;
+    justify-items: center;
     align-items: center;
-    padding-left: 4;
-    padding-right: 4;
+    padding: 4px;
+    border:1px solid #A5A5A5;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.btn-main:hover{
+    border:1px solid #E46036;
 }
 
 .btn-icon{
