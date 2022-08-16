@@ -2,31 +2,36 @@ import React from 'react'
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import './gp-search-input.css'
-import GPBlockButton from '../GPBlockButton'
+import Form from 'react-bootstrap/Form';
+
 
 function GPSearchInput({label,placeholder="Search",...props}) {
     return (
        
-          <div>
-            <div className='search-label'>
+          <Form.Group>
+
+            <Form.Label className='search-label'>
                 {label}
-            </div>
+            </Form.Label>
 
             <div className="search">
                 
-                <div className='icon-container'>
-                   <FontAwesomeIcon className="icon" icon={faMagnifyingGlass} />
+                <div className='search-icon-container'>
+                   <FontAwesomeIcon className="search-input-icon" icon={faMagnifyingGlass} />
                 </div>
 
-                <input
+                <Form.Control
                     {...props}
                     class="form-control me-2"
                     type="search"
                     placeholder={placeholder}
                     aria-label="Search"
                 />
-            </div>
-          </div>
+                
+              </div>
+
+
+          </Form.Group>
     
     )
 }

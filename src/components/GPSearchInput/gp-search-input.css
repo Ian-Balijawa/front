@@ -17,17 +17,18 @@
     color: #000000;
 }
 
-.icon-container {
+.search-icon-container {
      width:20px;
      height:20px;
      display: flex;
      justify-content: center;
      align-items: center;
      position: absolute;
-     top: 5px;
+     top: 50%;
      left: 8px;
+     transform: translateY(-50%);
 }
-.icon {
+.search-input-icon {
     color: #a5a5a5;
     font-size:16px;
 }
