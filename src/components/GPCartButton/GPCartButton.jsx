@@ -7,7 +7,7 @@ import './gp-cart-button.css'
 
 const GPCartButton = ({title="Your Shopping Cart",count=0,onClick}) => {
     return (
-        <div className='btn-main' onClick={onClick}>
+        <div className='cart-btn-main' onClick={onClick}>
 
             <div className='icon-cont'>
 

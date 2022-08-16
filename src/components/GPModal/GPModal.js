@@ -81,12 +81,12 @@ const styles = {
 
     },
     cancelBtn:{
-        width:"110px",
-        height:"50px",
+        minWidth:"110px",
+        height:"40px",
         border:"0.7px solid #000000",
         borderRadius:"6px",
         background:"transparent",
-        fontSize:"20px",
+        fontSize:"14px",
         fontWeight:500,
         color:"#000000",
         textAlign:"center"
@@ -95,11 +95,11 @@ const styles = {
     },
     saveBtn:{
       minWidth:"110px",
-      height:"50px",
+      height:"40px",
       border:0,
       borderRadius:"6px",
       background:"#E46036",
-      fontSize:"20px",
+      fontSize:"14px",
       fontWeight:500,
       color:"#ffffff",
       textAlign:"center"
