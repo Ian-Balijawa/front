@@ -14,6 +14,7 @@ import { Link } from 'react-router-dom'
 import GPDashCard from '../../components/GPDashCard'
 import GPDashTitle from '../../components/GPDashTitle'
 
+
 function Inventory() {
   const crumbs = [
     {
@@ -60,7 +61,7 @@ function Inventory() {
             <GPDashCard
               gpIcon={faPersonCirclePlus}
               gpTitle={'New Order'}
-              gpLink={'#'}
+              gpLink={'/view-supplier'}
               gpClassName={'mx-4'}
             />
           </div>

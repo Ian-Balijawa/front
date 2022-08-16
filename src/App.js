@@ -14,6 +14,7 @@ import NewEmployee from './content/Settings/EmployeeSetup/NewEmployee'
 import UpdateEmployee from './content/Settings/EmployeeSetup/UpdateEmployee'
 import OutletSetup from './content/Settings/OutletSetup'
 import Suppliers from './content/Inventory/Suppliers'
+import ViewSupplier from './content/Inventory/Suppliers/ViewSupplier'
 
 function App() {
     return (
@@ -32,7 +33,11 @@ function App() {
                 <Route path="update-employee" element={<UpdateEmployee />} />
                 <Route path="employee-role" element={<EmployeeRole />} />
                 <Route path="inventory" element={<Inventory />} />
-                <Route path="suppliers" element={<Suppliers />} />
+                <Route path="suppliers" element={<Suppliers />} /> 
+                <Route path="view-supplier" element={<ViewSupplier />} /> 
+
+
+        
 
                 <Route path="reports" element={<Reports />} />
             </Routes>
