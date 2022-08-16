@@ -24,7 +24,7 @@ const GPCartButton = ({title="Your Shopping Cart",count=0,onClick}) => {
 
             <div className='count-cont'>
 
-                <div className='count'>
+                <div className='cart-count'>
                     {count}
                 </div>
 
