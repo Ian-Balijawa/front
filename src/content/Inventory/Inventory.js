@@ -41,7 +41,7 @@ function Inventory() {
             <GPDashCard
               gpIcon={faPersonCirclePlus}
               gpTitle={'Recipes'}
-              gpLink={'#'}
+              gpLink={'/view-supplier'}
               gpClassName={'mx-4'}
             />
 
@@ -61,7 +61,7 @@ function Inventory() {
             <GPDashCard
               gpIcon={faPersonCirclePlus}
               gpTitle={'New Order'}
-              gpLink={'/view-supplier'}
+              gpLink={'/orders'}
               gpClassName={'mx-4'}
             />
           </div>
