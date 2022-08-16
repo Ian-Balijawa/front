@@ -1,13 +1,8 @@
 import React from 'react'
 import GPLayout from '../../components/GPLayout'
 import {
-  faBook,
   faGear,
-  faPersonCirclePlus,
   faSitemap,
-  faBarcode,
-  faAlignJustify,
-  faBookMedical,
   faCartShopping,
   faPlus,
 } from '@fortawesome/free-solid-svg-icons'
