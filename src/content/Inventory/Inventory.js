@@ -34,7 +34,7 @@ function Inventory() {
             <GPDashCard
               renderIcon={IngredientsIcon}
               gpTitle={'Ingredients'}
-              gpLink={'#'}
+              gpLink={'/order-list'}
             />
 
             <GPDashCard
@@ -72,7 +72,7 @@ function Inventory() {
             <GPDashCard
               renderIcon={StockIcon}
               gpTitle={'Stock'}
-              gpLink={'#'}
+              gpLink={'/delivered'}
             />
 
             <GPDashCard

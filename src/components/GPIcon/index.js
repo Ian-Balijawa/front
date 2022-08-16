@@ -6,6 +6,16 @@ import Ingredients from "../../assets/icons/IngredientsIcon.svg";
 import Stock from "../../assets/icons/StockIcon.svg";
 import Count from "../../assets/icons/CountIcon.svg";
 import Create from "../../assets/icons/CreateIcon.svg";
+import Hash from "../../assets/icons/HashIcon.svg";
+import BlueSupplier from "../../assets/icons/BlueSupplierIcon.svg";
+import BlueCalender from "../../assets/icons/BlueCalenderIcon.svg";
+import OrangeCalender from "../../assets/icons/OrangeCalenderIcon.svg";
+import OrangeUser from "../../assets/icons/OrangeUserIcon.svg";
+
+
+
+
+
 
 
 
@@ -125,6 +135,47 @@ export const CreateIcon = () => {
   return (
     <>
       <img src={Create} width={60} height={60} className="m-2" alt="" />
+    </>
+  );
+};
+
+export const HashIcon = () => {
+  return (
+    <>
+      <img src={Hash} width={30} height={30} className="m-2" alt="" />
+    </>
+  );
+};
+
+
+export const BlueSupplierIcon = () => {
+  return (
+    <>
+      <img src={BlueSupplier} width={30} height={30} className="m-2" alt="" />
+    </>
+  );
+};
+
+export const BlueCalenderIcon = () => {
+  return (
+    <>
+      <img src={BlueCalender} width={30} height={30} className="m-2" alt="" />
+    </>
+  );
+};
+
+export const OrangeCalenderIcon = () => {
+  return (
+    <>
+      <img src={OrangeCalender} width={30} height={30} className="m-2" alt="" />
+    </>
+  );
+};
+
+export const OrangeUserIcon = () => {
+  return (
+    <>
+      <img src={OrangeUser} width={30} height={30} className="m-2" alt="" />
     </>
   );
 };

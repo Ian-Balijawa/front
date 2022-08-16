@@ -16,6 +16,8 @@ import OutletSetup from './content/Settings/OutletSetup'
 import Suppliers from './content/Inventory/Suppliers'
 import ViewSupplier from './content/Inventory/Suppliers/ViewSupplier'
 import Orders from './content/Inventory/Orders'
+import OrderList from './content/Inventory/OrderList/OrderList'
+import Delivered from './content/Inventory/Delivered/Delivered'
 
 function App() {
     return (
@@ -37,6 +39,11 @@ function App() {
                 <Route path="suppliers" element={<Suppliers />} /> 
                 <Route path="view-supplier" element={<ViewSupplier />} /> 
                 <Route path="orders" element={<Orders />} /> 
+                <Route path="order-list" element={<OrderList />} /> 
+                <Route path="delivered" element={<Delivered />} /> 
+
+
+
 
 
 
