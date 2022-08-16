@@ -36,19 +36,11 @@ function App() {
                 <Route path="update-employee" element={<UpdateEmployee />} />
                 <Route path="employee-role" element={<EmployeeRole />} />
                 <Route path="inventory" element={<Inventory />} />
-                <Route path="suppliers" element={<Suppliers />} /> 
-                <Route path="view-supplier" element={<ViewSupplier />} /> 
-                <Route path="orders" element={<Orders />} /> 
-                <Route path="order-list" element={<OrderList />} /> 
-                <Route path="delivered" element={<Delivered />} /> 
-
-
-
-
-
-
-        
-
+                <Route path="suppliers" element={<Suppliers />} />
+                <Route path="view-supplier" element={<ViewSupplier />} />
+                <Route path="orders" element={<Orders />} />
+                <Route path="order-list" element={<OrderList />} />
+                <Route path="delivered" element={<Delivered />} />
                 <Route path="reports" element={<Reports />} />
             </Routes>
         </div>
