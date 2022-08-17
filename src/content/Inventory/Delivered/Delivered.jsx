@@ -4,6 +4,7 @@ import GPCard from '../../../components/GPCard/GPCard'
 import { BlueCalenderIcon, BlueSupplierIcon, HashIcon, OrangeCalenderIcon, OrangeUserIcon } from '../../../components/GPIcon'
 import GPLayout from '../../../components/GPLayout/GPLayout'
 import GPSelectInput from '../../../components/GPSelectInput.js/GPSelectInput'
+import DeliveredTable from '../../../components/GPTables/Inventory/DeliveredTable'
 
 const Delivered = () => {
 
@@ -60,6 +61,8 @@ const Delivered = () => {
 
         </div>
         <div className='delivered-table-area-wrapper-md'>
+
+          <DeliveredTable/>
 
         </div>
         <div className='delivered-button-area-wrapper'>
