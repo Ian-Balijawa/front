@@ -6,9 +6,9 @@ import {
     faCartShopping,
     faPlus,
 } from '@fortawesome/free-solid-svg-icons'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './inventory.css'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import GPDashCard from '../../components/GPDashCard'
 import GPDashTitle from '../../components/GPDashTitle'
 import {
@@ -37,7 +37,7 @@ function Inventory() {
                     <GPDashCard
                         renderIcon={IngredientsIcon}
                         gpTitle={'Ingredients'}
-                        gpLink={'/order-list'}
+                        gpLink={'#'}
                     />
 
                     <GPDashCard
@@ -52,11 +52,6 @@ function Inventory() {
             <div className="row mb-4">
                 <GPDashTitle gpTitle={'Procurement'} />
                 <div className="col-md-12 text-center d-flex">
-                    <GPDashCard
-                        gpIcon={faCartShopping}
-                        gpTitle={'Suppliers'}
-                        gpLink={'/suppliers'}
-                    />
 
                     <GPDashCard
                         gpIcon={faPlus}
@@ -64,6 +59,36 @@ function Inventory() {
                         gpLink={'/orders'}
                         gpClassName={'mx-4'}
                     />
+
+                    <GPDashCard
+                        gpIcon={faCartShopping}
+                        gpTitle={'Sent Orders'}
+                        gpLink={'#'}
+                        gpClassName={'mx-4'}
+                    />
+
+                    <GPDashCard
+                        gpIcon={faPlus}
+                        gpTitle={'Delivered'}
+                        gpLink={'/delivered'}
+                        gpClassName={'mx-4'}
+                    />
+
+                    <GPDashCard
+                        gpIcon={faCartShopping}
+                        gpTitle={'Suppliers'}
+                        gpLink={'/suppliers'}
+                        gpClassName={'mx-4'}
+                    />
+
+                    <GPDashCard
+                        gpIcon={faCartShopping}
+                        gpTitle={'All Concepts'}
+                        gpLink={'/order-list'}
+                        gpClassName={'mx-4'}
+                    />
+
+
                 </div>
             </div>
 
@@ -73,7 +98,8 @@ function Inventory() {
                     <GPDashCard
                         renderIcon={StockIcon}
                         gpTitle={'Stock'}
-                        gpLink={'/delivered'}
+                        gpLink={'#'}
+                        gpClassName={'mx-4'}
                     />
 
                     <GPDashCard
