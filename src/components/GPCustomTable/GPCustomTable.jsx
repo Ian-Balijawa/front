@@ -52,21 +52,31 @@ const GPCustomTable = ({
 }) => {
 
     return (
+        <>
+        {/* <GPPagination/> */}
+
         <MaterialTable
             icons={tableIcons}
-            title={title}
+            title={<GPPagination/>}
             columns={columns}
             data={data}
             actions={actions}
             options={{
                 headerStyle: {
-                    backgroundColor: '#FFE5DC',
-                    height: '39px',
-                    fontSize: "16px",
+                    backgroundColor:'#FFE5DC',
+                    height:'40px',
+                    paddingBottom:"5px",
+                    paddingTop:"5px",
+                    paddingLeft:"10px",
+                    paddingRight:"10px",
+                    fontSize:"16px",
                     fontWeight: 500,
-                    color: '#000'
+                    color: '#000',
+                    borderBottom:"1px solid #000"       
                 },
                 search: false,
+                toolbar:true,
+                paging:false,
                 ...options
 
 
@@ -75,6 +85,8 @@ const GPCustomTable = ({
             }
             {...props}
         />
+
+        </>
     )
 }
 

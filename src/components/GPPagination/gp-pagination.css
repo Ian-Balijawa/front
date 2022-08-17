@@ -1,3 +1,11 @@
+.pagination-wrapper{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    width: auto;
+    height:auto;
+}
+
 .main-pagination {
    width:140px;
    height: 50px;
@@ -27,16 +35,6 @@
     font-weight: 400;
     color:#E46036;
     background-color: #E2EDF8;
-}
-
-.pagination-wrapper{
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    padding-left: 45px;
-    padding-top: 25px;
-    width: auto;
-    height:auto;
 }
 
 .result-text {
