@@ -14,7 +14,7 @@ function GPSidebar() {
                 <div className="position-sticky pt-3 sidebar-sticky">
                     <GPBlockButton
                         title="Bake My Cake"
-                        gpClassName="p-3 gp-btn-margin border-0 rounded-1 mt-5 text-start align-left btn-lg bg-bake"
+                        gpClassName="p-3 gp-btn-margin border-0 rounded-1 mt-4 text-start align-left btn-lg bg-bake"
                     />
                     <hr className="divider bg-white" />
                     <ul className="nav flex-column">
