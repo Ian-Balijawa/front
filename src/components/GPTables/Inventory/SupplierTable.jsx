@@ -11,9 +11,6 @@ const SupplierTable = () => {
 
             <GPCustomTable
                 title="001"
-                options={{
-                    search: false
-                  }}
             />
             
           </div>

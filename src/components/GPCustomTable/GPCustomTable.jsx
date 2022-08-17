@@ -40,35 +40,41 @@ const tableIcons = {
 
 
 
-const GPCustomTable = ({ 
+const GPCustomTable = ({
     title,
-    columns= [{ title: 'Name', field: 'name' },{ title: 'Dummy', field: 'dummy' },], //sample default column
+    columns = [{ title: 'Name', field: 'name' }, { title: 'Dummy', field: 'dummy' },], //sample default column
 
-    data = [ { name: 'Mehmet', dummy: 'Baran' }], //sample default data
+    data = [{ name: 'Mehmet', dummy: 'Baran' }], //sample default data
     actions,
     options,
     ...props
 
- }) => {
+}) => {
 
     return (
         <MaterialTable
-                icons={tableIcons}
-                title={title}
-                columns={columns}
-                data={data}
-                actions={actions}
-                options = {{
-                    headerStyle:{
-                        backgroundColor: '#FFE5DC',
-                        height:'39px',
-                        fontSize:"16px",
-                        fontWeight:500,
-                        color: '#000'
-                      }
-                }}
-                {...props}
-            />
+            icons={tableIcons}
+            title={title}
+            columns={columns}
+            data={data}
+            actions={actions}
+            options={{
+                headerStyle: {
+                    backgroundColor: '#FFE5DC',
+                    height: '39px',
+                    fontSize: "16px",
+                    fontWeight: 500,
+                    color: '#000'
+                },
+                search: false,
+                ...options
+
+
+            }
+
+            }
+            {...props}
+        />
     )
 }
 
