@@ -3,6 +3,7 @@ import GPCartButton from '../../../components/GPCartButton/GPCartButton'
 import GPCustomTable from '../../../components/GPCustomTable/GPCustomTable'
 import GPLayout from '../../../components/GPLayout'
 import GPSearchFilterCard from '../../../components/GPSearchFilterCard/GPSearchFilterCard'
+import AllOrdersTable from '../../../components/GPTables/Inventory/AllOrdersTable'
 
 import '../inventory.css'
 import OrderModal from './OrderModal'
@@ -29,7 +30,7 @@ const Orders = () => {
                 </div>
 
                 <div className='order-table-container'>
-                    <GPCustomTable />
+                    <AllOrdersTable/>
                 </div>
 
 

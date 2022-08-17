@@ -75,6 +75,9 @@ const GPCustomTable = ({
                     color: '#000',
                     borderBottom:"1px solid #000"       
                 },
+                cellStyle:{
+                    borderBottom:"1px solid #7a7a7a" 
+                },
                 search: false,
                 toolbar:true,
                 paging:false,
