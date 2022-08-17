@@ -95,6 +95,7 @@ function Inventory() {
             <div className="row mb-4">
                 <GPDashTitle gpTitle={'Inventory Management'} />
                 <div className="col-md-12 text-center d-flex">
+                    
                     <GPDashCard
                         renderIcon={StockIcon}
                         gpTitle={'Stock'}
@@ -129,6 +130,7 @@ function Inventory() {
                         gpLink={'#'}
                         gpClassName={'mx-4'}
                     />
+
                 </div>
             </div>
         </GPLayout>
