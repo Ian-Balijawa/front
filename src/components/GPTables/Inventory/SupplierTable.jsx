@@ -9,9 +9,7 @@ const SupplierTable = () => {
 
            <div> 
 
-            <GPCustomTable
-                title="001"
-            />
+            <GPCustomTable  />
             
           </div>
     

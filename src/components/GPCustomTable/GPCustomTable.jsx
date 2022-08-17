@@ -42,6 +42,7 @@ const tableIcons = {
 
 const GPCustomTable = ({
     title,
+    gppagination = true, //boolean value for showing pagination
     columns = [{ title: 'Name', field: 'name' }, { title: 'Dummy', field: 'dummy' },], //sample default column
 
     data = [{ name: 'Mehmet', dummy: 'Baran' }], //sample default data
@@ -57,7 +58,7 @@ const GPCustomTable = ({
 
         <MaterialTable
             icons={tableIcons}
-            title={<GPPagination/>}
+            title={gppagination ?<GPPagination/> : title}
             columns={columns}
             data={data}
             actions={actions}
