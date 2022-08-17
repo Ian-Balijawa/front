@@ -1,0 +1,29 @@
+.supplier-actions-wrapper{
+    width:100px;
+    height:auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.view-btn-action{
+    width:63px;
+    height:22px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E46036;
+    color:#fff;
+    font-size: 12px;
+    font-weight: 400;
+    padding:8px;
+    
+
+}
+
+.ellipsis-icon-action{
+    font-size: 14px;
+    font-weight: 400;
+}
