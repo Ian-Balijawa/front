@@ -19,6 +19,10 @@
 
 }
 
+.supplier-table-card{
+    padding:30px;
+}
+
 
 /* view supplier */
 
@@ -110,11 +114,19 @@
     width:100%;
 }
 
+.order-table-card{
+    padding:30px;
+}
+
 .order-list-main {
     width:100%;
     height:auto;
     padding-top: 44px;
 }
+
+
+
+/* Delivery */
 
 .delivered-card-styles{
     width: 100%;

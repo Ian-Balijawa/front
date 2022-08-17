@@ -78,6 +78,11 @@ const GPCustomTable = ({
                 cellStyle:{
                     borderBottom:"1px solid #7a7a7a" 
                 },
+                rowStyle:(rowData, index ) => ({
+                    backgroundColor:
+                    index % 2 === 0 ? "#ffffff" : "rgba(227, 227, 227, 0.6)",
+                    }),
+
                 search: false,
                 toolbar:true,
                 paging:false,
@@ -86,7 +91,10 @@ const GPCustomTable = ({
 
             }
 
+
             }
+
+            style={{background:"transparent",border:"none",boxShadow:"none"}}
             {...props}
         />
 

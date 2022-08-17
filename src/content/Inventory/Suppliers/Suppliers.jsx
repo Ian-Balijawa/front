@@ -10,6 +10,7 @@ import GPCustomTable from '../../../components/GPCustomTable'
 import AddNewSupplier from './AddNewSupplier'
 import GPLayout from '../../../components/GPLayout'
 import SupplierTable from '../../../components/GPTables/Inventory/SupplierTable'
+import GPCard from '../../../components/GPCard/GPCard'
 
 const Suppliers = () => {
 
@@ -45,7 +46,9 @@ const Suppliers = () => {
 
         <div className='supplier-table-container'>
 
-          <SupplierTable/>
+          <GPCard classes="supplier-table-card">
+            <SupplierTable/>
+          </GPCard>
 
         </div>
 

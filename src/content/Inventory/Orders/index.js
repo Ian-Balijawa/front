@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import GPCard from '../../../components/GPCard/GPCard'
 import GPCartButton from '../../../components/GPCartButton/GPCartButton'
 import GPCustomTable from '../../../components/GPCustomTable/GPCustomTable'
 import GPLayout from '../../../components/GPLayout'
@@ -30,7 +31,9 @@ const Orders = () => {
                 </div>
 
                 <div className='order-table-container'>
-                    <AllOrdersTable/>
+                    <GPCard classes="order-table-card" >
+                        <AllOrdersTable/>
+                    </GPCard>
                 </div>
 
 
