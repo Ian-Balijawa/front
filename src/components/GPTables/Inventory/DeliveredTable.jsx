@@ -1,21 +1,23 @@
 
 import React from 'react'
-import CustomGreenActionButton from '../../CustomGreenActionButton'
 import GPCheckBox from '../../GPCheckBox/GPCheckBox'
 import GPCustomTable from '../../GPCustomTable/GPCustomTable'
-import GPSelectInput from '../../GPSelectInput.js/GPSelectInput'
+
 
 
 
 const DeliveredTable = () => {
 
-  
     const BoxMd =({qty})=>(
+
         <div style={styles.boxMd}>
            {qty}
         </div>
+
     )
 
+
+    
     const BoxLg = ({placeholder})=>(
        <div style={styles.boxLg}>
         {placeholder}

@@ -18,6 +18,8 @@ import ViewSupplier from './content/Inventory/Suppliers/ViewSupplier'
 import Orders from './content/Inventory/Orders'
 import OrderList from './content/Inventory/OrderList/OrderList'
 import Delivered from './content/Inventory/Delivered/Delivered'
+import Recipes from './content/Recipes/Recipes'
+import NewRecipe from './content/Recipes/NewRecipe'
 
 function App() {
     return (
@@ -41,6 +43,10 @@ function App() {
                 <Route path="order-list" element={<OrderList />} />
                 <Route path="delivered" element={<Delivered />} />
                 <Route path="reports" element={<Reports />} />
+                <Route path="recipes" element={<Recipes />} />
+                <Route path="new-recipe" element={<NewRecipe />} />
+
+
             </Routes>
         </div>
     )

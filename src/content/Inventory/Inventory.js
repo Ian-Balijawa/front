@@ -43,7 +43,7 @@ function Inventory() {
                     <GPDashCard
                         gpIcon={faSitemap}
                         gpTitle={'Recipes'}
-                        gpLink={'/view-supplier'}
+                        gpLink={'/recipes'}
                         gpClassName={'mx-4'}
                     />
                 </div>
