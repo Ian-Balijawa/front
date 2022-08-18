@@ -3,16 +3,15 @@ import './plusIconButton.css'
 
 import { faPlus } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-import {
-  Link
-
-} from "react-router-dom";
+import { useNavigate } from 'react-router-dom'
 
 const CustomPlusIconButton = ({ title, url, onClick }) => {
+
+   const navigate = useNavigate() 
+    
   return (
 
-    <div className='btn-main' onClick={onClick}>
+    <div className='btn-main' onClick={()=> url ? navigate(url) : onClick()}>
 
       <div className='btn-icon'>
         <FontAwesomeIcon icon={faPlus} />

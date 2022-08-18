@@ -19,7 +19,7 @@ const Recipes = () => {
                   <GPBlockButton title="Save Changes"  gpClassName="bg-theme border-0 btn-sm recipe-block-btn" />
                   <GPImportExportButton/>
                 </div>
-                  <CustomPlusIconButton title="Add New Recipe" url="new-recipe"/>
+                  <CustomPlusIconButton title="Add New Recipe" url="/new-recipe"/>
                 
            </div>
 
