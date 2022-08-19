@@ -16,7 +16,7 @@ import SaveAlt from '@material-ui/icons/SaveAlt'
 import Search from '@material-ui/icons/Search'
 import ViewColumn from '@material-ui/icons/ViewColumn'
 import GPPagination from '../GPPagination/GPPagination'
-import './gp-custom-table.css'
+import './gp-table.css'
 
 const tableIcons = {
     Add: forwardRef((props, ref) => <AddBox {...props} ref={ref} />),
@@ -46,18 +46,15 @@ const tableIcons = {
     ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />),
 }
 
-const GPCustomTable = ({
+const GPTable = ({
     title,
     gppagination = true, //boolean value for showing pagination
     toolbar = true,
-    columns = [
-        {title: 'Name', field: 'name'},
-        {title: 'Dummy', field: 'dummy'},
-    ], //sample default column
-
-    data = [{name: 'Mehmet', dummy: 'Baran'}], //sample default data
+    data,
+    columns,
     actions,
     options,
+    tableTitle = '',
     ...props
 }) => {
     return (
@@ -66,18 +63,18 @@ const GPCustomTable = ({
 
             <MaterialTable
                 icons={tableIcons}
-                title={gppagination ? <GPPagination /> : ''}
+                title={gppagination ? <GPPagination /> : tableTitle}
                 columns={columns}
                 data={data}
                 actions={actions}
                 options={{
                     headerStyle: {
                         backgroundColor: '#FFE5DC',
-                        height: '40px',
-                        paddingBottom: '5px',
-                        paddingTop: '5px',
-                        paddingLeft: '10px',
-                        paddingRight: '10px',
+                        // height: '40px',
+                        paddingBottom: '0px',
+                        paddingTop: '0px',
+                        paddingLeft: '5px',
+                        paddingRight: '5px',
                         fontSize: '16px',
                         fontWeight: 500,
                         color: '#000',
@@ -85,6 +82,10 @@ const GPCustomTable = ({
                     },
                     cellStyle: {
                         borderBottom: '1px solid #7a7a7a',
+                        height: '20px !important',
+                        fontSize: '14px',
+                        paddingBottom: '0px',
+                        paddingTop: '0px',
                     },
                     rowStyle: (rowData, index) => ({
                         backgroundColor:
@@ -109,4 +110,4 @@ const GPCustomTable = ({
     )
 }
 
-export default GPCustomTable
+export default GPTable

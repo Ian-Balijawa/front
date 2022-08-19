@@ -440,7 +440,7 @@ function NewOutlet() {
                                                 >
                                                     <li className="dropdown">
                                                         <a
-                                                            className=" dropdown-toggle"
+                                                            className="dropdown-toggle"
                                                             data-bs-toggle="dropdown"
                                                             href="#"
                                                             role="button"

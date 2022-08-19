@@ -87,13 +87,17 @@ function Library() {
     console.log('errors => ', errors)
 
     const [show, setShow] = useState(false)
+    const [showSub, setShowSub] = useState(false)
 
     const handleClose = () => setShow(false)
     const handleShow = () => setShow(true)
 
+    const handleShowSub = () => setShowSub(true)
+    const handleCloseSub = () => setShowSub(false)
+
     return (
         <GPLayout breadIcon={faPager} crumbs={crumbs}>
-            <div className="my-5 mx-5">
+            <div className="my-5">
                 <span className="dash-title">Library settings</span>
                 <p className="dash-sub-title">
                     Set library specific settings here. Variables added on this
@@ -104,7 +108,7 @@ function Library() {
                 noValidate
                 validated={validated}
                 onSubmit={handleSubmit(handleForgotPassword)}
-                className="needs-validation mx-5"
+                className="needs-validation "
             >
                 <div className="new-outlet">
                     <Tabs
@@ -283,18 +287,14 @@ function Library() {
                                         <div className="d-flex justify-content-start flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
                                             <GPIconButton
                                                 icon={faPlus}
-                                                onClick={() => {
-                                                    navigate('/new-outlet')
-                                                }}
+                                                onClick={handleShow}
                                                 title="Add Category"
                                                 gpClassName="cBtn bg-transparent text-theme mx-2"
                                             />
 
                                             <GPIconButton
                                                 icon={faPlus}
-                                                onClick={() => {
-                                                    navigate('/new-outlet')
-                                                }}
+                                                onClick={handleShowSub}
                                                 title="Add Sub Category"
                                                 gpClassName="cBtn bg-transparent text-theme mx-2"
                                             />
@@ -305,6 +305,91 @@ function Library() {
                                             />
                                         </div>
                                     </div>
+
+                                    <GPModal
+                                        title={'Add New Sub Category'}
+                                        handleClose={handleCloseSub}
+                                        onActionButtonClick={''}
+                                        size={'lg'}
+                                        show={showSub}
+                                    >
+                                        <div className="px-4 py-2 align-items-end">
+                                            <div className="row mb-3">
+                                                <label
+                                                    for="inputEmail3"
+                                                    className="col-sm-3 col-form-label text-end"
+                                                >
+                                                    Category Name
+                                                </label>
+                                                <div className="col-sm-9 ">
+                                                    <GPTextInput
+                                                        type="text"
+                                                        id="email"
+                                                        name="email"
+                                                        register={register}
+                                                        errors={errors}
+                                                    />
+                                                </div>
+                                            </div>
+
+                                            <div className="row mb-3">
+                                                <label
+                                                    for="inputEmail3"
+                                                    className="col-sm-3 col-form-label text-end"
+                                                >
+                                                    Category
+                                                </label>
+                                                <div className="col-sm-9">
+                                                    <select
+                                                        className="form-select"
+                                                        aria-label="Default select example"
+                                                    >
+                                                        <option selected>
+                                                            Open this select
+                                                            menu
+                                                        </option>
+                                                        <option value="1">
+                                                            One
+                                                        </option>
+                                                        <option value="2">
+                                                            Two
+                                                        </option>
+                                                        <option value="3">
+                                                            Three
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </GPModal>
+
+                                    <GPModal
+                                        title={'Add New Item Category'}
+                                        handleClose={handleClose}
+                                        onActionButtonClick={''}
+                                        size={'lg'}
+                                        show={show}
+                                    >
+                                        <div className="px-4 py-2 align-items-end">
+                                            <div className="row mb-3">
+                                                <label
+                                                    for="inputEmail3"
+                                                    className="col-sm-3 col-form-label text-end"
+                                                >
+                                                    Category Name
+                                                </label>
+                                                <div className="col-sm-9 ">
+                                                    <GPTextInput
+                                                        type="text"
+                                                        id="email"
+                                                        name="email"
+                                                        register={register}
+                                                        errors={errors}
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </GPModal>
 
                                     <div className="col-6 px-4">
                                         <span className="lib-title">

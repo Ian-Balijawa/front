@@ -22,6 +22,8 @@ import Recipes from './content/Recipes/Recipes'
 import NewRecipe from './content/Recipes/NewRecipe'
 import NewOutlet from './content/Settings/OutletSetup/NewOutlet'
 import Library from './content/Settings/Library'
+import Ingredients from './content/Inventory/Ingredients'
+import NewIngredient from './content/Inventory/Ingredients/NewIngredient'
 
 function App() {
     return (
@@ -46,6 +48,13 @@ function App() {
                 <Route path="library" element={<Library />} />
 
                 <Route path="inventory" element={<Inventory />} />
+
+                <Route path="inventory/ingredients" element={<Ingredients />} />
+                <Route
+                    path="inventory/ingredients/new"
+                    element={<NewIngredient />}
+                />
+
                 <Route path="suppliers" element={<Suppliers />} />
                 <Route path="view-supplier" element={<ViewSupplier />} />
                 <Route path="orders" element={<Orders />} />
