@@ -15,6 +15,10 @@ a {
     text-decoration: none !important;
 }
 
+hr.gp-divider {
+    border: 1px solid #7a7a7a;
+}
+
 .bg-theme {
     background: #e46036 !important;
 }
@@ -31,7 +35,6 @@ a {
     user-select: none;
 }
 
-
 @media (min-width: 768px) {
     .bd-placeholder-img-lg {
         font-size: 3.5rem;
@@ -45,6 +48,16 @@ a {
     border-width: 1px 0;
     box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
         inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.text-blue {
+    color: #0069a5 !important;
+}
+
+.theme-b-r {
+    border: 0.7px solid #7a7a7a;
+    border-radius: 3px;
+    padding: 3px;
 }
 
 .b-example-vr {
@@ -111,6 +124,10 @@ a {
     background-color: #18191d;
 }
 
+.accordion-button {
+    cursor: pointer !important;
+}
+
 .bg-bake {
     background-color: #303034 !important;
 }
@@ -140,4 +157,34 @@ label {
 
 .input-group-text {
     background-color: #eeeeee !important;
+}
+
+.bg-gray-e {
+    background: #eeeeee !important;
+}
+
+.card {
+    box-shadow: 0px 6px 15px 3px rgba(84, 84, 84, 0.1) !important;
+}
+
+::placeholder {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    color: #cbcbcb;
+}
+
+.outlet-title {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
+
+    color: #000000;
 }

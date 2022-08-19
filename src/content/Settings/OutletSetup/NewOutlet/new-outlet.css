@@ -1,0 +1,113 @@
+.new-outlet .nav-item .nav-link {
+    color: #000 !important;
+    padding: 12px 18px;
+}
+
+.new-outlet .nav-item {
+    background: #eeeeee;
+    border-radius: 6px 6px 0px 0px;
+    color: #000 !important;
+    margin-right: 0.2rem;
+}
+
+.new-outlet .nav-item .nav-link.active {
+    background: #e46036;
+    border-radius: 6px 6px 0px 0px;
+    color: #fff !important;
+    border-bottom: 0.5px solid #7a7a7a !important;
+}
+
+.gp-tab-content {
+    background: #fffefe;
+    border-top: none !important;
+    /* border: 0.5px solid #cbcbcb; */
+    box-shadow: 0px 6px 15px 3px rgba(84, 84, 84, 0.1);
+    border-radius: 0px 0px 6px 6px;
+}
+
+.new-outlet .nav-tabs {
+    border-bottom: 0.5px solid #7a7a7a !important;
+}
+
+.outlet-dashed {
+    background: #ffffff;
+    border: 0.5px dashed #7a7a7a;
+    border-radius: 6px;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.text-p {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #000000;
+}
+
+.w-180 {
+    width: 210px !important;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    color: #e46036;
+}
+
+.gp-divider {
+    border: 1px solid #7a7a7a;
+}
+
+.custom-title {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+
+    color: #000000;
+}
+
+.custom-fields {
+    background: rgba(227, 227, 227, 0.6);
+    border-top: 0.5px solid #7a7a7a;
+    border-bottom: 0.5px solid #7a7a7a;
+}
+
+.custom-fields .custom-name {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    padding-top: 5px;
+    /* identical to box height */
+
+    color: #0069a5;
+}
+
+.custom-dropdown {
+    background: #fffefe;
+    box-shadow: 0px 6px 19px 3px rgba(84, 84, 84, 0.25);
+    border-radius: 6px;
+    border: none !important;
+}
+
+.dropdown-toggle:after {
+    content: none !important;
+}
+
+.delete-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    color: #ff0b0b;
+}

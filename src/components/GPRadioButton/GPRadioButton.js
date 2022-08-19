@@ -6,9 +6,9 @@ function GPRadioButton({gpTitle, gpType, ...props}) {
         <div>
             <div className="form-check">
                 <input {...props} className="form-check-input" type={gpType} />
-                {gpTitle && (
+                {props.label && (
                     <label className="form-check-label" for="flexRadioDefault1">
-                        {gpTitle}
+                        {props.label}
                     </label>
                 )}
             </div>

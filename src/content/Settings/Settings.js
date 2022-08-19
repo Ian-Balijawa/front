@@ -33,7 +33,7 @@ function Settings() {
                     <GPDashCard
                         gpIcon={faBook}
                         gpTitle={'Library settings'}
-                        gpLink={'/'}
+                        gpLink={'/library'}
                     />
 
                     <GPDashCard
@@ -62,7 +62,7 @@ function Settings() {
                     <GPDashCard
                         gpIcon={faPersonCirclePlus}
                         gpTitle={'Add  Outlet'}
-                        gpLink={'/settings'}
+                        gpLink={'/new-outlet'}
                         gpClassName={'mx-4'}
                     />
                 </div>
