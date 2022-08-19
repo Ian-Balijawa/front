@@ -183,17 +183,17 @@ function Library() {
                         <Tab eventKey="Categories" title="Categories">
                             <div className="gp-tab-content px-4 py-5">
                                 <div class="row mb-5">
-                                    <div className="col-6">
+                                    <div className="col-6 px-4">
                                         <span className="lib-title">
                                             Ingredients Categories
                                         </span>
 
                                         <table
-                                            className="table table-striped mt-3"
+                                            className="table table-sm table-striped mt-3"
                                             style={{width: '100%'}}
                                         >
                                             <thead>
-                                                <tr className="lib-table">
+                                                <tr className="lib-table lib-table-row-title">
                                                     <th
                                                         scope="col"
                                                         style={{width: '60%'}}
@@ -277,73 +277,61 @@ function Library() {
                                                         />
                                                     </td>
                                                 </tr>
+                                            </tbody>
+                                        </table>
 
-                                                <tr
-                                                    id="flush-collapseOne"
-                                                    className=" accordion-collapse collapse"
-                                                    aria-labelledby="flush-headingOne"
-                                                    data-bs-parent="#accordionFlushExample"
-                                                >
-                                                    <td>Wisse</td>
-                                                    <td>
-                                                        <FontAwesomeIcon
-                                                            icon={faPen}
-                                                            className="mx-2"
-                                                        />
-                                                        <FontAwesomeIcon
-                                                            icon={faTrashCan}
-                                                            className="mx-2 theme-b-r"
-                                                        />
-                                                        <FontAwesomeIcon
-                                                            icon={
-                                                                faArrowsUpDownLeftRight
-                                                            }
-                                                            className="mx-2 theme-b-r"
-                                                        />
-                                                    </td>
-                                                </tr>
-                                                <tr
-                                                    id="flush-collapseOne"
-                                                    className=" accordion-collapse collapse"
-                                                    aria-labelledby="flush-headingOne"
-                                                    data-bs-parent="#accordionFlushExample"
-                                                >
-                                                    <td>Winssse</td>
-                                                    <td>
-                                                        <FontAwesomeIcon
-                                                            icon={faPen}
-                                                            className="mx-2"
-                                                        />
-                                                        <FontAwesomeIcon
-                                                            icon={faTrashCan}
-                                                            className="mx-2 theme-b-r"
-                                                        />
-                                                        <FontAwesomeIcon
-                                                            icon={
-                                                                faArrowsUpDownLeftRight
-                                                            }
-                                                            className="mx-2 theme-b-r"
-                                                        />
-                                                    </td>
-                                                </tr>
+                                        <div className="d-flex justify-content-start flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
+                                            <GPIconButton
+                                                icon={faPlus}
+                                                onClick={() => {
+                                                    navigate('/new-outlet')
+                                                }}
+                                                title="Add Category"
+                                                gpClassName="cBtn bg-transparent text-theme mx-2"
+                                            />
 
+                                            <GPIconButton
+                                                icon={faPlus}
+                                                onClick={() => {
+                                                    navigate('/new-outlet')
+                                                }}
+                                                title="Add Sub Category"
+                                                gpClassName="cBtn bg-transparent text-theme mx-2"
+                                            />
+
+                                            <GPIconButton
+                                                title="Edit"
+                                                gpClassName="px-4 bg-transparent border-1 text-dark border-secondary"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className="col-6 px-4">
+                                        <span className="lib-title">
+                                            Recipe and Menu Categories
+                                        </span>
+
+                                        <table
+                                            className="table table-sm table-striped mt-3"
+                                            style={{width: '100%'}}
+                                        >
+                                            <thead>
+                                                <tr className="lib-table lib-table-row-title">
+                                                    <th
+                                                        scope="col"
+                                                        style={{width: '60%'}}
+                                                    >
+                                                        Name
+                                                    </th>
+                                                    <th scope="col">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
                                                 <tr>
-                                                    <td>Wine</td>
-                                                    <td>
-                                                        <FontAwesomeIcon
-                                                            icon={faPen}
-                                                            className="mx-2"
-                                                        />
-                                                        <FontAwesomeIcon
-                                                            icon={faTrashCan}
-                                                            className="mx-2 theme-b-r"
-                                                        />
-                                                        <FontAwesomeIcon
-                                                            icon={
-                                                                faArrowsUpDownLeftRight
-                                                            }
-                                                            className="mx-2 theme-b-r"
-                                                        />
+                                                    <td colspan="2">
+                                                        <span className="table-no-records text-center">
+                                                            No Categories found
+                                                        </span>
                                                     </td>
                                                 </tr>
                                             </tbody>

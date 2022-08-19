@@ -27,6 +27,10 @@
     border-bottom: 0.5px solid #7a7a7a;
 }
 
+.lib-table tr {
+    border-bottom: 0.5px solid #7a7a7a !important;
+}
+
 .lib-table tr:nth-child(odd) {
     background: #fafafa;
 }
@@ -54,4 +58,26 @@
 
     color: #000000;
     cursor: pointer;
+}
+
+.lib-table-row-title {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    background-color: #ffe5dc;
+    color: #000000;
+    padding-left: 10px;
+}
+
+.table-no-records {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    align-items: center;
+    text-align: center;
+    color: #000000;
 }
