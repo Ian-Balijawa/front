@@ -24,6 +24,8 @@ import NewOutlet from './content/Settings/OutletSetup/NewOutlet'
 import Library from './content/Settings/Library'
 import Ingredients from './content/Inventory/Ingredients'
 import NewIngredient from './content/Inventory/Ingredients/NewIngredient'
+import Sales from './content/Sales'
+import Menu from './content/Menu'
 
 function App() {
     return (
@@ -36,6 +38,8 @@ function App() {
                 <Route path="/" element={<Dashboard />} />
 
                 <Route path="settings" element={<Settings />} />
+                <Route path="sales" element={<Sales />} />
+                <Route path="menu" element={<Menu />} />
 
                 <Route path="employee-setup" element={<EmployeeSetup />} />
                 <Route path="new-employee" element={<NewEmployee />} />

@@ -14,7 +14,7 @@ function GPLayout({breadIcon, crumbs, children}) {
                 <div className="row">
                     <GPSidebar />
                     <main className="col-md-9 ms-sm-auto col-lg-10 px-5">
-                        <div className="my-3 mx-5">{children}</div>
+                        <div className="my-3 mx-2">{children}</div>
                     </main>
                 </div>
             </div>

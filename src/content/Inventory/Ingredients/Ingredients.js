@@ -44,7 +44,7 @@ function Ingredients() {
             field: 'ordering',
             render: rowData => (
                 <div className="d-flex justity-content-between">
-                    <small>
+                    {/* <small>
                         <GPIconButton
                             icon={faEye}
                             title="View"
@@ -56,7 +56,16 @@ function Ingredients() {
                             }}
                             onClick={() => {}}
                         />
-                    </small>
+                    </small> */}
+                    <div className="supplier-action-view-btn-cont">
+                        <div className="view-btn-action">
+                            <FontAwesomeIcon
+                                icon={faEye}
+                                style={{color: '#fff'}}
+                            />
+                            View
+                        </div>
+                    </div>
                     <GPActionLinks record={rowData} />
                 </div>
             ),

@@ -18,6 +18,22 @@ import Close from '../../assets/icons/closeIcon.svg'
 import Setting from '../../assets/icons/settingGear.svg'
 import ImageP from '../../assets/img/imagePlaceholder.PNG'
 import './gp_icon.css'
+import Sales from '../../assets/icons/sales.svg'
+import Menu from '../../assets/icons/menu.svg'
+
+export const MenuIcon = () => {
+    return (
+        <>
+            <img
+                src={Menu}
+                width={20}
+                height={20}
+                className="m-2 filter"
+                alt=""
+            />
+        </>
+    )
+}
 
 export const SettingIcon = () => {
     return (
@@ -42,6 +58,21 @@ export const HomeIcon = () => {
     )
 }
 
+export const SalesIcon = () => {
+    return (
+        <>
+            <img
+                src={Sales}
+                width={20}
+                height={20}
+                style={{fill: 'red'}}
+                className="m-2"
+                alt=""
+            />
+        </>
+    )
+}
+
 export const ImagePlaceholder = () => {
     return (
         <>
@@ -53,7 +84,7 @@ export const ImagePlaceholder = () => {
 export const ArrowDown = () => {
     return (
         <>
-            <img src={ArrowD} width={14} height={14} className="m-2" alt="" />
+            <img src={ArrowD} width={14} height={14} className="" alt="" />
         </>
     )
 }
@@ -111,7 +142,7 @@ export const ReportIcon = () => {
 export const CloseIcon = () => {
     return (
         <>
-            <img src={Close} width={20} height={20} className="m-2" alt="" />
+            <img src={Close} width={20} height={20} className="" alt="" />
         </>
     )
 }
@@ -119,13 +150,7 @@ export const CloseIcon = () => {
 export const IngredientsIcon = () => {
     return (
         <>
-            <img
-                src={Ingredients}
-                width={60}
-                height={60}
-                className="m-2"
-                alt=""
-            />
+            <img src={Ingredients} width={40} height={40} alt="" />
         </>
     )
 }
@@ -133,7 +158,7 @@ export const IngredientsIcon = () => {
 export const StockIcon = () => {
     return (
         <>
-            <img src={Stock} width={60} height={60} className="m-2" alt="" />
+            <img src={Stock} width={40} height={40} className="" alt="" />
         </>
     )
 }
@@ -141,7 +166,7 @@ export const StockIcon = () => {
 export const CountIcon = () => {
     return (
         <>
-            <img src={Count} width={60} height={60} className="m-2" alt="" />
+            <img src={Count} width={40} height={40} className="" alt="" />
         </>
     )
 }
@@ -149,7 +174,7 @@ export const CountIcon = () => {
 export const CreateIcon = () => {
     return (
         <>
-            <img src={Create} width={60} height={60} className="m-2" alt="" />
+            <img src={Create} width={40} height={40} className="" alt="" />
         </>
     )
 }
@@ -157,7 +182,7 @@ export const CreateIcon = () => {
 export const HashIcon = () => {
     return (
         <>
-            <img src={Hash} width={30} height={30} className="m-2" alt="" />
+            <img src={Hash} width={30} height={30} className="" alt="" />
         </>
     )
 }
