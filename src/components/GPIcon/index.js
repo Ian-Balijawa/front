@@ -24,13 +24,7 @@ import Menu from '../../assets/icons/menu.svg'
 export const MenuIcon = () => {
     return (
         <>
-            <img
-                src={Menu}
-                width={25}
-                height={25}
-                className="m-2 filter"
-                alt=""
-            />
+            <img src={Menu} width={25} height={25} className="m-2" alt="" />
         </>
     )
 }

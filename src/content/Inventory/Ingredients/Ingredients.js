@@ -27,7 +27,18 @@ function Ingredients() {
             href: '#',
         },
     ]
-
+    const actionLinks = [
+        {
+            text: 'Edit',
+            icon: 'faPen',
+            href: '',
+        },
+        {
+            text: 'Delete',
+            icon: 'faTrashCan',
+            href: '',
+        },
+    ]
     const navigate = useNavigate()
 
     const _columns = [
@@ -66,7 +77,7 @@ function Ingredients() {
                             View
                         </div>
                     </div>
-                    <GPActionLinks record={rowData} />
+                    <GPActionLinks actionLinks={actionLinks} record={rowData} />
                 </div>
             ),
         },
@@ -179,6 +190,8 @@ function Ingredients() {
                 <GPTable
                     columns={_columns}
                     data={_data}
+                    paddingBottom="0"
+                    paddingTop="0"
                     options={{
                         selection: true,
                     }}

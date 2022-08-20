@@ -18,7 +18,7 @@ function Settings() {
     const crumbs = [
         {
             text: 'Settings',
-            href: '/settings',
+            href: '#',
         },
     ]
 
@@ -35,19 +35,19 @@ function Settings() {
                     <GPDashCard
                         gpIcon={faBook}
                         gpTitle={'Library settings'}
-                        gpLink={'/library'}
+                        gpLink={'/settings/library'}
                     />
 
                     <GPDashCard
                         gpIcon={faPersonCirclePlus}
                         gpTitle={'Employee Setup'}
-                        gpLink={'/employee-setup'}
+                        gpLink={'/settings/employee-setup'}
                         gpClassName={'mx-4'}
                     />
                     <GPDashCard
                         gpIcon={faUserLock}
                         gpTitle={'Employee  Roles'}
-                        gpLink={'/employee-role'}
+                        gpLink={'/settings/employee-role'}
                     />
                 </div>
             </div>

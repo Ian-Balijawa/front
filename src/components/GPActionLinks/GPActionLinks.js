@@ -8,15 +8,14 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import './gp-action-links.css'
 
-function GPActionLinks() {
+function GPActionLinks({actionLinks, ...props}) {
     return (
         <div className="">
             <ul className="p-0 m-0 d-flex" style={{listStyle: 'none'}}>
                 <li className="dropdown">
-                    <a
+                    <span
                         className="dropdown-toggle"
                         data-bs-toggle="dropdown"
-                        href="#"
                         role="button"
                         aria-expanded="false"
                     >
@@ -24,24 +23,24 @@ function GPActionLinks() {
                             className="text-theme mx-3 dropdown"
                             icon={faEllipsis}
                         />
-                    </a>
-                    <ul className="dropdown-menu custom-dropdown action-links">
-                        <li>
-                            <Link className="dropdown-item" to="#">
-                                <FontAwesomeIcon
-                                    className="text-theme mx-3 dropdown"
-                                    icon={faPenToSquare}
-                                />{' '}
-                                <span className="">Edit</span>
-                            </Link>
-                            <Link className="dropdown-item" to="#">
-                                <FontAwesomeIcon
-                                    className="text-theme mx-3 dropdown"
-                                    icon={faTrashCan}
-                                />{' '}
-                                <span className="">Delete</span>
-                            </Link>
-                        </li>
+                    </span>
+                    <ul className="dropdown-menu custom-dropdown px-2 action-links">
+                        {actionLinks.map((actionLink, index) => (
+                            <li key={index}>
+                                <Link
+                                    className="dropdown-item"
+                                    to={actionLink.href}
+                                >
+                                    {actionLink.icon && (
+                                        <FontAwesomeIcon
+                                            className="text-theme mx-3 dropdown"
+                                            icon={actionLink.icon}
+                                        />
+                                    )}{' '}
+                                    <span className="">{actionLink.text}</span>
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </li>
             </ul>

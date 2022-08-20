@@ -41,15 +41,21 @@ function App() {
                 <Route path="sales" element={<Sales />} />
                 <Route path="menu" element={<Menu />} />
 
-                <Route path="employee-setup" element={<EmployeeSetup />} />
-                <Route path="new-employee" element={<NewEmployee />} />
+                <Route
+                    path="settings/employee-setup"
+                    element={<EmployeeSetup />}
+                />
+                <Route path="settings/new-employee" element={<NewEmployee />} />
                 <Route path="update-employee" element={<UpdateEmployee />} />
-                <Route path="employee-role" element={<EmployeeRole />} />
+                <Route
+                    path="settings/employee-role"
+                    element={<EmployeeRole />}
+                />
 
                 <Route path="outlet-setup" element={<OutletSetup />} />
                 <Route path="new-outlet" element={<NewOutlet />} />
 
-                <Route path="library" element={<Library />} />
+                <Route path="settings/library" element={<Library />} />
 
                 <Route path="inventory" element={<Inventory />} />
 

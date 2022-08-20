@@ -5,7 +5,7 @@ import GPIconButton from '../../../components/GPIconButton'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import GPSearchInput from '../../../components/GPSearchInput'
 import GPImportExportButton from '../../../components/GPImportExportButton'
-import {Col, Form, Nav, Row, Tab, Tabs} from 'react-bootstrap'
+import {Col, Form, InputGroup, Nav, Row, Tab, Tabs} from 'react-bootstrap'
 import './employee-role.css'
 import GPBlockButton from '../../../components/GPBlockButton'
 import GPTextInput from '../../../components/GPTextInput/GPTextInput'
@@ -18,8 +18,8 @@ import GPRadioButton from '../../../components/GPRadioButton'
 function EmployeeRole() {
     const crumbs = [
         {
-            text: 'Home',
-            href: '/',
+            text: 'Settings',
+            href: '/settings',
         },
         {
             text: 'Employee Roles: New',
@@ -72,11 +72,11 @@ function EmployeeRole() {
 
                     <GPIconButton
                         title="Save Changes"
-                        gpClassName="cBtn px-4 bg-theme border-0 "
+                        gpClassName="cBtn px-4 bg-theme border-0 p-2"
                     />
 
                     <GPBlockButton
-                        gpClassName="cBtn bg-transparent text-theme px-4 mx-2"
+                        gpClassName="cBtn bg-transparent text-theme px-4 mx-2 p-2"
                         title={'Save & Start New'}
                     />
                 </div>
@@ -90,7 +90,7 @@ function EmployeeRole() {
 
                         <div className="container">
                             <div className="row row-cols-2">
-                                <div className="col-3 text-start">
+                                <div className="col-3 text-end">
                                     <label htmlFor="name">
                                         Employee Role Title
                                     </label>
@@ -108,7 +108,7 @@ function EmployeeRole() {
                             </div>
 
                             <div className="row row-cols-2 mb-3">
-                                <div className="col-3 text-start">
+                                <div className="col-3 text-end">
                                     <label htmlFor="name">Pay Basis</label>
                                 </div>
                                 <div className="col-9">
@@ -127,24 +127,24 @@ function EmployeeRole() {
                                 </div>
                             </div>
                             <div className="row row-cols-2 mb-3">
-                                <div className="col-3 text-start">
+                                <div className="col-md-3 text-end">
                                     <label htmlFor="name">Default Pay</label>
                                 </div>
-                                <div className="col-9">
-                                    <div class="input-group">
-                                        <div class="input-group-text">USh</div>
-                                        <GPTextInput
-                                            type="text"
-                                            id="email"
-                                            name="email"
-                                            register={register}
-                                            errors={errors}
+                                <div className="col-md-9">
+                                    <InputGroup className="mb-3">
+                                        <InputGroup.Text id="basic-addon1">
+                                            USh
+                                        </InputGroup.Text>
+                                        <Form.Control
+                                            placeholder="0.00"
+                                            aria-label="Default Pay"
+                                            aria-describedby="basic-addon1"
                                         />
-                                    </div>
+                                    </InputGroup>
                                 </div>
                             </div>
                             <div className="row row-cols-2 mb-3">
-                                <div className="col-3 text-start">
+                                <div className="col-3 text-end">
                                     <label htmlFor="name">Pay Basis</label>
                                 </div>
                                 <div className="col-9">
@@ -163,7 +163,7 @@ function EmployeeRole() {
                                 </div>
                             </div>
                             <div className="row row-cols-2 mb-3">
-                                <div className="col-3 text-start">
+                                <div className="col-3 text-end">
                                     <label htmlFor="name">Cashier</label>
                                 </div>
                                 <div className="col-9">
@@ -183,7 +183,7 @@ function EmployeeRole() {
                             </div>
 
                             <div className="row row-cols-2 mb-3">
-                                <div className="col-3 text-start">
+                                <div className="col-3 text-end">
                                     <span className="e-heading mb-5">
                                         User Permisions
                                     </span>

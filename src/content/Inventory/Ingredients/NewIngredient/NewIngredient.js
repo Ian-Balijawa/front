@@ -920,6 +920,8 @@ function NewIngredient() {
                                             <GPTable
                                                 columns={gpColumns}
                                                 data={gpData}
+                                                paddingBottom="0"
+                                                paddingTop="0"
                                                 gppagination={false}
                                                 options={{toolbar: false}}
                                             />
@@ -936,6 +938,8 @@ function NewIngredient() {
                                             <GPTable
                                                 columns={gpSupColumns}
                                                 data={gpSupData}
+                                                paddingBottom="0"
+                                                paddingTop="0"
                                                 gppagination={false}
                                                 options={{toolbar: false}}
                                             />
@@ -989,18 +993,8 @@ function NewIngredient() {
                                                 data={gpInvData}
                                                 gppagination={false}
                                                 options={{toolbar: false}}
-                                                headerStyle={{
-                                                    paddingBottom:
-                                                        '2px !important',
-                                                    paddingTop:
-                                                        '2px !important',
-                                                }}
-                                                cellStyle={{
-                                                    paddingBottom:
-                                                        '2px !important',
-                                                    paddingTop:
-                                                        '2px !important',
-                                                }}
+                                                paddingBottom="5px"
+                                                paddingTop="5px"
                                             />
                                         </div>
                                     </div>
