@@ -89,9 +89,13 @@ function NewIngredient() {
     console.log('errors => ', errors)
 
     const [show, setShow] = useState(false)
+    const [supplierShow, setSupplierShow] = useState(false)
 
     const handleClose = () => setShow(false)
     const handleShow = () => setShow(true)
+
+    const supplierModalClose = () => setShow(false)
+    const supplierModalShow = () => setSupplierShow(true)
 
     const gpColumns = [
         {title: 'Package Type', field: 'PackageType'},
@@ -108,6 +112,7 @@ function NewIngredient() {
                         <FontAwesomeIcon
                             icon={faPlus}
                             className="mx-2 theme-b-r"
+                            onClick={supplierModalShow}
                         />
                     </small>
                 </div>
@@ -144,24 +149,134 @@ function NewIngredient() {
             basePrice: '0',
             Supplier: 0,
         },
+        {
+            PackageType: 'Bottle',
+            Content: '0.51 l',
+            Storable: 'Rice',
+            avgPrice: 'Uhs 5,000',
+            basePrice: '0',
+            Supplier: 0,
+        },
+        {
+            PackageType: 'Bottle',
+            Content: '0.51 l',
+            Storable: 'Rice',
+            avgPrice: 'Uhs 5,000',
+            basePrice: '0',
+            Supplier: 0,
+        },
     ]
 
-    const gpColumns2 = () => {
-        return (
-            <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">
-                <span className="new-ing-title">Package Information</span>
+    const gpSupColumns = [
+        {title: 'Content', field: 'Content'},
+        {title: 'Supplier', field: 'Supplier'},
+        {title: 'Product Name', field: 'ProductName'},
+        {title: 'Price', field: 'Price'},
+        {title: 'Price/Unit', field: 'PriceUnit'},
+        {
+            title: 'Edit',
+            field: 'edit',
+            render: rowData => (
+                <div className="d-flex justity-content-between">
+                    <small>
+                        <FontAwesomeIcon
+                            icon={faPen}
+                            className="mx-2 theme-b-r"
+                        />
+                    </small>
+                </div>
+            ),
+        },
+    ]
 
-                <GPIconButton
-                    icon={faPlus}
-                    onClick={() => {
-                        navigate('/inventory/ingredients/new')
-                    }}
-                    title="Add New Ingredient"
-                    gpClassName="cBtn bg-transparent text-theme "
-                />
-            </div>
-        )
-    }
+    const gpSupData = [
+        {
+            Content: '1 kg',
+            Supplier: 'S&S Co.',
+            ProductName: 'Basmati rice',
+            Price: 'shs 1,000/ 1kg',
+            PriceUnit: 'shs 1,000/ 1kg',
+        },
+
+        {
+            Content: '1 kg',
+            Supplier: 'S&S Co.',
+            ProductName: 'Basmati rice',
+            Price: 'shs 1,000/ 1kg',
+            PriceUnit: 'shs 1,000/ 1kg',
+        },
+
+        {
+            Content: '1 kg',
+            Supplier: 'S&S Co.',
+            ProductName: 'Basmati rice',
+            Price: 'shs 1,000/ 1kg',
+            PriceUnit: 'shs 1,000/ 1kg',
+        },
+
+        {
+            Content: '1 kg',
+            Supplier: 'S&S Co.',
+            ProductName: 'Basmati rice',
+            Price: 'shs 1,000/ 1kg',
+            PriceUnit: 'shs 1,000/ 1kg',
+        },
+
+        {
+            Content: '1 kg',
+            Supplier: 'S&S Co.',
+            ProductName: 'Basmati rice',
+            Price: 'shs 1,000/ 1kg',
+            PriceUnit: 'shs 1,000/ 1kg',
+        },
+
+        {
+            Content: '1 kg',
+            Supplier: 'S&S Co.',
+            ProductName: 'Basmati rice',
+            Price: 'shs 1,000/ 1kg',
+            PriceUnit: 'shs 1,000/ 1kg',
+        },
+    ]
+
+    const gpInvColumns = [
+        {title: 'Outlet', field: 'Outlet'},
+        {title: 'Quantity', field: 'Quantity'},
+        {title: 'Par', field: 'Par'},
+        {title: 'Minimum Quantity', field: 'MinimumQuantity'},
+        {title: 'Storage Location', field: 'StorageLocation'},
+    ]
+
+    const gpInvData = [
+        {
+            Outlet: 'Bake my day Entebbe',
+            Quantity: '1',
+            Par: '1',
+            MinimumQuantity: '0',
+            StorageLocation: 'N/A',
+        },
+        {
+            Outlet: 'Bake my day Entebbe',
+            Quantity: '1',
+            Par: '1',
+            MinimumQuantity: '0',
+            StorageLocation: 'N/A',
+        },
+        {
+            Outlet: 'Bake my day Entebbe',
+            Quantity: '1',
+            Par: '1',
+            MinimumQuantity: '0',
+            StorageLocation: 'N/A',
+        },
+        {
+            Outlet: 'Bake my day Entebbe',
+            Quantity: '1',
+            Par: '1',
+            MinimumQuantity: '0',
+            StorageLocation: 'N/A',
+        },
+    ]
 
     return (
         <GPLayout breadIcon={faPager} crumbs={crumbs}>
@@ -485,9 +600,9 @@ function NewIngredient() {
                             eventKey="PackagePricing"
                             title="Package and Pricing"
                         >
-                            <div className="gp-tab-content px-4 py-5">
+                            <div className="gp-tab-content px-4 py-2">
                                 <div class="row mb-5">
-                                    <div className="col-6">
+                                    <div className="col-6 p-4">
                                         <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center mb-3">
                                             <span className="new-ing-title">
                                                 Package Information
@@ -660,6 +775,145 @@ function NewIngredient() {
                                                     </div>
                                                 </div>
                                             </GPModal>
+                                            <GPModal
+                                                title={'Create Package'}
+                                                buttonText={'Add Package'}
+                                                handleClose={supplierModalClose}
+                                                onActionButtonClick={''}
+                                                size={'lg'}
+                                                Add
+                                                Package
+                                                show={supplierShow}
+                                            >
+                                                <div className="px-4 py-2 align-items-end">
+                                                    <div className="row mb-3">
+                                                        <label
+                                                            for="inputEmail3"
+                                                            className="col-sm-3 col-form-label text-end"
+                                                        >
+                                                            Package Quantity
+                                                        </label>
+                                                        <div className="col-sm-9 ">
+                                                            <GPTextInput
+                                                                type="text"
+                                                                id="email"
+                                                                name="email"
+                                                                placeholder="e.g. 21"
+                                                                register={
+                                                                    register
+                                                                }
+                                                                errors={errors}
+                                                            />
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="row mb-3">
+                                                        <label
+                                                            for="inputEmail3"
+                                                            className="col-sm-3 col-form-label text-end"
+                                                        >
+                                                            Package name
+                                                        </label>
+                                                        <div className="col-sm-9 ">
+                                                            <GPTextInput
+                                                                type="text"
+                                                                id="email"
+                                                                name="email"
+                                                                disabled={true}
+                                                                register={
+                                                                    register
+                                                                }
+                                                                errors={errors}
+                                                            />
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="row mb-3">
+                                                        <label
+                                                            for="inputEmail3"
+                                                            className="col-sm-3 col-form-label text-end"
+                                                        >
+                                                            Unit
+                                                        </label>
+                                                        <div className="col-sm-9">
+                                                            <select
+                                                                className="form-select"
+                                                                aria-label="Default select example"
+                                                            >
+                                                                <option
+                                                                    selected
+                                                                >
+                                                                    Select Unit
+                                                                </option>
+                                                                <option value="1">
+                                                                    One
+                                                                </option>
+                                                                <option value="2">
+                                                                    Two
+                                                                </option>
+                                                                <option value="3">
+                                                                    Three
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="row mb-3">
+                                                        <label
+                                                            for="inputEmail3"
+                                                            className="col-sm-3 col-form-label text-end"
+                                                        >
+                                                            EAN/UPC
+                                                        </label>
+                                                        <div className="col-sm-9 ">
+                                                            <GPTextInput
+                                                                type="text"
+                                                                id="email"
+                                                                name="email"
+                                                                placeholder="e.g. 600962262001"
+                                                                register={
+                                                                    register
+                                                                }
+                                                                errors={errors}
+                                                            />
+                                                        </div>
+                                                    </div>
+
+                                                    <hr className="gp-divider" />
+
+                                                    <div className="row mb-3 mt-4 justify-content-end">
+                                                        <div className="col-md-3">
+                                                            Is Active?
+                                                            <br />
+                                                            <GPRadioButton
+                                                                gpType="checkbox"
+                                                                id="no"
+                                                                name="no"
+                                                            />
+                                                        </div>
+
+                                                        <div className="col-md-3">
+                                                            Is stockable?
+                                                            <br />
+                                                            <GPRadioButton
+                                                                gpType="checkbox"
+                                                                id="no"
+                                                                name="no"
+                                                            />
+                                                        </div>
+
+                                                        <div className="col-md-3">
+                                                            Is piece?
+                                                            <br />
+                                                            <GPRadioButton
+                                                                gpType="checkbox"
+                                                                id="no"
+                                                                name="no"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </GPModal>
                                         </div>
 
                                         <div>
@@ -667,8 +921,53 @@ function NewIngredient() {
                                                 columns={gpColumns}
                                                 data={gpData}
                                                 gppagination={false}
+                                                options={{toolbar: false}}
                                             />
                                         </div>
+                                    </div>
+                                    <div className="col-6 p-4">
+                                        <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center mb-3">
+                                            <span className="new-ing-title">
+                                                Suppliers and pricing
+                                            </span>
+                                        </div>
+
+                                        <div>
+                                            <GPTable
+                                                columns={gpSupColumns}
+                                                data={gpSupData}
+                                                gppagination={false}
+                                                options={{toolbar: false}}
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className="col-6 p-4">
+                                        <span className="outlet-title">
+                                            Conversaions & Waste
+                                        </span>
+                                        <hr className="gp-divider" />
+
+                                        <span className="conversion-text">
+                                            Conversion
+                                        </span>
+
+                                        <GPRadioButton
+                                            gpType="checkbox"
+                                            id="Blindcount"
+                                            name="Blind count"
+                                            label="Change Ratio Between Kg/L"
+                                            className="conversion-text"
+                                        />
+
+                                        <GPTextInput
+                                            type="text"
+                                            id="email"
+                                            name="email"
+                                            label={'Waste Percentage'}
+                                            register={register}
+                                            errors={errors}
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -678,8 +977,33 @@ function NewIngredient() {
                             <div className="gp-tab-content px-4 py-4">
                                 <div class="row mb-5">
                                     <span className="custom-title">
-                                        Custom Inventory fields
+                                        Inventory Info per Outlet
                                     </span>
+                                    <span className="conversion-text mt-3 mb-2">
+                                        Lemon Juice bottle (1 ltr)
+                                    </span>
+                                    <div className="row">
+                                        <div className="col-12">
+                                            <GPTable
+                                                columns={gpInvColumns}
+                                                data={gpInvData}
+                                                gppagination={false}
+                                                options={{toolbar: false}}
+                                                headerStyle={{
+                                                    paddingBottom:
+                                                        '2px !important',
+                                                    paddingTop:
+                                                        '2px !important',
+                                                }}
+                                                cellStyle={{
+                                                    paddingBottom:
+                                                        '2px !important',
+                                                    paddingTop:
+                                                        '2px !important',
+                                                }}
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </Tab>

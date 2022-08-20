@@ -70,7 +70,7 @@ const GPTable = ({
                 options={{
                     headerStyle: {
                         backgroundColor: '#FFE5DC',
-                        // height: '40px',
+                        height: '40px !important',
                         paddingBottom: '0px',
                         paddingTop: '0px',
                         paddingLeft: '5px',
@@ -79,13 +79,15 @@ const GPTable = ({
                         fontWeight: 500,
                         color: '#000',
                         borderBottom: '1px solid #000',
+                        ...props.headerStyle,
                     },
                     cellStyle: {
                         borderBottom: '1px solid #7a7a7a',
-                        height: '20px !important',
+                        height: '40px !important',
                         fontSize: '14px',
                         paddingBottom: '0px',
                         paddingTop: '0px',
+                        ...props.cellStyle,
                     },
                     rowStyle: (rowData, index) => ({
                         backgroundColor:

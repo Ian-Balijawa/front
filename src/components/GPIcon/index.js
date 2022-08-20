@@ -26,8 +26,8 @@ export const MenuIcon = () => {
         <>
             <img
                 src={Menu}
-                width={20}
-                height={20}
+                width={25}
+                height={25}
                 className="m-2 filter"
                 alt=""
             />
@@ -41,8 +41,8 @@ export const SettingIcon = () => {
             <img
                 style={{color: '#232A3B'}}
                 src={Setting}
-                width={20}
-                height={20}
+                width={25}
+                height={25}
                 className="m-2 svg-black"
                 alt=""
             />
@@ -53,7 +53,7 @@ export const SettingIcon = () => {
 export const HomeIcon = () => {
     return (
         <>
-            <img src={Home} width={20} height={20} className="m-2" alt="" />
+            <img src={Home} width={25} height={25} className="m-2" alt="" />
         </>
     )
 }
@@ -63,8 +63,8 @@ export const SalesIcon = () => {
         <>
             <img
                 src={Sales}
-                width={20}
-                height={20}
+                width={25}
+                height={25}
                 style={{fill: 'red'}}
                 className="m-2"
                 alt=""
@@ -122,8 +122,8 @@ export const InventoryIcon = () => {
         <>
             <img
                 src={Inventory}
-                width={20}
-                height={20}
+                width={25}
+                height={25}
                 className="m-2"
                 alt=""
             />
@@ -134,7 +134,7 @@ export const InventoryIcon = () => {
 export const ReportIcon = () => {
     return (
         <>
-            <img src={Report} width={20} height={20} className="m-2" alt="" />
+            <img src={Report} width={25} height={25} className="m-2" alt="" />
         </>
     )
 }
@@ -142,7 +142,7 @@ export const ReportIcon = () => {
 export const CloseIcon = () => {
     return (
         <>
-            <img src={Close} width={20} height={20} className="" alt="" />
+            <img src={Close} width={25} height={25} className="" alt="" />
         </>
     )
 }
