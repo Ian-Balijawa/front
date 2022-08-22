@@ -1,0 +1,33 @@
+.gp-custom-theme-btn{
+    width:170px;
+    height:41px;
+    background-color: #E46036;
+    font-size:18px;
+    border:0;
+    border-radius:6px;
+    color: white;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+.gp-custom-theme-btn:hover{
+    background-color: #e77958;
+}
+
+.btn-no-bg {
+   background-color: transparent;
+   border:0.5px solid #A5A5A5;
+   color:#E46036;
+
+}
+
+.btn-no-bg:hover {
+    background-color: transparent;
+    color: #e77958;
+    border:0.5px solid #A5A5A5;
+}

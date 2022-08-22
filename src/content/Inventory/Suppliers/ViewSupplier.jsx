@@ -11,6 +11,7 @@ import Col from 'react-bootstrap/Col';
 import "../inventory.css"
 import GPBlockButton from '../../../components/GPBlockButton/GPBlockButton';
 import GPLayout from '../../../components/GPLayout';
+import CustomButton from '../../../components/CustomButton/CustomButton';
 
 const ViewSupplier = () => {
 
@@ -164,33 +165,37 @@ const ViewSupplier = () => {
                                 <Container>
 
                                     <Row >
-                                        <Col lg="6"  style={{display:"flex",justifyContent:"flex-start"}}>
+                                        <Col lg="6" style={{ display: "flex", justifyContent: "flex-start" }}>
 
-                                           <div style={{}}>
+                                            <div style={{}}>
 
-                                            <ListItem objectKey="Company" value={details.name} />
-                                            <ListItem objectKey="Email" value={details.email} />
-                                            <ListItem objectKey="Name" value={details.name} />
-                                            <ListItem objectKey="Adress" value={details.address} />
-                                            <ListItem objectKey="Mobile" value={details.mobile} />
-                                            <ListItem objectKey="Phone" value={details.phone} />
-                                            <ListItem objectKey="Tin" value={details.TIN} />
+                                                <ListItem objectKey="Company" value={details.name} />
+                                                <ListItem objectKey="Email" value={details.email} />
+                                                <ListItem objectKey="Name" value={details.name} />
+                                                <ListItem objectKey="Adress" value={details.address} />
+                                                <ListItem objectKey="Mobile" value={details.mobile} />
+                                                <ListItem objectKey="Phone" value={details.phone} />
+                                                <ListItem objectKey="Tin" value={details.TIN} />
 
-                                           </div>
+                                            </div>
 
                                         </Col>
 
                                         <Col lg="6">
-                                            <div style={{ display: "flex", justifyContent:"space-between", items: "center", }}>
-                                                <GPBlockButton
-                                                    title="Edit"
-                                                    gpClassName="x-c"
+                                            <div style={{ display: "flex", justifyContent: "flex-end", items: "center", }}>
+                                                <CustomButton
+                                                    title="Save"
+                                                    withBackground={false}
+                                                    style={{ width: "70px", height: "40px" }}
                                                 />
 
-                                                <GPBlockButton
+                                                <CustomButton
                                                     title="Remove"
-                                                    gpClassName=""
+                                                    withBackground={false}
+                                                    style={{ width: "90px", height: "40px" }}
                                                 />
+
+
                                             </div>
 
                                         </Col>
