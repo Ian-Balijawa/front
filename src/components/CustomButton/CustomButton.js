@@ -1,6 +1,8 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import { useNavigate } from 'react-router-dom'
+import * as icons from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./custom-theme-btn.css"
 
@@ -10,7 +12,7 @@ import "./custom-theme-btn.css"
 */
 
 
-function CustomButton({url,onClick,title,gpClassNames,style,withBackground=true}) {
+function CustomButton({url,onClick,title,gpClassNames,style,withBackground=true,iconName}) {
 
   const navigate = useNavigate() 
 
@@ -22,7 +24,8 @@ function CustomButton({url,onClick,title,gpClassNames,style,withBackground=true}
          className={`gp-custom-theme-btn ${gpClassNames}`}
          style={style}
           >
-        {title}
+         <FontAwesomeIcon icon={icons.faTrashCan}  />
+          {title}
         </button> :
 
 <button 
@@ -30,6 +33,7 @@ function CustomButton({url,onClick,title,gpClassNames,style,withBackground=true}
  className={`gp-custom-theme-btn btn-no-bg ${gpClassNames}`}
  
   >
+ {iconName &&  <FontAwesomeIcon icon={icons[iconName]} style={{marginRight:"5px"}}  />}
 {title}
 </button>
       }
