@@ -12,11 +12,11 @@ const CustomTextInput = ({value,onChange,placeholder,label,style,gpClassName,lab
   return (
 
     <Form>
-    <Form.Group className="mb-3" controlId="formBasicEmail" style={{display:labelPosition ==="left" ? "flex":"block",alignItems:"center"}}>
+    <Form.Group className='mb-2' controlId="form-gp-1" style={{display:labelPosition ==="left" ? "flex":"block",alignItems:"center"}}>
     {labelPosition === "top" ? <Form.Label>
         {label}
     </Form.Label>:
-     <Form.Label style={{marginRight:labelPosition ==="left" ? "30px":"0px"}}>
+     <Form.Label style={{marginRight:labelPosition ==="left" ? "5px":"0px",minWidth:"80px"}}>
      {label}
     </Form.Label>
     }

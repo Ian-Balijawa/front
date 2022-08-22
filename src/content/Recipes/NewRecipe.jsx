@@ -1,8 +1,9 @@
 import React from 'react'
-import { Tab, Tabs } from 'react-bootstrap'
+import { Col, Container, Row, Tab, Tabs } from 'react-bootstrap'
 import CustomTextInput from '../../components/CustomTextInput'
 import GPBlockButton from '../../components/GPBlockButton'
 import GPLayout from '../../components/GPLayout/GPLayout'
+import GPSelectInput from '../../components/GPSelectInput.js/GPSelectInput'
 import './recipes.css'
 
 
@@ -19,14 +20,14 @@ const NewRecipe = () => {
                 </div>
 
                 <div className='new-recipe-title-cont'>
-                    <div style={{ height: "40px", fontSize: '25px',fontWeight:400,color:"#000000",marginBottom:"20px" }} >
+                    <div style={{ height: "40px", fontSize: '25px', fontWeight: 400, color: "#000000", marginBottom: "20px" }} >
                         Create a new Recipe
                     </div>
 
                     <CustomTextInput
-                      style={{width:"300px",height:"40px"}}
-                      label="Recipe Title"
-                      labelPosition='left'
+                        style={{ width: "300px", height: "40px" }}
+                        label="Recipe Title"
+                        labelPosition='left'
                     />
 
                 </div>
@@ -41,34 +42,84 @@ const NewRecipe = () => {
                     >
                         <Tab eventKey="general" title="General" style={{ background: "#fff", boxShadow: "0px 6px 15px 3px rgba(84, 84, 84, 0.1)" }} tabClassName="tab">
 
-                            <div className='new-recipe-tab-1-wrapper' style={{padding:"40px"}}>
+                            <div className='new-recipe-tab-1-wrapper' style={{ padding: "40px" }}>
 
-                                <div className='new-recipe-tab-input-cont' style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+                                <div className='new-recipe-tab-input-cont' style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                                    <Container>
+                                        <Row>
+                                            {/* column one */}
+                                            <Col lg="4" >
+                                                <CustomTextInput
+                                                    style={{ width: "280px", height: "40px",margin:0 }}
+                                                    label="EAN/UPC"
+                                                    placeholder="BARCODE"
+                                                    labelPosition='left'
+                                                />
+                                                <CustomTextInput
+                                                    style={{ width: "280px", height: "40px",margin:0 }}
+                                                    label="System ID "
+                                                    labelPosition='left'
+                                                />
+                                                <CustomTextInput
+                                                    style={{ width: "280px", height: "40px",margin:0 }}
+                                                    label="Custom ID"
+                                                    placeholder="Custom ID"
+                                                    labelPosition='left'
+                                                />
+                                            </Col>
+                                            <Col lg="4" >
+                                            <CustomTextInput
+                                                    style={{ width: "280px", height: "40px",margin:0 }}
+                                                    label="Cuisine"
+                                                    placeholder="Eg: French,Indian,Italian"
+                                                    labelPosition='left'
+                                                />
+                                                <CustomTextInput
+                                                    style={{ width: "280px", height: "40px",margin:0 }}
+                                                    label="Shelf Life "
+                                                    placeholder="Number of days"
 
-                                    <div style={{display:'flex',flexDirection:"column",justifyContent:"space-between", alignItems:"center",height:"100px"}}>
+                                                    labelPosition='left'
+                                                />
+                                                 
 
-                                        <div style={{display:'flex',alignItems:"center"}}>  <div style={{marginRight:"60px"}}> EAN/UPC</div> <input/>   </div>
-                                        <div style={{display:'flex',alignItems:"center"}}>  <div style={{marginRight:"60px"}}> System Id</div> <input/>   </div>
-                                        <div style={{display:'flex',alignItems:"center"}}>  <div style={{marginRight:"60px"}}> Custom Id</div> <input/>   </div>
+                                                 <GPSelectInput
 
-                                    </div>
+                                                    style={{ width: "280px", height: "40px",margin:0 }}
+                                                    label="Custom ID"
+                                                    placeholder="Custom ID"
+                                                    
+                                                 />
 
-                                    <div style={{display:'flex',flexDirection:"column",justifyContent:"space-between", alignItems:"center",height:"100px"}}>
-                                        
-                                    <div style={{display:'flex',alignItems:"center"}}>  <div style={{marginRight:"60px"}}> EAN/UPC</div> <input/>   </div>
-                                        <div style={{display:'flex',alignItems:"center"}}>  <div style={{marginRight:"60px"}}> System Id</div> <input/>   </div>
-                                        <div style={{display:'flex',alignItems:"center"}}>  <div style={{marginRight:"60px"}}> Custom Id</div> <input/>   </div>
-                                    </div>
 
-                                    <div style={{display:'flex',flexDirection:"column",justifyContent:"space-between", alignItems:"center",height:"100px"}}>
-                                       
-                                    <div style={{display:'flex',alignItems:"center",padding:"10px"}}> 
-                                     <div style={{marginRight:"60px"}}> EAN/UPC</div> <input/>   </div>
-                                        <div style={{display:'flex',alignItems:"center"}}>  <div style={{marginRight:"60px"}}> System Id</div> <input/>   </div>
-                                        <div style={{display:'flex',alignItems:"center"}}>  <div style={{marginRight:"60px"}}> Custom Id</div> <input/>   </div>
-                                    </div>
+                                            </Col>
+
+
+                                            <Col lg="4" >
+                                            <CustomTextInput
+                                                    style={{ width: "280px", height: "40px",margin:0 }}
+                                                    label="EAN/UPC"
+                                                    placeholder="BARCODE"
+                                                    labelPosition='left'
+                                                />
+                                                <CustomTextInput
+                                                    style={{ width: "280px", height: "40px",margin:0 }}
+                                                    label="System ID "
+                                                    labelPosition='left'
+                                                />
+                                                <CustomTextInput
+                                                    style={{ width: "280px", height: "40px",margin:0 }}
+                                                    label="Custom ID"
+                                                    placeholder="Custom ID"
+                                                    labelPosition='left'
+                                                />
+                                            </Col>
+                                        </Row>
+                                    </Container>
 
                                 </div>
+
+                                {/* text area region */}
 
                                 <div>
 
