@@ -92,3 +92,13 @@
     color:#000 !important;
     border:"1px solid #000000" !important;
 }
+
+
+/* overiding the Tabs and Tab classes to fit GP styling */
+
+ .nav-item .nav-link.active {
+    background: #e46036 !important;
+    border-radius: 6px 6px 0px 0px;
+    color: #fff !important;
+    border-bottom: 0.5px solid #7a7a7a !important;
+}

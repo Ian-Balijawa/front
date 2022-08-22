@@ -8,7 +8,7 @@ import './custom-theme-input.css'
    passing "labelPosition" prop and setting it to "left" or "top", top- is default
 */
 
-const CustomTextInput = ({value,onChange,placeholder,label,style,gpClassName,labelPosition="top"}) => {
+const CustomTextInput = ({value,onChange,placeholder,label,style,gpClassName,labelPosition="top",...rest}) => {
   return (
 
     <Form>
@@ -16,17 +16,17 @@ const CustomTextInput = ({value,onChange,placeholder,label,style,gpClassName,lab
     {labelPosition === "top" ? <Form.Label>
         {label}
     </Form.Label>:
-     <Form.Label style={{marginRight:labelPosition ==="left" ? "5px":"0px",minWidth:"80px"}}>
+     <Form.Label style={{marginRight:labelPosition ==="left" ? "5px":"0px",minWidth:"80px",maxWidth:"80px"}}>
      {label}
     </Form.Label>
     }
     <Form.Control 
-       type="text" 
        placeholder={placeholder}
        value={value}
        onChange={onChange}
        style={style}
        className={`custom-theme-text-input ${gpClassName}`}
+       {...rest}
        />
 
        </Form.Group> 
