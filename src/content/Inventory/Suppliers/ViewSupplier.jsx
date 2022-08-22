@@ -13,6 +13,32 @@ import GPBlockButton from '../../../components/GPBlockButton/GPBlockButton';
 import GPLayout from '../../../components/GPLayout';
 
 const ViewSupplier = () => {
+
+    //u can pass company details from the props and replace this 
+    const details = {
+        company: "Nico&Nic Supplies",
+        email: "info@nicandnicosupplies.com",
+        name: "Grace Moris",
+        address: "Sanlam road",
+        mobile: "0779744583",
+        phone: "000045666",
+        TIN: "000456849"
+    }
+
+    const ListItem = ({ objectKey, value }) => (
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "5px" }}>
+            <div style={{ width: "50%", display: "flex", justifyContent: "flex-end", alignItems: "center", marginRight: "10px" }}>
+                {objectKey}
+            </div>
+
+            <div style={{ width: "50%", display: "flex", justifyContent: "flex-start", alignItems: "center", marginLeft: "10px" }}>
+                {value}
+            </div>
+
+        </div>
+    )
+
+
     return (
         <GPLayout>
             <div className='view-supplier-main'>
@@ -76,25 +102,41 @@ const ViewSupplier = () => {
                                                     <thead>
 
                                                         <tr>
-                                                            <th>Latest Orders</th>
-                                                            <th>First Name</th>
+                                                            <th style={{ border: 0 }}>Latest Orders</th>
+                                                            <th style={{ border: 0 }}></th>
                                                         </tr>
 
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td>1</td>
-                                                            <td>Mark</td>
+                                                            <td>Orders in progress</td>
+                                                            <td>Started at</td>
                                                         </tr>
                                                         <tr>
-                                                            <td>2</td>
-                                                            <td>Jacob</td>
+                                                            <td>NA</td>
+                                                            <td></td>
                                                         </tr>
                                                         <tr>
-                                                            <td>3</td>
-                                                            <td colSpan={2}>Larry the Bird</td>
-                                                            <td>@twitter</td>
+                                                            <td>Delivered Orders</td>
+                                                            <td >Delivered On</td>
                                                         </tr>
+
+                                                        <tr>
+                                                            <td>NA</td>
+                                                            <td></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>Outstanding Orders(Not Delivered yet)</td>
+                                                            <td >Delivered On</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>NA</td>
+                                                            <td></td>
+                                                        </tr>
+
+
                                                     </tbody>
                                                 </Table>
                                             </div>
@@ -116,52 +158,51 @@ const ViewSupplier = () => {
 
                         </Tab>
                         <Tab eventKey="contact" title="Contact Details" style={{ background: "#fff", boxShadow: "0px 6px 15px 3px rgba(84, 84, 84, 0.1)" }} tabClassName="tab">
-                            <Container>
-                                <Row>
-                                    <Col lg="8">
 
-                                        <Row>
-                                            <Col lg="6">
-                                                Company
-                                            </Col>
+                            <div className='content-wrapper' style={{ paddingTop: "10px", paddingBottom: "10px" }}>
 
-                                            <Col lg="6">
-                                                Nic&Nico Supplies
-                                            </Col>
+                                <Container>
 
-                                        </Row>
+                                    <Row >
+                                        <Col lg="6"  style={{display:"flex",justifyContent:"flex-start"}}>
 
-                                    </Col>
+                                           <div style={{}}>
 
-                                    <Col lg="4">
+                                            <ListItem objectKey="Company" value={details.name} />
+                                            <ListItem objectKey="Email" value={details.email} />
+                                            <ListItem objectKey="Name" value={details.name} />
+                                            <ListItem objectKey="Adress" value={details.address} />
+                                            <ListItem objectKey="Mobile" value={details.mobile} />
+                                            <ListItem objectKey="Phone" value={details.phone} />
+                                            <ListItem objectKey="Tin" value={details.TIN} />
 
-                                        <Row>
-                                            <Col lg="4">
+                                           </div>
+
+                                        </Col>
+
+                                        <Col lg="6">
+                                            <div style={{ display: "flex", justifyContent:"space-between", items: "center", }}>
                                                 <GPBlockButton
                                                     title="Edit"
-                                                    gpClassName="view-btn"
+                                                    gpClassName="x-c"
                                                 />
-                                            </Col>
-
-                                            <Col lg="4">
-
 
                                                 <GPBlockButton
                                                     title="Remove"
-                                                    gpClassName="view-btn"
-
+                                                    gpClassName=""
                                                 />
+                                            </div>
+
+                                        </Col>
 
 
+                                    </Row>
+                                </Container>
+                            </div>
 
-                                            </Col>
-                                        </Row>
-
-                                    </Col>
-                                </Row>
-
-                            </Container>
                         </Tab>
+
+
                         <Tab eventKey="delivery" title="Delivery Details" tabClassName="tab" disabled>
                             huuu
                         </Tab>
@@ -174,7 +215,7 @@ const ViewSupplier = () => {
                 </div>
 
             </div>
-        </GPLayout>
+        </GPLayout >
     )
 }
 

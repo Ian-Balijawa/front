@@ -60,3 +60,35 @@
     font-size: 14px;
     font-weight: 400;
 }
+
+/* new recipe */
+
+.new-recipe-header-cont{
+    width:100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height:65px;
+
+    display:flex;
+    justify-content:flex-start;
+    align-items: center;
+    border-bottom:  0.5px solid rgba(122, 122, 122, 0.8);
+}
+
+
+.new-recipe-block-btn{
+    height:35px;
+    width:150px;
+    margin-right:11px;
+    font-size: 16px;
+}
+
+.start-recipe-block-btn{
+    height:35px;
+    width:150px;
+    margin-right:11px;
+    font-size: 16px;
+    background:transparent !important;
+    color:#000 !important;
+    border:"1px solid #000000" !important;
+}

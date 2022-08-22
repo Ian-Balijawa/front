@@ -33,7 +33,7 @@ const Recipes = () => {
                         <div style={{marginBottom:"15px"}}>
                             No Recipes Found
                         </div>
-                        <CustomPlusIconButton title="Add One Now"/>
+                        <CustomPlusIconButton title="Add One Now" url="/new-recipe"/>
 
                       </div>
                  </GPCard>

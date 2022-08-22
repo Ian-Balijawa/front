@@ -3,18 +3,20 @@ import "./supplier-table-actions.css"
 import {faEllipsis, faEye} from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import { useNavigate } from 'react-router-dom'
+
+
 const SupplierTableActions = ({record}) => {
+
+  const navigate = useNavigate() 
 
 
   return (
-    <div className='supplier-actions-wrapper' onClick={()=>{
-        let rec = JSON.stringify(record)
-        alert(rec)
-    }}>
+    <div className='supplier-actions-wrapper'>
 
         <div className='supplier-action-view-btn-cont'>
 
-           <div className='view-btn-action'>
+           <div className='view-btn-action' onClick={()=> navigate("/view-supplier")}>
             <FontAwesomeIcon icon={faEye} style={{color:"#fff"}} />
              View
            </div>
