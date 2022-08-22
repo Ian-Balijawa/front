@@ -1,0 +1,4 @@
+.action-links li a,
+.action-links li a svg {
+    color: black !important;
+}

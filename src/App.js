@@ -20,6 +20,12 @@ import OrderList from './content/Inventory/OrderList/OrderList'
 import Delivered from './content/Inventory/Delivered/Delivered'
 import Recipes from './content/Recipes/Recipes'
 import NewRecipe from './content/Recipes/NewRecipe'
+import NewOutlet from './content/Settings/OutletSetup/NewOutlet'
+import Library from './content/Settings/Library'
+import Ingredients from './content/Inventory/Ingredients'
+import NewIngredient from './content/Inventory/Ingredients/NewIngredient'
+import Sales from './content/Sales'
+import Menu from './content/Menu'
 
 function App() {
     return (
@@ -30,13 +36,35 @@ function App() {
                 <Route path="forgot-password" element={<ForgotPassword />} />
                 <Route path="reset-password" element={<ResetPassword />} />
                 <Route path="/" element={<Dashboard />} />
+
                 <Route path="settings" element={<Settings />} />
-                <Route path="employee-setup" element={<EmployeeSetup />} />
-                <Route path="outlet-setup" element={<OutletSetup />} />
-                <Route path="new-employee" element={<NewEmployee />} />
+                <Route path="sales" element={<Sales />} />
+                <Route path="menu" element={<Menu />} />
+
+                <Route
+                    path="settings/employee-setup"
+                    element={<EmployeeSetup />}
+                />
+                <Route path="settings/new-employee" element={<NewEmployee />} />
                 <Route path="update-employee" element={<UpdateEmployee />} />
-                <Route path="employee-role" element={<EmployeeRole />} />
+                <Route
+                    path="settings/employee-role"
+                    element={<EmployeeRole />}
+                />
+
+                <Route path="outlet-setup" element={<OutletSetup />} />
+                <Route path="new-outlet" element={<NewOutlet />} />
+
+                <Route path="settings/library" element={<Library />} />
+
                 <Route path="inventory" element={<Inventory />} />
+
+                <Route path="inventory/ingredients" element={<Ingredients />} />
+                <Route
+                    path="inventory/ingredients/new"
+                    element={<NewIngredient />}
+                />
+
                 <Route path="suppliers" element={<Suppliers />} />
                 <Route path="view-supplier" element={<ViewSupplier />} />
                 <Route path="orders" element={<Orders />} />
@@ -45,8 +73,6 @@ function App() {
                 <Route path="reports" element={<Reports />} />
                 <Route path="recipes" element={<Recipes />} />
                 <Route path="new-recipe" element={<NewRecipe />} />
-
-
             </Routes>
         </div>
     )

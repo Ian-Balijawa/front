@@ -6,15 +6,15 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import GPSidebar from '../../components/GPSidebar/GPSidebar'
 
-function GPLayout({children}) {
+function GPLayout({breadIcon, crumbs, children}) {
     return (
         <>
-            <GPHeader />
+            <GPHeader breadIcon={breadIcon} crumbs={crumbs} />
             <div className="container-fluid">
                 <div className="row">
                     <GPSidebar />
                     <main className="col-md-9 ms-sm-auto col-lg-10 px-5">
-                        {children}
+                        <div className="my-3 mx-2">{children}</div>
                     </main>
                 </div>
             </div>

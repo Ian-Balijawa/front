@@ -6,9 +6,9 @@ import {
     faCartShopping,
     faPlus,
 } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import './inventory.css'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import GPDashCard from '../../components/GPDashCard'
 import GPDashTitle from '../../components/GPDashTitle'
 import {
@@ -27,17 +27,13 @@ function Inventory() {
     ]
     return (
         <GPLayout breadIcon={faGear} crumbs={crumbs}>
-            {/* <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 className="h2">Settings</h1>
-                </div> */}
-
             <div className="row mb-4">
                 <GPDashTitle gpTitle={'Items'} />
                 <div className="col-md-12 text-center d-flex">
                     <GPDashCard
                         renderIcon={IngredientsIcon}
                         gpTitle={'Ingredients'}
-                        gpLink={'#'}
+                        gpLink={'/inventory/ingredients'}
                     />
 
                     <GPDashCard
@@ -52,7 +48,6 @@ function Inventory() {
             <div className="row mb-4">
                 <GPDashTitle gpTitle={'Procurement'} />
                 <div className="col-md-12 text-center d-flex">
-
                     <GPDashCard
                         gpIcon={faPlus}
                         gpTitle={'New Order'}
@@ -87,15 +82,12 @@ function Inventory() {
                         gpLink={'/order-list'}
                         gpClassName={'mx-4'}
                     />
-
-
                 </div>
             </div>
 
             <div className="row mb-4">
                 <GPDashTitle gpTitle={'Inventory Management'} />
                 <div className="col-md-12 text-center d-flex">
-                    
                     <GPDashCard
                         renderIcon={StockIcon}
                         gpTitle={'Stock'}
@@ -130,7 +122,6 @@ function Inventory() {
                         gpLink={'#'}
                         gpClassName={'mx-4'}
                     />
-
                 </div>
             </div>
         </GPLayout>

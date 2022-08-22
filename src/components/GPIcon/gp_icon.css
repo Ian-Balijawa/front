@@ -1,7 +1,19 @@
+/* Link for setting up SVG color filters 
+https://codepen.io/sosuke/pen/Pjoqqp
+
+Link for SVG to base64
+https://yoksel.github.io/url-encoder/
+*/
+
 .svg-white {
-  fill: white;
+    fill: white;
 }
 
 .svg-black {
-  fill: black !important;
+    fill: black !important;
+}
+
+.filter {
+    filter: invert(100%) sepia(0%) saturate(6512%) hue-rotate(224deg)
+        brightness(106%) contrast(93%);
 }

@@ -1,54 +1,196 @@
-import React from 'react'
+import React, {useState} from 'react'
 import GPLayout from '../../../components/GPLayout'
 import {
     faGear,
     faPlus,
     faEllipsis,
     faPen,
+    faTrashCan,
 } from '@fortawesome/free-solid-svg-icons'
 import GPIconButton from '../../../components/GPIconButton'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import GPSearchInput from '../../../components/GPSearchInput'
+import GPSearchLongInput from '../../../components/GPSearchLongInput'
 import GPImportExportButton from '../../../components/GPImportExportButton'
 import {Col, Nav, Row, Tab, Tabs} from 'react-bootstrap'
 import './employee-setup.css'
 import GPBlockButton from '../../../components/GPBlockButton'
 import {Link, Navigate, useNavigate} from 'react-router-dom'
+import GPPagination from '../../../components/GPPagination/GPPagination'
+import GPTable from '../../../components/GPTable'
+import GPActionLinks from '../../../components/GPActionLinks'
 
 function EmployeeSetup() {
     const crumbs = [
-        {
-            text: 'Home',
-            href: '/',
-        },
         {
             text: 'Settings',
             href: '/settings',
         },
         {
             text: 'EmployeeSetup',
-            href: '/employee-setup',
+            href: '#',
         },
     ]
     const navigate = useNavigate()
 
+    const actionLinks = [
+        {
+            text: 'Archive',
+            icon: '',
+            href: '',
+        },
+        {
+            text: 'Edit',
+            icon: '',
+            href: '',
+        },
+    ]
+
+    const gpColumns = [
+        {title: 'First Name', field: 'FirstName'},
+        {title: 'Last Name', field: 'LastName'},
+        {title: 'Job Title', field: 'JobTitle'},
+
+        {
+            title: 'Status',
+            field: 'Status',
+            render: rowData => (
+                <div className="d-flex justity-content-between">
+                    <span class="badge bg-success rounded-pill px-3 fw-normal">
+                        Active
+                    </span>
+                </div>
+            ),
+        },
+        {
+            title: 'Actions',
+            field: 'Actions',
+            render: rowData => (
+                <div className="d-flex justity-content-between">
+                    <FontAwesomeIcon icon={faPen} className="mx-3" />
+                    <GPActionLinks actionLinks={actionLinks} />
+                </div>
+            ),
+        },
+    ]
+
+    const gpData = [
+        {
+            FirstName: 'Mwesigye',
+            LastName: 'Nicholas',
+            JobTitle: 'Admin',
+        },
+        {
+            FirstName: 'Mwesigye',
+            LastName: 'Nicholas',
+            JobTitle: 'Admin',
+        },
+        {
+            FirstName: 'Mwesigye',
+            LastName: 'Nicholas',
+            JobTitle: 'Admin',
+        },
+        {
+            FirstName: 'Mwesigye',
+            LastName: 'Nicholas',
+            JobTitle: 'Admin',
+        },
+    ]
+
+    const gpRoleColumns = [
+        {title: 'Employee Role', field: 'EmployeeRole'},
+        {title: 'Pay Basis', field: 'PayBasis'},
+        {title: 'Default Pay', field: 'DefaultPay'},
+
+        {
+            title: 'Actions',
+            field: 'Actions',
+            render: rowData => (
+                <div className="d-flex justity-content-between">
+                    <GPActionLinks actionLinks={actionLinks} />
+                </div>
+            ),
+        },
+    ]
+
+    const gpRoleData = [
+        {
+            EmployeeRole: 'General Manager',
+            PayBasis: 'Salary',
+            DefaultPay: 'USh 800,000',
+        },
+        {
+            EmployeeRole: 'General Manager',
+            PayBasis: 'Salary',
+            DefaultPay: 'USh 800,000',
+        },
+        {
+            EmployeeRole: 'General Manager',
+            PayBasis: 'Salary',
+            DefaultPay: 'USh 800,000',
+        },
+        {
+            EmployeeRole: 'General Manager',
+            PayBasis: 'Salary',
+            DefaultPay: 'USh 800,000',
+        },
+        {
+            EmployeeRole: 'General Manager',
+            PayBasis: 'Salary',
+            DefaultPay: 'USh 800,000',
+        },
+        {
+            EmployeeRole: 'General Manager',
+            PayBasis: 'Salary',
+            DefaultPay: 'USh 800,000',
+        },
+        {
+            EmployeeRole: 'General Manager',
+            PayBasis: 'Salary',
+            DefaultPay: 'USh 800,000',
+        },
+    ]
+
+    const [activeButtonText, setActiveButtonText] = useState('')
+    const [activeButtonURL, setActiveButtonURL] = useState('')
+
+    const handleTabClick = (event, param) => {
+        console.log(event)
+        console.log(param)
+
+        if (param === '1') {
+            setActiveButtonText('New Employee')
+            setActiveButtonURL('/settings/new-employee')
+        }
+
+        if (param === '2') {
+            setActiveButtonText('New Employee Role')
+            setActiveButtonURL('/settings/employee-role')
+        }
+    }
+
     return (
         <GPLayout breadIcon={faGear} crumbs={crumbs}>
-            <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3  border-bottom">
-                <h1 className="h2"></h1>
-                <GPSearchInput />
+            <div className="d-flex justify-content-end flex-wrap flex-md-nowrap align-items-center pt-3 pb-2">
+                <GPSearchLongInput />
                 <GPIconButton
                     icon={faPlus}
-                    title="New Employee Role"
+                    title={activeButtonText || 'New Employee'}
+                    onClick={() =>
+                        navigate(activeButtonURL || '/settings/new-employee')
+                    }
                     gpClassName="border-0 bg-transparent text-theme fs-5"
                 />
             </div>
+
+            <hr className="divider mb-5" />
 
             <Tab.Container id="left-tabs-example" defaultActiveKey="employees">
                 <Row>
                     <Col sm={3}>
                         <Nav variant="pills" className="flex-column">
-                            <Nav.Item>
+                            <Nav.Item
+                                onClick={event => handleTabClick(event, '1')}
+                            >
                                 <Nav.Link
                                     className="employees_tabs"
                                     eventKey="employees"
@@ -56,7 +198,9 @@ function EmployeeSetup() {
                                     Employees
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item>
+                            <Nav.Item
+                                onClick={event => handleTabClick(event, '2')}
+                            >
                                 <Nav.Link
                                     className="employees_tabs"
                                     eventKey="employees_roles"
@@ -80,103 +224,33 @@ function EmployeeSetup() {
                                 <Tabs
                                     defaultActiveKey="actives"
                                     id="uncontrolled-tab-example"
-                                    className="mb-3"
+                                    className="mb-3 employee-setup-tabs"
                                 >
                                     <Tab eventKey="actives" title="Active">
                                         <div className="d-flex justify-content-between mb-3">
-                                            <div>
-                                                <span className="fc-7A">
-                                                    4 Results
-                                                </span>
-                                                <span className="fw-bold fz-20">
-                                                    20 PER PAGE
-                                                </span>
-                                            </div>
+                                            <GPPagination />
 
                                             <GPImportExportButton />
                                         </div>
                                         <div>
-                                            <table class="table">
-                                                <thead className="table-head">
-                                                    <tr>
-                                                        <th scope="col">
-                                                            First Name
-                                                        </th>
-                                                        <th scope="col">
-                                                            Last Name
-                                                        </th>
-                                                        <th scope="col">
-                                                            Job Title
-                                                        </th>
-                                                        <th scope="col">
-                                                            Status
-                                                        </th>
-                                                        <th scope="col">
-                                                            Actions
-                                                        </th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td scope="row">
-                                                            Mwesigye
-                                                        </td>
-                                                        <td>Hourly</td>
-                                                        <td>Nicholas</td>
-                                                        <td>
-                                                            <span class="badge bg-success rounded-pill px-3 fw-normal">
-                                                                Active
-                                                            </span>
-                                                        </td>
-                                                        <td>
-                                                            <FontAwesomeIcon
-                                                                icon={faPen}
-                                                                className="mx-3"
-                                                            />
-                                                            <FontAwesomeIcon
-                                                                icon={
-                                                                    faEllipsis
-                                                                }
-                                                            />
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td scope="row">
-                                                            Mwesigye
-                                                        </td>
-                                                        <td>Hourly</td>
-                                                        <td>Nicholas</td>
-                                                        <td>
-                                                            <span class="badge bg-success rounded-pill px-3 fw-normal">
-                                                                Active
-                                                            </span>
-                                                        </td>
-                                                        <td>
-                                                            <Link to="/update-employee">
-                                                                <FontAwesomeIcon
-                                                                    icon={faPen}
-                                                                    className="mx-3"
-                                                                />
-                                                            </Link>
-                                                            <FontAwesomeIcon
-                                                                icon={
-                                                                    faEllipsis
-                                                                }
-                                                            />
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                            <GPTable
+                                                columns={gpColumns}
+                                                data={gpData}
+                                                gppagination={false}
+                                                paddingBottom="5px"
+                                                paddingTop="5px"
+                                                options={{toolbar: false}}
+                                            />
                                         </div>
 
-                                        <div className="row">
+                                        <div className="row mt-3">
                                             <div className="col-3">
                                                 <GPIconButton
                                                     icon={faPlus}
                                                     title="New Employee"
                                                     onClick={() => {
                                                         navigate(
-                                                            '/new-employee'
+                                                            '/settings/new-employee'
                                                         )
                                                     }}
                                                     gpClassName="cBtn bg-transparent text-theme "
@@ -203,107 +277,37 @@ function EmployeeSetup() {
                                 <Tabs
                                     defaultActiveKey="roles_actives"
                                     id="uncontrolled-tab-example"
-                                    className="mb-3"
+                                    className="mb-3 employee-setup-tabs"
                                 >
                                     <Tab
                                         eventKey="roles_actives"
                                         title="Active"
                                     >
                                         <div className="d-flex justify-content-between mb-3">
-                                            <div>
-                                                <span className="fc-7A">
-                                                    4 Results
-                                                </span>
-                                                <span className="fw-bold fz-20">
-                                                    20 PER PAGE
-                                                </span>
-                                            </div>
-
+                                            <GPPagination />
                                             <GPImportExportButton />
                                         </div>
                                         <div>
-                                            <table class="table">
-                                                <thead className="table-head">
-                                                    <tr>
-                                                        <th scope="col">
-                                                            Employee Role
-                                                        </th>
-                                                        <th scope="col">
-                                                            Pay Basis
-                                                        </th>
-                                                        <th scope="col">
-                                                            Default Pay
-                                                        </th>
-                                                        <th scope="col"></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td scope="row">
-                                                            General Manager
-                                                        </td>
-                                                        <td>Hourly</td>
-                                                        <td>
-                                                            <span className="text-secondary">
-                                                                USh
-                                                            </span>
-                                                            800,000
-                                                        </td>
-                                                        <td>
-                                                            <FontAwesomeIcon
-                                                                icon={
-                                                                    faEllipsis
-                                                                }
-                                                            />
-                                                        </td>
-                                                    </tr>
-                                                    <tr className="tableEven">
-                                                        <td scope="row">
-                                                            Admin
-                                                        </td>
-                                                        <td>Hourly</td>
-                                                        <td>
-                                                            <span className="text-secondary">
-                                                                USh
-                                                            </span>
-                                                            800,000
-                                                        </td>
-                                                        <td>
-                                                            <FontAwesomeIcon
-                                                                icon={
-                                                                    faEllipsis
-                                                                }
-                                                            />
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td scope="row">
-                                                            Chef
-                                                        </td>
-                                                        <td>Hourly</td>
-                                                        <td>
-                                                            <span className="text-secondary">
-                                                                USh
-                                                            </span>
-                                                            800,000
-                                                        </td>
-                                                        <td>
-                                                            <FontAwesomeIcon
-                                                                icon={
-                                                                    faEllipsis
-                                                                }
-                                                            />
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                            <GPTable
+                                                columns={gpRoleColumns}
+                                                data={gpRoleData}
+                                                gppagination={false}
+                                                paddingBottom="5px"
+                                                paddingTop="5px"
+                                                options={{toolbar: false}}
+                                            />
                                         </div>
 
-                                        <div className="row">
+                                        <div className="row mt-3">
                                             <div className="col-3">
                                                 <GPIconButton
                                                     icon={faPlus}
                                                     title="New Employee Role"
+                                                    onClick={() => {
+                                                        navigate(
+                                                            '/settings/employee-role'
+                                                        )
+                                                    }}
                                                     gpClassName="cBtn bg-transparent text-theme "
                                                 />
                                             </div>
