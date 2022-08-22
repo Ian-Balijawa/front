@@ -1,5 +1,6 @@
 import React from 'react'
 import { Tab, Tabs } from 'react-bootstrap'
+import CustomTextInput from '../../components/CustomTextInput'
 import GPBlockButton from '../../components/GPBlockButton'
 import GPLayout from '../../components/GPLayout/GPLayout'
 import './recipes.css'
@@ -18,14 +19,15 @@ const NewRecipe = () => {
                 </div>
 
                 <div className='new-recipe-title-cont'>
-                    <div style={{ height: "40px", fontSize: '16px' }} >
+                    <div style={{ height: "40px", fontSize: '25px',fontWeight:400,color:"#000000",marginBottom:"20px" }} >
                         Create a new Recipe
                     </div>
 
-                    <div style={{ display: "flex", fontSize: "12px" }}>
-                        Recipe title
-                        <input style={{ marginLeft: "10px" }}></input>
-                    </div>
+                    <CustomTextInput
+                      style={{width:"300px",height:"40px"}}
+                      label="Recipe Title"
+                      labelPosition='left'
+                    />
 
                 </div>
 

@@ -184,7 +184,7 @@ const ViewSupplier = () => {
                                         <Col lg="6">
                                             <div style={{ display: "flex", justifyContent: "flex-end", items: "center", }}>
                                                 <CustomButton
-                                                    title="Save"
+                                                    title="Edit"
                                                     withBackground={false}
                                                     style={{ width: "70px", height: "40px" }}
                                                 />
