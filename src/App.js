@@ -29,6 +29,7 @@ import Menu from './content/Menu'
 import ViewRecipe from './content/Recipes/ViewRecipe'
 import EditRecipe from './content/Recipes/EditRecipe'
 import OutletsDashBoard from './content/Inventory/Outlets/OutletsDashBoard'
+import OutletPreparation from './content/Inventory/Outlets/OutletPreparation'
 
 function App() {
     return (
@@ -79,6 +80,8 @@ function App() {
                 <Route path="recipes/:name" element={<ViewRecipe/>} />
                 <Route path="recipes/:name/edit" element={<EditRecipe/>} />
                 <Route path="/inventory/outlets" element={< OutletsDashBoard />} />
+                <Route path="/inventory/preparation/:outletId" element={< OutletPreparation />} />
+
 
 
 

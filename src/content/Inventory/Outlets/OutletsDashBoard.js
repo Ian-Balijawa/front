@@ -16,14 +16,14 @@ const OutletsDashBoard = () => {
                     <GPDashCard
                         gpIcon={faPlus}
                         gpTitle={'Bake My Day Entebbe'}
-                        gpLink={'#'}
+                        gpLink={`/inventory/preparation/${"bake_my_day_entebbe"}`}
                         gpClassName={'mx-4'}
                     />
 
                     <GPDashCard
                         gpIcon={faPlus}
                         gpTitle={'Bake My Day Ntinda'}
-                        gpLink={'#'}
+                        gpLink={`/inventory/preparation/${"bake_my_day_"}`}
                         gpClassName={'mx-4'}
                     />
                 </div>
