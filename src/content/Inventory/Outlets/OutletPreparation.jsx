@@ -34,6 +34,7 @@ const OutletPreparation = () => {
 
                     <CustomPlusIconButton
                        title="Record Creation"
+                       url="/inventory/preparation/new"
                     />
 
                 </div>
