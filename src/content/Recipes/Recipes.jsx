@@ -3,6 +3,7 @@ import CustomPlusIconButton from '../../components/CustomPlusIconButton/CustomPl
 import GPActionLinks from '../../components/GPActionLinks/GPActionLinks'
 import GPBlockButton from '../../components/GPBlockButton/GPBlockButton'
 import GPCard from '../../components/GPCard/GPCard'
+import GPCheckBox from '../../components/GPCheckBox/GPCheckBox'
 import GPCustomTable from '../../components/GPCustomTable/GPCustomTable'
 import GPImportExportButton from '../../components/GPImportExportButton/GPImportExportButton'
 import GPLayout from '../../components/GPLayout/GPLayout'
@@ -62,6 +63,15 @@ const Recipes = () => {
                         recipes ? <GPCustomTable
                                     data={_recipeData}
                                     columns={_recipeTableColumns}
+                                    actions={[
+                                      {
+                                        icon:()=> <GPCheckBox/>,
+                                        tooltip: 'Select Row',
+                                        onClick: (event, rowData) => {
+                                          // Do save operation
+                                        }
+                                      }
+                                    ]}
                         /> :<div className='recipes-not-found-container'>
                         <div style={{marginBottom:"15px"}}>
                             No Recipes Found

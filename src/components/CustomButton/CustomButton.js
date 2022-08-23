@@ -24,7 +24,7 @@ function CustomButton({url,onClick,title,gpClassNames,style,withBackground=true,
          className={`gp-custom-theme-btn ${gpClassNames}`}
          style={style}
           >
-         <FontAwesomeIcon icon={icons.faTrashCan}  />
+         {iconName &&  <FontAwesomeIcon icon={icons[iconName]} style={{marginRight:"5px"}}  />}
           {title}
         </button> :
 

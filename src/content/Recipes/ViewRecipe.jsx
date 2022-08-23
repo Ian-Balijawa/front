@@ -82,6 +82,7 @@ const ViewRecipe = () => {
                         style={{ width: "100px", height: "50px", color: "#000000" }}
                         withBackground={false}
                         iconName="faPenToSquare"
+                        url={`/recipes/${params.name}/edit`} //depends on params
                     />
 
                     <CustomButton

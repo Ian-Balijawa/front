@@ -27,6 +27,7 @@ import NewIngredient from './content/Inventory/Ingredients/NewIngredient'
 import Sales from './content/Sales'
 import Menu from './content/Menu'
 import ViewRecipe from './content/Recipes/ViewRecipe'
+import EditRecipe from './content/Recipes/EditRecipe'
 
 function App() {
     return (
@@ -75,6 +76,8 @@ function App() {
                 <Route path="recipes" element={<Recipes />} />
                 <Route path="new-recipe" element={<NewRecipe />} />
                 <Route path="recipes/:name" element={<ViewRecipe/>} />
+                <Route path="recipes/:name/edit" element={<EditRecipe/>} />
+
 
             </Routes>
         </div>
