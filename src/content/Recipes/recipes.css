@@ -44,10 +44,12 @@
 }
 
 .recipes-card-styles{
-    height:190px;
+    min-height:190px;
     display:flex;
     justify-content: center;
     align-items: center;
+    padding-top: 22px;
+    padding-bottom: 22px;
 }
 
 .recipes-not-found-container{

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useNavigate } from 'react-router-dom'
 
 
-const SupplierTableActions = ({record}) => {
+const SupplierTableActions = ({record,url}) => {
 
   const navigate = useNavigate() 
 
@@ -16,7 +16,7 @@ const SupplierTableActions = ({record}) => {
 
         <div className='supplier-action-view-btn-cont'>
 
-           <div className='view-btn-action' onClick={()=> navigate("/view-supplier")}>
+           <div className='view-btn-action' onClick={()=> navigate(url)}>
             <FontAwesomeIcon icon={faEye} style={{color:"#fff"}} />
              View
            </div>

@@ -3,6 +3,7 @@ import { Col, Container, Row, Tab, Tabs } from 'react-bootstrap'
 import CustomButton from '../../components/CustomButton/CustomButton'
 import GPCustomTable from '../../components/GPCustomTable/GPCustomTable'
 import GPLayout from '../../components/GPLayout/GPLayout'
+import { useParams } from 'react-router-dom'
 
 const ViewRecipe = () => {
 
@@ -68,6 +69,8 @@ const ViewRecipe = () => {
 
   ]
 
+  const params = useParams()
+
     return (
         <GPLayout>
 
@@ -90,7 +93,7 @@ const ViewRecipe = () => {
                 </div>
 
                 <div style={{ padding: "22px", color: "#000000", fontSize: "30px", fontWeight: 400 }}>
-                    Lemon Mayonnaise
+                    {params.name}
                 </div>
 
                 <Tabs
