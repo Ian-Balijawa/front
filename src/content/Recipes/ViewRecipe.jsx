@@ -1,9 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Col, Container, Row, Tab, Tabs } from 'react-bootstrap'
 import CustomButton from '../../components/CustomButton/CustomButton'
 import GPCustomTable from '../../components/GPCustomTable/GPCustomTable'
 import GPLayout from '../../components/GPLayout/GPLayout'
 import { useParams } from 'react-router-dom'
+import GPModal from '../../components/GPModal/GPModal'
+import CustomTextInput from '../../components/CustomTextInput'
+import GPSelectInput from '../../components/GPSelectInput.js/GPSelectInput'
 
 const ViewRecipe = () => {
 
@@ -69,7 +72,33 @@ const ViewRecipe = () => {
 
     ]
 
+
+    const billOfMaterialColumns = [
+         {title:"Ingredient",field:"ingredient"},
+         {title:"Needed Qty",field:"needed_qty"},
+         {title:"Stock Qty",field:"stock_qty"},
+         {title:"Order Qty",field:"order_qty"},
+         {title:"Choose Product",field:"choose_product",render:(rowData)=><GPSelectInput placeholder="Bake my day ntinda" />},
+         {title:"Total",field:"total"},
+    ]
+
+
+
+    const billOfMaterialData = [
+        {ingredient:"Sea Salt",needed_qty:"20g",stock_qty:"----",order_qty:"1 x sea salt 1kg = 1 kg",choose_product:"x",total:"ugx 20000"},
+        {ingredient:"Rice",needed_qty:"30kg",stock_qty:"----",order_qty:"1 x sea salt 1kg = 1 kg",choose_product:"x",total:"ugx 40500"},
+        {ingredient:"Sugar",needed_qty:"5kg",stock_qty:"----",order_qty:"1 x sea salt 1kg = 1 kg",choose_product:"x",total:"ugx 90000"},
+        {ingredient:"Avocado",needed_qty:"8g",stock_qty:"----",order_qty:"1 x sea salt 1kg = 1 kg",choose_product:"x",total:"ugx 7000"},
+
+
+
+    ]
+
     const params = useParams()
+
+    const [showAssistiveOrderingModal,setShowAssistiveOrderingModal] = useState(false)
+    const [showGenerateBillOfMaterialsModal,setShowGenerateBillOfMaterialsModal] = useState(false)
+
 
 
     const Item = ({ title, value }) => (
@@ -117,8 +146,8 @@ const ViewRecipe = () => {
 
                             <div style={{ display: "flex" }}>
                                 {/* gray box */}
-                                <div style={{ width: "128px", height: "128px", background: "#D9D9D9;", borderRadius: "6px", margin: "18px" }}>
-
+                                <div style={{ width: "128px", height: "128px", background: "#D9D9D9", borderRadius: "6px", margin: "18px" }}>
+                                    
                                 </div>
                                 {/* details container */}
                                 <div style={{ width: "100%" }}>
@@ -238,6 +267,7 @@ const ViewRecipe = () => {
 
                             <div style={{ width: "100%", height: "80px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                                 <CustomButton 
+                                   onClick={()=> setShowAssistiveOrderingModal(true) }
                                    title="Bill of Materials"
                                    iconName="faCreditCard"
                                    style={{width:"170px",height:"40px",background:"#eeeeee",border:" 0.5px solid #7A7A7A",color:"#000"}}
@@ -320,6 +350,63 @@ const ViewRecipe = () => {
                                 gppagination={false}
                             />
                         </div>
+
+                    {/* Assertive ordering modal */}
+                        <GPModal
+                           title="Assistive Ordering"
+                           show={showAssistiveOrderingModal}
+                           buttonText="Generate bill of materials"
+                           handleClose={()=> setShowAssistiveOrderingModal(false) }
+                           onActionButtonClick={()=>{
+                            setShowAssistiveOrderingModal(false)
+                            setShowGenerateBillOfMaterialsModal(true)
+                           }}
+
+                         >
+
+                            <div>
+
+                                <GPSelectInput
+                                   label="Select an outlet"
+                                   labelPosition='left'
+                                   placeholder="Bake My day Intinda"
+                                />
+
+                               <CustomTextInput
+                                 label="Fill out Project servings"
+                                 labelPosition='left'
+                                 placeholder={20}
+                               />
+
+                            </div>
+
+
+                        </GPModal>
+
+                        {/* bill of material modal */}
+
+                        <GPModal
+                           title="Bill of materials for 20.0  Servings"
+                           show={showGenerateBillOfMaterialsModal}
+                           buttonText="Generate bill of materials"
+                           handleClose={()=> setShowGenerateBillOfMaterialsModal(false) }
+                           size="lg"
+
+                         >
+
+                            <GPCustomTable
+                                data={billOfMaterialData}
+                                columns={billOfMaterialColumns}
+                                gppagination={false}
+                                options={{
+                                    exportButton: true
+                                  }}
+                            />
+
+
+                         </GPModal>
+
+
                     </Tab>
 
 
