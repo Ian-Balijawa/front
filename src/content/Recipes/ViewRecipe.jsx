@@ -58,18 +58,26 @@ const ViewRecipe = () => {
             title: "Waste %",
             field: "waste"
         }
-       
+
     ]
 
-  const  _bottomTableData = [
-    {ingredient:"Mayonnaise",supplier:"Nico&Nic Suppliers",net_qty:"60 ml",gross_qty:"60 ml",waste:"0%"},
-    {ingredient:"Lemon Juice",supplier:"Juice & Nic",net_qty:"6 ml",gross_qty:"6 ml",waste:"0%"},
-    {ingredient:"Lemon Zest",supplier:"Nico&Nic Suppliers",net_qty:"4 g",gross_qty:"4 g",waste:"0%"}
+    const _bottomTableData = [
+        { ingredient: "Mayonnaise", supplier: "Nico&Nic Suppliers", net_qty: "60 ml", gross_qty: "60 ml", waste: "0%" },
+        { ingredient: "Lemon Juice", supplier: "Juice & Nic", net_qty: "6 ml", gross_qty: "6 ml", waste: "0%" },
+        { ingredient: "Lemon Zest", supplier: "Nico&Nic Suppliers", net_qty: "4 g", gross_qty: "4 g", waste: "0%" }
 
 
-  ]
+    ]
 
-  const params = useParams()
+    const params = useParams()
+
+
+    const Item = ({ title, value }) => (
+        <div>
+            <div> {title}</div>
+            <div>{value}</div>
+        </div>
+    )
 
     return (
         <GPLayout>
@@ -102,15 +110,149 @@ const ViewRecipe = () => {
                     id="vew-recipe"
                     className="mb-3"
                 >
-                    <Tab eventKey="general" title="General" style={{ background: "#fff", boxShadow: "0px 6px 15px 3px rgba(84, 84, 84, 0.1)" }} tabClassName="tab">
+                    <Tab eventKey="general" title="General" tabClassName="tab">
+
+                        <div style={{ background: "#fff", boxShadow: "0px 6px 15px 3px rgba(84, 84, 84, 0.1)", width: "100%", padding: "22px", marginBottom: "20px" }}>
+                            <h5> General Information </h5>
+
+                            <div style={{ display: "flex" }}>
+                                {/* gray box */}
+                                <div style={{ width: "128px", height: "128px", background: "#D9D9D9;", borderRadius: "6px", margin: "18px" }}>
+
+                                </div>
+                                {/* details container */}
+                                <div style={{ width: "100%" }}>
+
+                                    <Container>
+                                        <Row style={{ width: "100%", height: "60px", borderBottom: "0.5px solid rgba(122, 122, 122, 0.8)" }}>
+
+
+                                            <Col lg="3">
+                                                <Item title="EAN/UPC" value="847277381666" />
+
+                                            </Col>
+
+                                            <Col lg="3">
+                                                <Item title="Product Type" value="Finished product" />
+
+                                            </Col>
+
+                                            <Col lg="3">
+                                                <Item title="Difficulty" value="------" />
+
+                                            </Col>
+
+                                            <Col lg="3">
+                                                <Item title="Shelf Life" value="------" />
+
+                                            </Col>
+
+
+                                        </Row>
+
+
+                                        <Row style={{ width: "100%", height: "60px", borderBottom: "0.5px solid rgba(122, 122, 122, 0.8)" }}>
+
+
+                                            <Col lg="3">
+                                                <Item title="Category" value="Vegetables" />
+
+                                            </Col>
+
+                                            <Col lg="3">
+                                                <Item title="Create At" value="12/Augsut/2022" />
+
+                                            </Col>
+
+                                            <Col lg="3">
+                                                <Item title="Last Modified" value="12/Augsut/2022" />
+
+                                            </Col>
+
+                                            <Col lg="3">
+                                                <Item title="Created" value="12/Augsut/2022" />
+
+                                            </Col>
+
+
+                                        </Row>
+
+
+
+                                        <Row style={{ width: "100%", height: "60px", borderBottom: "0.5px solid rgba(122, 122, 122, 0.8)" }}>
+
+
+                                            <Col lg="3">
+                                                <Item title="Sub Category" value="greens" />
+
+                                            </Col>
+
+                                            <Col lg="3">
+                                                <Item title="By" value="Grace Annita" />
+
+                                            </Col>
+
+                                            <Col lg="3">
+                                                <Item title="Class" value="------" />
+
+                                            </Col>
+
+                                            <Col lg="3">
+                                                <Item title="Cuisine" value="------" />
+
+                                            </Col>
+
+
+                                        </Row>
+
+
+
+
+
+
+
+                                    </Container>
+
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div style={{ background: "#fff", boxShadow: "0px 6px 15px 3px rgba(84, 84, 84, 0.1)", width: "100%", padding: "22px", marginBottom: "20px" }}>
+
+                            <div style={{ width: "100%", height: "40px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                                <h5> Ingredient & sub recipes </h5>
+                                <h5 style={{ color: "#0069A5" }}>1 Serving</h5>
+                            </div>
+
+                            <GPCustomTable
+                                data={_bottomTableData}
+                                columns={_bottomTableColumns}
+                                gppagination={false}
+                                toolbar={false}
+
+                            />
+
+                            <div style={{ width: "100%", height: "80px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                                <CustomButton 
+                                   title="Bill of Materials"
+                                   iconName="faCreditCard"
+                                   style={{width:"170px",height:"40px",background:"#eeeeee",border:" 0.5px solid #7A7A7A",color:"#000"}}
+                                 />
+                            </div>
+
+                        </div>
 
 
                     </Tab>
 
 
 
-                    <Tab eventKey="packaging" title="Packaging & Pricing"  tabClassName="tab">
-                        <div style={{ background: "#fff", boxShadow: "0px 6px 15px 3px rgba(84, 84, 84, 0.1)",width:"100%",padding:"10px",marginBottom:"20px" }}>
+                    <Tab eventKey="packaging" title="Packaging & Pricing" tabClassName="tab">
+                        <div style={{ background: "#fff", boxShadow: "0px 6px 15px 3px rgba(84, 84, 84, 0.1)", width: "100%", padding: "10px", marginBottom: "20px" }}>
 
                             <Container>
                                 <Row>
@@ -160,7 +302,7 @@ const ViewRecipe = () => {
                                             gppagination={false}
                                         />
 
-                                    
+
                                     </Col>
 
                                 </Row>
@@ -168,15 +310,15 @@ const ViewRecipe = () => {
                         </div>
 
 
-                        <div style={{ background: "#fff", boxShadow: "0px 6px 15px 3px rgba(84, 84, 84, 0.1)",width:"100%",padding:"10px",marginBottom:"20px" }}>
+                        <div style={{ background: "#fff", boxShadow: "0px 6px 15px 3px rgba(84, 84, 84, 0.1)", width: "100%", padding: "10px", marginBottom: "20px" }}>
 
-                        <GPCustomTable
-                                            toolbar={false}
-                                            title="Package Information"
-                                            columns={_bottomTableColumns}
-                                            data={_bottomTableData}
-                                            gppagination={false}
-                                        />
+                            <GPCustomTable
+                                toolbar={false}
+                                title="Package Information"
+                                columns={_bottomTableColumns}
+                                data={_bottomTableData}
+                                gppagination={false}
+                            />
                         </div>
                     </Tab>
 
