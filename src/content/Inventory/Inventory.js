@@ -5,6 +5,10 @@ import {
     faSitemap,
     faCartShopping,
     faPlus,
+    faCartPlus,
+    faCartArrowDown,
+    faCartFlatbed,
+    faBagShopping
 } from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import './inventory.css'
@@ -47,25 +51,39 @@ function Inventory() {
 
             <div className="row mb-4">
                 <GPDashTitle gpTitle={'Procurement'} />
-                <div className="col-md-12 text-center d-flex">
+                <div className="col-md-12 text-center d-flex" style={{flexWrap:"wrap"}}>
                     <GPDashCard
-                        gpIcon={faPlus}
+                        gpIcon={faCartPlus}
                         gpTitle={'New Order'}
                         gpLink={'/orders'}
                         gpClassName={'mx-4'}
                     />
 
-                    <GPDashCard
+<GPDashCard
                         gpIcon={faCartShopping}
+                        gpTitle={'Open Orders'}
+                        gpLink={'/orders'}
+                        gpClassName={'mx-4'}
+                    />
+
+                    <GPDashCard
+                        gpIcon={faCartFlatbed}
                         gpTitle={'Sent Orders'}
                         gpLink={'#'}
                         gpClassName={'mx-4'}
                     />
 
                     <GPDashCard
-                        gpIcon={faPlus}
+                        gpIcon={faBagShopping}
                         gpTitle={'Delivered'}
                         gpLink={'/delivered'}
+                        gpClassName={'mx-4'}
+                    />
+
+<GPDashCard
+                        gpIcon={faCartArrowDown}
+                        gpTitle={'External Orders'}
+                        gpLink={'/orders'}
                         gpClassName={'mx-4'}
                     />
 
