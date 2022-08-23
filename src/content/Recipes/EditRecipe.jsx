@@ -10,8 +10,37 @@ import AddIngredientsTable from '../../components/GPTables/Recipes/AddIngredient
 import CustomPlusIconButton from '../../components/CustomPlusIconButton/CustomPlusIconButton'
 import GPModal from '../../components/GPModal/GPModal'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck, faPen, faPlus, faTrashCan } from '@fortawesome/free-solid-svg-icons'
+
 
 const EditRecipe = () => {
+
+
+    const AddIcon =()=>(
+        <div style={{width:"25px",height:"25px",border:"1px solid #7a7a7a",borderRadius:"3px",display:"flex",justifyContent:"center",alignItems:"center"}}>
+           <FontAwesomeIcon icon={faPlus} size={20} />
+        </div>
+    )
+
+
+    const EditIcon =()=>(
+        <div style={{width:"25px",height:"25px",border:"1px solid #7a7a7a",borderRadius:"3px",display:"flex",justifyContent:"center",alignItems:"center"}}>
+           <FontAwesomeIcon icon={faPen} size={20} />
+        </div>
+    )
+
+    const DeleteIcon =()=>(
+        <div style={{width:"25px",height:"25px",border:"1px solid #7a7a7a",borderRadius:"3px",display:"flex",justifyContent:"center",alignItems:"center"}}>
+           <FontAwesomeIcon icon={faTrashCan} size={20} />
+        </div>
+    )
+
+    const CheckIcon =()=>(
+        <div style={{width:"25px",height:"25px",border:"1px solid #7a7a7a",borderRadius:"3px",display:"flex",justifyContent:"center",alignItems:"center"}}>
+           <FontAwesomeIcon icon={faCheck} size={20} />
+        </div>
+    )
 
     const _packageTableColumns = [
         {
@@ -23,56 +52,42 @@ const EditRecipe = () => {
             field: "content"
         },
         {
-            title: "Stockable",
-            field: "stockable"
-        },
-        {
-            title: "Active Piece",
-            field: "active_piece"
+            title: "Storable",
+            field: "storable",
+            render:(rowData)=>( <CheckIcon/>)
         },
         {
             title: "Avg Price",
             field: "avarage_price"
         },
         {
-            title: "UPC/EAN",
-            field: "upc"
-        }
-    ]
-
-
-
-    const _bottomTableColumns = [
-        {
-            title: "Ingredients & sub recipes",
-            field: "ingredient"
+            title: "Base Price",
+            field: "base_price"
         },
         {
             title: "Supplier",
-            field: "supplier"
+            field: "supplier",
+            render:(rowData)=>( <AddIcon/>)
         },
         {
-            title: "Net Qty",
-            field: "net_qty"
+            title: "Edit",
+            field: "edit",
+            render:(rowData)=>( <EditIcon/>)
         },
         {
-            title: "Gross Qty",
-            field: "gross_qty"
+            title: "Delete",
+            field: "Delete",
+            render:(rowData)=>( <DeleteIcon/>)
         },
-        {
-            title: "Waste %",
-            field: "waste"
-        }
-
     ]
 
-    const _bottomTableData = [
-        { ingredient: "Mayonnaise", supplier: "Nico&Nic Suppliers", net_qty: "60 ml", gross_qty: "60 ml", waste: "0%" },
-        { ingredient: "Lemon Juice", supplier: "Juice & Nic", net_qty: "6 ml", gross_qty: "6 ml", waste: "0%" },
-        { ingredient: "Lemon Zest", supplier: "Nico&Nic Suppliers", net_qty: "4 g", gross_qty: "4 g", waste: "0%" }
 
-
+    const dummySaveData = [
+        {package_type:"Bottle",content:"1L",storable:true,avarage_price:"Ush 5000",base_price:"0",supplier:""}
     ]
+    
+
+   
 
 
     const params = useParams()
@@ -137,7 +152,7 @@ const EditRecipe = () => {
                                             toolbar={false}
                                             title="Package Information"
                                             columns={_packageTableColumns}
-                                            data={[]}
+                                            data={dummySaveData}
                                             gppagination={false}
                                         />
 
