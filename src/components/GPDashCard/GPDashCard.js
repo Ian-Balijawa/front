@@ -9,7 +9,7 @@ function GPDashCard({gpIcon, renderIcon, gpTitle, gpLink, gpClassName}) {
 
     return (
         <Link to={gpLink} className={gpClassName}>
-            <div className="card gbDashCard">
+            <div className="card gbDashCard" style={{marginTop:"6px",marginBottom:"6px"}}>
                 <div className="card-body gbDashCardBody  p-0" style={{position:"relative",width:"100%"}}>
                     {renderIcon ? (
                         <div>
