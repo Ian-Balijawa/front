@@ -7,6 +7,8 @@ import { useParams } from 'react-router-dom'
 import GPModal from '../../components/GPModal/GPModal'
 import CustomTextInput from '../../components/CustomTextInput'
 import GPSelectInput from '../../components/GPSelectInput.js/GPSelectInput'
+import {faBox} from '@fortawesome/free-solid-svg-icons'
+
 
 const ViewRecipe = () => {
 
@@ -108,8 +110,24 @@ const ViewRecipe = () => {
         </div>
     )
 
+
+    const crumbs = [
+        {
+            text: 'Inventroy',
+            href: '/inventory',
+        },
+        {
+          text: 'Recipe',
+          href:`/inventory/recipes`,
+       },
+       {
+        text:`${params.name}`,
+        href:`#`,
+     },
+    ]
+
     return (
-        <GPLayout>
+        <GPLayout breadIcon={faBox} crumbs={crumbs} >
 
             <div style={{ width: "100%" }}>
 
@@ -119,7 +137,7 @@ const ViewRecipe = () => {
                         style={{ width: "100px", height: "50px", color: "#000000" }}
                         withBackground={false}
                         iconName="faPenToSquare"
-                        url={`/recipes/${params.name}/edit`} //depends on params
+                        url={`/inventory/recipes/${params.name}/edit`} //depends on params
                     />
 
                     <CustomButton

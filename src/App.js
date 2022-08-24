@@ -76,10 +76,10 @@ function App() {
                 <Route path="order-list" element={<OrderList />} />
                 <Route path="delivered" element={<Delivered />} />
                 <Route path="reports" element={<Reports />} />
-                <Route path="recipes" element={<Recipes />} />
-                <Route path="new-recipe" element={<NewRecipe />} />
-                <Route path="recipes/:name" element={<ViewRecipe/>} />
-                <Route path="recipes/:name/edit" element={<EditRecipe/>} />
+                <Route path="/inventory/recipes" element={<Recipes />} />
+                <Route path="/inventory/recipe/new" element={<NewRecipe />} />
+                <Route path="/inventory/recipes/:name" element={<ViewRecipe/>} />
+                <Route path="/inventory/recipes/:name/edit" element={<EditRecipe/>} />
                 <Route path="/inventory/outlets" element={< OutletsDashBoard />} />
                 <Route path="/inventory/preparation/:outletId" element={< OutletPreparation />} />
                 <Route path="/inventory/preparation/new" element={< NewPreparationRecord />} />

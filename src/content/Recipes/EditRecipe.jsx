@@ -11,7 +11,7 @@ import CustomPlusIconButton from '../../components/CustomPlusIconButton/CustomPl
 import GPModal from '../../components/GPModal/GPModal'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck, faPen, faPlus, faTrashCan } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faPen, faPlus, faTrashCan,faBox } from '@fortawesome/free-solid-svg-icons'
 
 
 const EditRecipe = () => {
@@ -96,8 +96,29 @@ const EditRecipe = () => {
 
 
 
+    const crumbs = [
+        {
+            text: 'Inventroy',
+            href: '/inventory',
+        },
+        {
+          text: 'Recipe',
+          href:`/inventory/recipes`,
+       },
+       {
+        text:`${params.name}`,
+        href:`/inventory/recipes/${params.name}`,
+       },
+       {
+        text:`Edit`,
+        href:`#`,
+       },
+    ]
+
+
+
     return (
-        <GPLayout>
+        <GPLayout breadIcon={faBox} crumbs={crumbs}>
             <div style={{ width: "100%" }}>
 
                 <div style={{ width: "100%", display: "flex", borderBottom: "0.5px solid rgba(122, 122, 122, 0.8)", paddingBottom: "13px" }}>

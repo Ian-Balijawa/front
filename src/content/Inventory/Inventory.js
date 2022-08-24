@@ -8,11 +8,12 @@ import {
     faCartPlus,
     faCartArrowDown,
     faCartFlatbed,
-    faBagShopping
+    faBagShopping,
+    faBox
 } from '@fortawesome/free-solid-svg-icons'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+
 import './inventory.css'
-import {Link} from 'react-router-dom'
+
 import GPDashCard from '../../components/GPDashCard'
 import GPDashTitle from '../../components/GPDashTitle'
 import {
@@ -23,14 +24,16 @@ import {
 } from '../../components/GPIcon'
 
 function Inventory() {
-    const crumbs = [
-        {
-            text: 'Settings',
-            href: '/settings',
-        },
-    ]
+
+        const crumbs = [
+            {
+                text: 'Inventroy',
+                href: '/inventory',
+            },
+        ]
+    
     return (
-        <GPLayout breadIcon={faGear} crumbs={crumbs}>
+        <GPLayout breadIcon={faBox} crumbs={crumbs}>
             <div className="row mb-4">
                 <GPDashTitle gpTitle={'Items'} />
                 <div className="col-md-12 text-center d-flex">
@@ -43,7 +46,7 @@ function Inventory() {
                     <GPDashCard
                         gpIcon={faSitemap}
                         gpTitle={'Recipes'}
-                        gpLink={'/recipes'}
+                        gpLink={'/inventory/recipes'}
                         gpClassName={'mx-4'}
                     />
                 </div>

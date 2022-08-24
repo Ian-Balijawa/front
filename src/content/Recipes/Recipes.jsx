@@ -10,6 +10,8 @@ import GPLayout from '../../components/GPLayout/GPLayout'
 import GPSearchFilterCard from '../../components/GPSearchFilterCard/GPSearchFilterCard'
 import SupplierTableActions from '../../components/SupplierTableActions/SupplierTableActions'
 
+import {faBox} from '@fortawesome/free-solid-svg-icons'
+
 
 import './recipes.css'
 
@@ -32,7 +34,7 @@ const Recipes = () => {
      {title:"Category",field:"category"},
      {title:"Shell Life",field:"shell_life"},
      {title:"Difficulty",field:"difficulty"},
-     {title:"Actions",field:"actions",render:(rowData)=> <SupplierTableActions record={rowData} url={`/recipes/${rowData.recipe_name}`}/> },
+     {title:"Actions",field:"actions",render:(rowData)=> <SupplierTableActions record={rowData} url={`/inventory/recipes/${rowData.recipe_name}`}/> },
 
 
 
@@ -40,8 +42,19 @@ const Recipes = () => {
 
   const [recipes,setRecipes] = useState(_recipeData)
 
+  const crumbs = [
+    {
+        text: 'Inventroy',
+        href: '/inventory',
+    },
+    {
+      text: 'Recipe',
+      href: '#',
+  },
+]
+
   return (
-    <GPLayout>
+    <GPLayout breadIcon={faBox} crumbs={crumbs} >
         <div className='recipes-main-wrapper'>
            
            <div className='recipes-header-container'>
@@ -49,7 +62,7 @@ const Recipes = () => {
                   <GPBlockButton title="Save Changes"  gpClassName="bg-theme border-0 btn-sm recipe-block-btn" />
                   <GPImportExportButton/>
                 </div>
-                  <CustomPlusIconButton title="Add New Recipe" url="/new-recipe"/>
+                  <CustomPlusIconButton title="Add New Recipe" url="/inventory/recipe/new"/>
                 
            </div>
 

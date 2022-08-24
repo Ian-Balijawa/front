@@ -7,12 +7,32 @@ import GPCheckBox from '../../components/GPCheckBox/GPCheckBox'
 import GPLayout from '../../components/GPLayout/GPLayout'
 import GPSelectInput from '../../components/GPSelectInput.js/GPSelectInput'
 import AddIngredientsTable from '../../components/GPTables/Recipes/AddIngredientsTable'
+import {faBox} from '@fortawesome/free-solid-svg-icons'
+
 import './recipes.css'
 
 
 const NewRecipe = () => {
+
+
+    const crumbs = [
+        {
+            text: 'Inventroy',
+            href: '/inventory',
+        },
+        {
+          text: 'Recipe',
+          href: '/inventory/recipes',
+        },
+        {
+            text: 'New',
+            href: '#',
+          }
+    ]
+
+
     return (
-        <GPLayout>
+        <GPLayout breadIcon={faBox} crumbs={crumbs} >
             <div className='new-recipe-wrapper'>
 
                 <div className='new-recipe-header-cont'>
