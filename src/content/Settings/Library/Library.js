@@ -35,6 +35,7 @@ import ImageP2 from '../../../assets/img/imagePlaceholder2.PNG'
 import GPModal from '../../../components/GPModal/GPModal'
 import './library.css'
 import GPRadioButton from '../../../components/GPRadioButton'
+import GPTable from '../../../components/GPTable'
 
 function Library() {
     const crumbs = [
@@ -94,6 +95,52 @@ function Library() {
 
     const handleShowSub = () => setShowSub(true)
     const handleCloseSub = () => setShowSub(false)
+
+    const gpLibColumns = [
+        {title: 'Name', field: 'name'},
+        {
+            title: 'Actions',
+            field: 'actions',
+            render: rowData => (
+                <div className="d-flex justity-content-between">
+                    <FontAwesomeIcon
+                        icon={faPen}
+                        className="mx-2 pt-1 text-dark"
+                    />
+                    <FontAwesomeIcon
+                        icon={faTrashCan}
+                        className="mx-2 theme-b-r text-dark"
+                    />
+                    <FontAwesomeIcon
+                        icon={faArrowsUpDownLeftRight}
+                        className="mx-2 theme-b-r text-dark"
+                    />
+                </div>
+            ),
+        },
+    ]
+
+    const gpLibData = [
+        {
+            id: 1,
+            name: 'Desserts',
+        },
+
+        {
+            id: 2,
+            name: 'Drinks',
+        },
+        {
+            id: 3,
+            name: 'liquor',
+            parentId: 2,
+        },
+        {
+            id: 4,
+            name: 'Wine',
+            parentId: 2,
+        },
+    ]
 
     return (
         <GPLayout breadIcon={faPager} crumbs={crumbs}>
@@ -188,103 +235,27 @@ function Library() {
                             <div className="gp-tab-content px-4 py-5">
                                 <div class="row mb-5">
                                     <div className="col-6 px-4">
-                                        <span className="lib-title">
+                                        <span className="lib-title mb-3">
                                             Ingredients Categories
                                         </span>
 
-                                        <table
-                                            className="table table-sm table-striped mt-3"
-                                            style={{width: '100%'}}
-                                        >
-                                            <thead>
-                                                <tr className="lib-table lib-table-row-title">
-                                                    <th
-                                                        scope="col"
-                                                        style={{width: '60%'}}
-                                                    >
-                                                        Name
-                                                    </th>
-                                                    <th scope="col">Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr
-                                                    data-toggle="collapse"
-                                                    className="accordion-toggle"
-                                                    data-target="#demo10"
-                                                >
-                                                    <th
-                                                        scope="row"
-                                                        className="accordion-item"
-                                                    >
-                                                        <span
-                                                            className="accordion-button"
-                                                            data-bs-toggle="collapse"
-                                                            data-bs-target="#flush-collapseOne"
-                                                            aria-expanded="false"
-                                                            aria-controls="flush-collapseOne"
-                                                        >
-                                                            <FontAwesomeIcon
-                                                                style={{
-                                                                    color: '#3E4347',
-                                                                }}
-                                                                icon={
-                                                                    faChevronRight
-                                                                }
-                                                                className="mx-2"
-                                                            />
-                                                            <span className="table-tr-title ">
-                                                                Desserts
-                                                            </span>
-                                                        </span>
-                                                    </th>
+                                        <GPTable
+                                            columns={gpLibColumns}
+                                            data={gpLibData}
+                                            paddingBottom="5px"
+                                            paddingTop="5px"
+                                            fontSize="12px"
+                                            gpColor="#0069A5"
+                                            gppagination={false}
+                                            options={{toolbar: false}}
+                                            parentChildData={(row, rows) =>
+                                                rows.find(
+                                                    a => a.id === row.parentId
+                                                )
+                                            }
+                                        />
 
-                                                    <td>
-                                                        <FontAwesomeIcon
-                                                            icon={faPen}
-                                                            className="mx-2"
-                                                        />
-                                                        <FontAwesomeIcon
-                                                            icon={faTrashCan}
-                                                            className="mx-2 theme-b-r"
-                                                        />
-                                                        <FontAwesomeIcon
-                                                            icon={
-                                                                faArrowsUpDownLeftRight
-                                                            }
-                                                            className="mx-2 theme-b-r"
-                                                        />
-                                                    </td>
-                                                </tr>
-
-                                                <tr
-                                                    id="flush-collapseOne"
-                                                    className=" accordion-collapse collapse"
-                                                    aria-labelledby="flush-headingOne"
-                                                    data-bs-parent="#accordionFlushExample"
-                                                >
-                                                    <td>Wine</td>
-                                                    <td>
-                                                        <FontAwesomeIcon
-                                                            icon={faPen}
-                                                            className="mx-2"
-                                                        />
-                                                        <FontAwesomeIcon
-                                                            icon={faTrashCan}
-                                                            className="mx-2 theme-b-r"
-                                                        />
-                                                        <FontAwesomeIcon
-                                                            icon={
-                                                                faArrowsUpDownLeftRight
-                                                            }
-                                                            className="mx-2 theme-b-r"
-                                                        />
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-
-                                        <div className="d-flex justify-content-start flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
+                                        <div className="d-flex justify-content-start flex-wrap flex-md-nowrap align-items-center pb-2 mt-3 mb-3">
                                             <GPIconButton
                                                 icon={faPlus}
                                                 onClick={handleShow}

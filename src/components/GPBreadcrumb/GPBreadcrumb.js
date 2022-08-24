@@ -2,6 +2,7 @@ import React from 'react'
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {Link} from 'react-router-dom'
+import './gp-breadcrumb.css'
 
 function GPBreadcrumb(props) {
     function isLast(index) {

@@ -6,7 +6,7 @@ function GPIconButton({title, to, gpClassName, ...props}) {
     return (
         <div>
             <div className="d-grid gap-2">
-                <Button {...props} className={`btn ${gpClassName}`}>
+                <Button {...props} className={`btn shadow-none ${gpClassName}`}>
                     <FontAwesomeIcon icon={props.icon} /> {title}
                 </Button>
             </div>

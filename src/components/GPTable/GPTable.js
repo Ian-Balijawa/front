@@ -85,7 +85,8 @@ const GPTable = ({
                     cellStyle: {
                         borderBottom: '1px solid #7a7a7a',
                         height: '40px !important',
-                        fontSize: '14px',
+                        fontSize: props.fontSize || '14px',
+                        color: props.gpColor || 'inherit',
                         paddingBottom: props.paddingBottom,
                         paddingTop: props.paddingTop,
                         ...props.cellStyle,

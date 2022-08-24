@@ -13,7 +13,8 @@
 }
 
 .gp-breadcrumb-item a {
-    color: #989898 !important;
+    font-size: 16px !important;
+color: #0069A5 !important;
 }
 
 .gp-crumb-active a {

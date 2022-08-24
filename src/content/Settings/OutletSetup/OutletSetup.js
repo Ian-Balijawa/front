@@ -173,7 +173,7 @@ function OutletSetup() {
 
     return (
         <GPLayout breadIcon={faPager} crumbs={crumbs}>
-            <div className="d-flex justify-content-end flex-wrap flex-md-nowrap align-items-center pt-3 py-4 mb-3 border-bottom">
+            <div className="d-flex justify-content-end flex-wrap flex-md-nowrap align-items-center pt-1 py-4 mb-3 border-bottom">
                 {/* <h1 className="h2">OutletSetup</h1> */}
 
                 <GPIconButton

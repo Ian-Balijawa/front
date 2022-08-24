@@ -1,3 +1,4 @@
 .fz-12 {
     font-size: 12px;
+    line-height: 1.7em; /* 1em = 12px in this case. 20/12 == 1.666666  */
 }
