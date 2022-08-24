@@ -69,7 +69,7 @@ function Inventory() {
                     <GPDashCard
                         gpIcon={faCartFlatbed}
                         gpTitle={'Sent Orders'}
-                        gpLink={'#'}
+                        gpLink={'/inventory/outlets'}
                         gpClassName={'mx-4'}
                     />
 
