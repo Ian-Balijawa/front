@@ -4,27 +4,30 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {Link} from 'react-router-dom'
 import './gp-dash-card.css'
 
-function GPDashCard({gpIcon,renderIcon, gpTitle, gpLink, gpClassName}) {
-  
+function GPDashCard({gpIcon, renderIcon, gpTitle, gpLink, gpClassName}) {
     let Icon = renderIcon
 
     return (
-        <div className={gpClassName}>
-            <div className="card gbDashCard">
-                <div className="card-body gbDashCardBody mt-4">
-                   { renderIcon ? <div style={{width:"100px",height:"62px"}}>
-                       <Icon/>
-                   </div> : <FontAwesomeIcon
-                        className="dash-icon-bg"
-                        icon={gpIcon}
-                        size="4x"
-                    />}
-                    <div className="card-title gp-card-title">
-                        <Link to={gpLink}>{gpTitle}</Link>
+        <Link to={gpLink} className={gpClassName}>
+            <div className="card gbDashCard" style={{marginTop:"6px",marginBottom:"6px"}}>
+                <div className="card-body gbDashCardBody  p-0" style={{position:"relative",width:"100%"}}>
+                    {renderIcon ? (
+                        <div>
+                            <Icon />
+                        </div>
+                    ) : (
+                        <FontAwesomeIcon
+                            className="dash-icon-bg"
+                            icon={gpIcon}
+                            size="2x"
+                        />
+                    )}
+                    <div className="gp-card-title" style={{position:"absolute",top:"30%",left:0,width:"100%"}}>
+                        <span>{gpTitle}</span>
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

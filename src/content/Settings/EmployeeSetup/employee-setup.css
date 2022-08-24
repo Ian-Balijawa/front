@@ -1,3 +1,22 @@
+.employee-setup-tabs li button {
+    border-radius: 0 !important;
+    border: 0 !important;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
+    background: transparent;
+
+    color: #000000;
+}
+
+.employee-setup-tabs li button.active {
+    background: transparent !important;
+    border-bottom: 3px solid #e46036 !important;
+}
+
 .employees_tabs {
     border-radius: 0 !important;
     border-left: 3px solid #000000 !important;

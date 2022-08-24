@@ -1,0 +1,16 @@
+.custom-theme-text-input{
+   height:40px;
+   border:1px solid#7a7a7a;
+   border-radius: 6px;
+}
+
+.custom-theme-text-input:focus{
+    border-color:1px solid #b9b5b5;
+    outline: none
+}
+
+form .form-control:focus{
+    border-color: #b9b5b5;
+    box-shadow: none;
+  }
+

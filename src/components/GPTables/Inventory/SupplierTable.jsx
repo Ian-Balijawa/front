@@ -11,7 +11,7 @@ const SupplierTable = () => {
         {title:"Total Orders Value (Ush)",field:"order_value"},
         {title:"Last Order Value",field:"last_order_value"},
         {title:"Statistics",field:"statistics"},
-        {title:"Action",field:"action",render:(rowData)=> <SupplierTableActions record={rowData} />},
+        {title:"Action",field:"action",render:(rowData)=> <SupplierTableActions record={rowData} url='/view-supplier' />},
     ]
 
    const _data = [

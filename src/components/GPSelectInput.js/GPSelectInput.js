@@ -1,14 +1,19 @@
 import React from "react"
 import Form from 'react-bootstrap/Form';
 
-function GPSelectInput({ handleChange, label, placeholder, name, arrayOfData, error, ...rest }) {
+function GPSelectInput({ handleChange, label, placeholder, name, arrayOfData, error, labelPosition = "top", labelStyles, ...rest }) {
 
 
     return (
-        <>
-
-            <Form.Group>
-                {label && <Form.Label style={{ fontSize: "14px", color: "#7a7a7a" }}>{label}</Form.Label>}
+       <Form>
+         <Form.Group className='mb-2' controlId="form-gp-2" style={{ display: labelPosition === "left" ? "flex" : "block", alignItems: "center" }}>
+                {labelPosition === "top" ? <Form.Label>
+                    {label}
+                </Form.Label> :
+                    <Form.Label style={{ marginRight: labelPosition === "left" ? "5px" : "0px", minWidth: "80px" }}>
+                        {label}
+                    </Form.Label>
+                }
                 <Form.Select onChange={handleChange} {...rest}>
                     <option>
                         {placeholder}
@@ -19,7 +24,7 @@ function GPSelectInput({ handleChange, label, placeholder, name, arrayOfData, er
                 </Form.Select>
                 {error && <div className="error">{error}</div>}
             </Form.Group>
-        </>
+       </Form>
     )
 }
 

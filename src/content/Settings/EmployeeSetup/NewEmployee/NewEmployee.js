@@ -5,7 +5,7 @@ import GPIconButton from '../../../../components/GPIconButton'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import GPSearchInput from '../../../../components/GPSearchInput'
 import GPImportExportButton from '../../../../components/GPImportExportButton'
-import {Col, Form, Nav, Row, Tab, Tabs} from 'react-bootstrap'
+import {Col, Form, InputGroup, Nav, Row, Tab, Tabs} from 'react-bootstrap'
 
 import GPBlockButton from '../../../../components/GPBlockButton'
 import GPTextInput from '../../../../components/GPTextInput/GPTextInput'
@@ -21,15 +21,16 @@ import {useNavigate} from 'react-router-dom'
 import './new-employee.css'
 import GPTextarea from '../../../../components/GPTextarea'
 import GPSelectInput from '../../../../components/GPSelectInput.js/GPSelectInput'
+import GPPhoneInput from '../../../../components/GPPhoneInput/GPPhoneInput'
 
 function NewEmployee() {
     const crumbs = [
         {
-            text: 'Home',
-            href: '/',
+            text: 'Settings',
+            href: '/settings',
         },
         {
-            text: 'Employee Roles: New',
+            text: 'Employee : New',
             href: '/employee-role',
         },
     ]
@@ -98,11 +99,11 @@ function NewEmployee() {
 
                     <GPIconButton
                         title="Save Changes"
-                        gpClassName="cBtn px-4 bg-theme border-0 "
+                        gpClassName="cBtn px-4 bg-theme border-0 p-2"
                     />
 
                     <GPBlockButton
-                        gpClassName="cBtn bg-transparent text-theme px-4 mx-2"
+                        gpClassName="cBtn bg-transparent text-theme px-4 p-2 mx-2"
                         title={'Save & Start New'}
                     />
                 </div>
@@ -113,108 +114,93 @@ function NewEmployee() {
                         <hr />
 
                         <div className="container">
-                            <div class="row mb-3">
-                                <div className="col-6">
-                                    <div className="row">
-                                        <label
-                                            for="inputEmail3"
-                                            class="col-sm-4 col-form-label"
-                                        >
-                                            Fist Name
-                                        </label>
-                                        <div class="col-sm-8">
-                                            <GPTextInput
-                                                type="text"
-                                                id="email"
-                                                name="email"
-                                                register={register}
-                                                errors={errors}
-                                            />
-                                        </div>
-                                    </div>
+                            <div className="row row-cols-2">
+                                <div className="col-3 text-end">
+                                    <label htmlFor="name">First Name</label>
                                 </div>
-                                <div className="col-6">
-                                    <div className="row">
-                                        <label
-                                            for="inputEmail3"
-                                            class="col-sm-4 col-form-label"
-                                        >
-                                            Last Name
-                                        </label>
-                                        <div class="col-sm-8">
-                                            <GPTextInput
-                                                type="text"
-                                                id="email"
-                                                name="email"
-                                                register={register}
-                                                errors={errors}
-                                            />
-                                        </div>
-                                    </div>
+                                <div className="col-3">
+                                    <GPTextInput
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        register={register}
+                                        errors={errors}
+                                        gpClassName="mb-3"
+                                    />
+                                </div>
+
+                                <div className="col-3 text-end">
+                                    <label htmlFor="name">Last Name</label>
+                                </div>
+                                <div className="col-3">
+                                    <GPTextInput
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        register={register}
+                                        errors={errors}
+                                        gpClassName="mb-3"
+                                    />
                                 </div>
                             </div>
-
-                            <div class="row mb-3">
-                                <div className="col-6">
-                                    <div className="row">
-                                        <label
-                                            for="inputEmail3"
-                                            class="col-sm-4 col-form-label"
-                                        >
-                                            UserName
-                                        </label>
-                                        <div class="col-sm-8">
-                                            <GPTextInput
-                                                type="text"
-                                                id="email"
-                                                name="email"
-                                                register={register}
-                                                errors={errors}
-                                            />
-                                        </div>
-                                    </div>
+                            <div className="row row-cols-2">
+                                <div className="col-3 text-end">
+                                    <label htmlFor="name">UserName</label>
                                 </div>
-                                <div className="col-6">
-                                    <div className="row">
-                                        <label
-                                            for="inputEmail3"
-                                            class="col-sm-4 col-form-label"
-                                        >
-                                            Employee Role
-                                        </label>
-                                        <div class="col-sm-8">
-                                            <GPSelectInput
-                                                label=""
-                                                placeholder="employeeRoles"
-                                                name="employeeRoles"
-                                                arrayOfData={employeeRoles}
-                                                className="border border_color mb-3 form-select"
-                                            />
-                                        </div>
-                                    </div>
+                                <div className="col-3">
+                                    <GPTextInput
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        register={register}
+                                        errors={errors}
+                                        gpClassName="mb-3"
+                                    />
+                                </div>
+
+                                <div className="col-3 text-end">
+                                    <label htmlFor="name">Employee Role</label>
+                                </div>
+                                <div className="col-3">
+                                    <GPSelectInput
+                                        label=""
+                                        placeholder="employeeRoles"
+                                        name="employeeRoles"
+                                        arrayOfData={employeeRoles}
+                                        className="border border_color mb-3 form-select"
+                                    />
                                 </div>
                             </div>
 
                             <div className="row row-cols-2 mb-3">
-                                <div className="col-3 text-start">
+                                <div className="col-3 text-end">
                                     <label htmlFor="name">Pay</label>
                                 </div>
                                 <div className="col-9">
-                                    <div class="input-group">
-                                        <div class="input-group-text">USh</div>
-                                        <GPTextInput
-                                            type="text"
-                                            id="email"
-                                            name="email"
-                                            register={register}
-                                            errors={errors}
+                                    <InputGroup className="mb-3">
+                                        <InputGroup.Text id="basic-addon1">
+                                            USh
+                                        </InputGroup.Text>
+                                        <Form.Control
+                                            placeholder="0.00"
+                                            aria-label="Default Pay"
+                                            aria-describedby="basic-addon1"
                                         />
-                                    </div>
+                                    </InputGroup>
+                                </div>
+                            </div>
+
+                            <div className="row row-cols-2 mb-3">
+                                <div className="col-3 text-end">
+                                    <label htmlFor="name">Mobile Phone</label>
+                                </div>
+                                <div className="col-9">
+                                    <GPPhoneInput />
                                 </div>
                             </div>
 
                             <div className="row row-cols-2">
-                                <div className="col-3 text-start">
+                                <div className="col-3 text-end">
                                     <label htmlFor="name">Passcode *</label>
                                     <small className="fz-12">
                                         Enter a 4 digit numerical code that your
@@ -234,7 +220,7 @@ function NewEmployee() {
                             </div>
 
                             <div className="row row-cols-2">
-                                <div className="col-3 text-start">
+                                <div className="col-3 text-end">
                                     <label htmlFor="name">
                                         Email Address *
                                     </label>
@@ -252,7 +238,7 @@ function NewEmployee() {
                             </div>
 
                             <div className="row row-cols-2">
-                                <div className="col-3 text-start">
+                                <div className="col-3 text-end">
                                     <label htmlFor="name">
                                         Tax Identificaion Number
                                     </label>
@@ -270,7 +256,7 @@ function NewEmployee() {
                             </div>
 
                             <div className="row row-cols-2">
-                                <div className="col-3 text-start">
+                                <div className="col-3 text-end">
                                     <label htmlFor="name">
                                         National ID Number*
                                     </label>
@@ -288,7 +274,7 @@ function NewEmployee() {
                             </div>
 
                             <div className="row row-cols-2">
-                                <div className="col-3 text-start">
+                                <div className="col-3 text-end">
                                     <label htmlFor="name">Address</label>
                                 </div>
                                 <div className="col-9">

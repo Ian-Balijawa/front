@@ -10,7 +10,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import './settings.css'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import GPDashCard from '../../components/GPDashCard'
 import GPDashTitle from '../../components/GPDashTitle'
 
@@ -18,9 +18,11 @@ function Settings() {
     const crumbs = [
         {
             text: 'Settings',
-            href: '/settings',
+            href: '#',
         },
     ]
+
+    const navigate = useNavigate()
     return (
         <GPLayout breadIcon={faGear} crumbs={crumbs}>
             {/* <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -33,19 +35,19 @@ function Settings() {
                     <GPDashCard
                         gpIcon={faBook}
                         gpTitle={'Library settings'}
-                        gpLink={'/'}
+                        gpLink={'/settings/library'}
                     />
 
                     <GPDashCard
                         gpIcon={faPersonCirclePlus}
                         gpTitle={'Employee Setup'}
-                        gpLink={'/employee-setup'}
+                        gpLink={'/settings/employee-setup'}
                         gpClassName={'mx-4'}
                     />
                     <GPDashCard
                         gpIcon={faUserLock}
                         gpTitle={'Employee  Roles'}
-                        gpLink={'/employee-role'}
+                        gpLink={'/settings/employee-role'}
                     />
                 </div>
             </div>
@@ -62,7 +64,7 @@ function Settings() {
                     <GPDashCard
                         gpIcon={faPersonCirclePlus}
                         gpTitle={'Add  Outlet'}
-                        gpLink={'/settings'}
+                        gpLink={'/new-outlet'}
                         gpClassName={'mx-4'}
                     />
                 </div>

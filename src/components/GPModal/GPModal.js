@@ -29,7 +29,7 @@ const GPModal = ({
                   <CloseIcon/>
                  }
 
-                 </Button>
+            </Button>
             
           </Modal.Header>
           
@@ -71,8 +71,8 @@ const styles = {
       backgroundColor:"#F1EDE5"
   },
     closeBtn:{
-      width:"50px",
-      height:"50px",
+      width:"40px",
+      height:"40px",
       background:"#CBCBCB",
       borderRadius:"4px",
       display:"flex",

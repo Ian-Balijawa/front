@@ -1,0 +1,83 @@
+.lib-bg-ffe {
+    background: #ffe5dc;
+    border-bottom: 0.5px solid #7a7a7a;
+    padding: 8px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height */
+
+    color: #000000;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+.lib-table {
+    background: #ffe5dc;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    color: #000000;
+    border-bottom: 0.5px solid #7a7a7a;
+}
+
+.lib-table tr {
+    border-bottom: 0.5px solid #7a7a7a !important;
+}
+
+.lib-table tr:nth-child(odd) {
+    background: #fafafa;
+}
+.lib-table tr:nth-child(even) {
+    background: #ffffff;
+}
+
+.table-tr-title {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+
+    color: #0069a5;
+}
+
+.lib-title {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+
+    color: #000000;
+    cursor: pointer;
+}
+
+.lib-table-row-title {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    background-color: #ffe5dc;
+    color: #000000;
+    padding-left: 10px;
+}
+
+.table-no-records {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
