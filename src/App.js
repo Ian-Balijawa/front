@@ -31,6 +31,12 @@ import EditRecipe from './content/Recipes/EditRecipe'
 import OutletsDashBoard from './content/Inventory/Outlets/OutletsDashBoard'
 import OutletPreparation from './content/Inventory/Outlets/OutletPreparation'
 import NewPreparationRecord from './content/Inventory/Outlets/NewPreparationRecord'
+import CountsDashBoard from './content/Inventory/Counts/CountDashBoard'
+import CountsDashBoardPopulated from './content/Inventory/Counts/CountsDashBoardPopulated'
+import InventoryStockDashboard from './content/Inventory/Stock/InventoryStockDashboard'
+import StockHistory from './content/Inventory/Stock/StockHistory'
+import CountsInventory from './content/Inventory/Stock/CountsInventory'
+import CountsEventsNtinda from './content/Inventory/Stock/CountsEventNtinda';
 
 function App() {
     return (
@@ -41,11 +47,9 @@ function App() {
                 <Route path="forgot-password" element={<ForgotPassword />} />
                 <Route path="reset-password" element={<ResetPassword />} />
                 <Route path="/" element={<Dashboard />} />
-
                 <Route path="settings" element={<Settings />} />
                 <Route path="sales" element={<Sales />} />
                 <Route path="menu" element={<Menu />} />
-
                 <Route
                     path="settings/employee-setup"
                     element={<EmployeeSetup />}
@@ -56,20 +60,15 @@ function App() {
                     path="settings/employee-role"
                     element={<EmployeeRole />}
                 />
-
                 <Route path="outlet-setup" element={<OutletSetup />} />
                 <Route path="new-outlet" element={<NewOutlet />} />
-
                 <Route path="settings/library" element={<Library />} />
-
                 <Route path="inventory" element={<Inventory />} />
-
                 <Route path="inventory/ingredients" element={<Ingredients />} />
                 <Route
                     path="inventory/ingredients/new"
                     element={<NewIngredient />}
                 />
-
                 <Route path="suppliers" element={<Suppliers />} />
                 <Route path="view-supplier" element={<ViewSupplier />} />
                 <Route path="orders" element={<Orders />} />
@@ -78,16 +77,48 @@ function App() {
                 <Route path="reports" element={<Reports />} />
                 <Route path="/inventory/recipes" element={<Recipes />} />
                 <Route path="/inventory/recipe/new" element={<NewRecipe />} />
-                <Route path="/inventory/recipes/:name" element={<ViewRecipe/>} />
-                <Route path="/inventory/recipes/:name/edit" element={<EditRecipe/>} />
-                <Route path="/inventory/outlets" element={< OutletsDashBoard />} />
-                <Route path="/inventory/preparation/:outletId" element={< OutletPreparation />} />
-                <Route path="/inventory/preparation/new" element={< NewPreparationRecord />} />
+                <Route
+                    path="/inventory/recipes/:name"
+                    element={<ViewRecipe />}
+                />
+                <Route
+                    path="/inventory/recipes/:name/edit"
+                    element={<EditRecipe />}
+                />
+                <Route
+                    path="/inventory/outlets"
+                    element={<OutletsDashBoard />}
+                />
+                <Route
+                    path="/inventory/preparation/:outletId"
+                    element={<OutletPreparation />}
+                />
+                <Route path="/inventory/counts" element={<CountsDashBoard />} />
+                <Route
+                    path="/inventory/counts-populated"
+                    element={<CountsDashBoardPopulated />}
+                />
+                <Route
+                    path="/inventory/view-stock"
+                    element={<InventoryStockDashboard />}
+                />
+                <Route
+                    path="/inventory/stock-history"
+                    element={<StockHistory />}
+                />
+                <Route
+                    path="/inventory/counts-inventory"
+                    element={<CountsInventory />}
+                />
+                <Route
+                    path="/inventory/counts-event-ntinda"
+                    element={<CountsEventsNtinda />}
+                />
 
-
-
-
-
+                <Route
+                    path="/inventory/preparation/new"
+                    element={<NewPreparationRecord />}
+                />
             </Routes>
         </div>
     )

@@ -5,12 +5,10 @@ import {
     faGear,
     faPersonCirclePlus,
     faUserLock,
-    faBookAtlas,
     faBookMedical,
 } from '@fortawesome/free-solid-svg-icons'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import './settings.css'
-import {Link, useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import GPDashCard from '../../components/GPDashCard'
 import GPDashTitle from '../../components/GPDashTitle'
 
@@ -22,13 +20,8 @@ function Settings() {
         },
     ]
 
-    const navigate = useNavigate()
     return (
         <GPLayout breadIcon={faGear} crumbs={crumbs}>
-            {/* <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 className="h2">Settings</h1>
-                </div> */}
-
             <div className="row mb-4">
                 <GPDashTitle gpTitle={'General'} />
                 <div className="col-md-12 text-center d-flex">

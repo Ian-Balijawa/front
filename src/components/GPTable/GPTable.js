@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react'
+import React, {forwardRef, Fragment} from 'react'
 import MaterialTable from 'material-table'
 import AddBox from '@material-ui/icons/AddBox'
 import ArrowDownward from '@material-ui/icons/ArrowDownward'
@@ -17,6 +17,7 @@ import Search from '@material-ui/icons/Search'
 import ViewColumn from '@material-ui/icons/ViewColumn'
 import GPPagination from '../GPPagination/GPPagination'
 import './gp-table.css'
+import {Button} from 'react-bootstrap'
 
 const tableIcons = {
     Add: forwardRef((props, ref) => <AddBox {...props} ref={ref} />),
@@ -54,12 +55,41 @@ const GPTable = ({
     columns,
     actions,
     options,
+    showBtn = false,
+    handleShow,
     tableTitle = '',
     ...props
 }) => {
     return (
-        <>
-            {/* <GPPagination/> */}
+        <Fragment>
+            <div
+                style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                }}
+            >
+                <GPPagination />
+                {showBtn && (
+                    <Button
+                        onClick={() => handleShow()}
+                        style={{
+                            minWidth: '110px',
+                            height: '40px',
+                            border: 0,
+                            borderRadius: '6px',
+                            background: '#E46036',
+                            fontSize: '14px',
+                            fontWeight: 500,
+                            color: '#ffffff',
+                            textAlign: 'center',
+                            marginBottom: '1rem',
+                        }}
+                    >
+                        Stock history
+                    </Button>
+                )}
+            </div>
 
             <MaterialTable
                 icons={tableIcons}
@@ -109,7 +139,7 @@ const GPTable = ({
                 }}
                 {...props}
             />
-        </>
+        </Fragment>
     )
 }
 
