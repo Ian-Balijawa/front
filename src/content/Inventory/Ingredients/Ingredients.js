@@ -77,7 +77,13 @@ function Ingredients() {
                             View
                         </div>
                     </div>
-                    <GPActionLinks actionLinks={actionLinks} record={rowData} />
+                    <GPActionLinks
+                        actionLinks={actionLinks}
+                        record={rowData}
+                        paddingBottom="0px"
+                        paddingTop="0px"
+                        gppagination={true}
+                    />
                 </div>
             ),
         },

@@ -69,7 +69,6 @@ const GPTable = ({
                     justifyContent: 'space-between',
                 }}
             >
-                <GPPagination />
                 {showBtn && (
                     <Button
                         onClick={() => handleShow()}
