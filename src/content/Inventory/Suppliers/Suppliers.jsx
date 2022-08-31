@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import GPIconButton from '../../../components/GPIconButton'
 import GPImportExportButton from '../../../components/GPImportExportButton/GPImportExportButton'
-import { faFileExport, faFileImport } from '@fortawesome/free-solid-svg-icons'
+import {faFileExport, faFileImport} from '@fortawesome/free-solid-svg-icons'
 
-import "../inventory.css"
+import '../inventory.css'
 import CustomPlusIconButton from '../../../components/CustomPlusIconButton'
 import GPSearchFilterCard from '../../../components/GPSearchFilterCard/GPSearchFilterCard'
 import GPCustomTable from '../../../components/GPCustomTable'
@@ -13,54 +13,45 @@ import SupplierTable from '../../../components/GPTables/Inventory/SupplierTable'
 import GPCard from '../../../components/GPCard/GPCard'
 
 const Suppliers = () => {
+    const crumbs = [
+        {
+            text: 'Settings',
+            href: '/settings',
+        },
+    ]
 
-  const crumbs = [
-    {
-      text: 'Settings',
-      href: '/settings',
-    },
-  ]
+    const [addNewSupplier, setAddNewSupplier] = useState(false)
 
-  const [addNewSupplier, setAddNewSupplier] = useState(false)
+    return (
+        <GPLayout>
+            <div className="supplier-main-wrapper">
+                <div className="supplier-top-container">
+                    <GPImportExportButton />
 
-  return (
-    <GPLayout >
+                    <CustomPlusIconButton
+                        title={'Add New Supplier'}
+                        onClick={() => setAddNewSupplier(true)}
+                    />
+                </div>
 
-      <div className='supplier-main-wrapper'>
+                <div className="supplier-search-container">
+                    <GPSearchFilterCard />
+                </div>
 
-        <div className='supplier-top-container'>
+                <div className="supplier-table-container">
+                    <GPCard classes="supplier-table-card">
+                        <SupplierTable />
+                    </GPCard>
+                </div>
 
-          <GPImportExportButton />
-
-          <CustomPlusIconButton
-            title={"Add New Supplier"}
-            onClick={() => setAddNewSupplier(true)}
-          />
-
-
-        </div>
-
-        <div className='supplier-search-container'>
-          <GPSearchFilterCard />
-        </div>
-
-        <div className='supplier-table-container'>
-
-          <GPCard classes="supplier-table-card">
-            <SupplierTable/>
-          </GPCard>
-
-        </div>
-
-        {/* new supplier modal */}
-        <AddNewSupplier show={addNewSupplier} handleClose={() => setAddNewSupplier(false)} />
-
-
-
-      </div>
-      
-    </GPLayout>
-  )
+                {/* new supplier modal */}
+                <AddNewSupplier
+                    show={addNewSupplier}
+                    handleClose={() => setAddNewSupplier(false)}
+                />
+            </div>
+        </GPLayout>
+    )
 }
 
 export default Suppliers

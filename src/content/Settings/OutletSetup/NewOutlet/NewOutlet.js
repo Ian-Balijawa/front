@@ -2,19 +2,11 @@ import React, {useState} from 'react'
 import GPLayout from '../../../../components/GPLayout'
 import {
     faArrowsUpDownLeftRight,
-    faArrowUpRightFromSquare,
-    faBars,
-    faChevronRight,
     faEllipsis,
-    faFaceGrinWide,
-    faGrinBeamSweat,
-    faInr,
     faPager,
     faPen,
-    faPenToSquare,
     faPlus,
     faTrashCan,
-    faUserPen,
 } from '@fortawesome/free-solid-svg-icons'
 import GPIconButton from '../../../../components/GPIconButton'
 import GPBlockButton from '../../../../components/GPBlockButton'
@@ -22,7 +14,7 @@ import './new-outlet.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {Form, Tab, Tabs} from 'react-bootstrap'
 import GPTextInput from '../../../../components/GPTextInput/GPTextInput'
-import {Link, Routes, useNavigate} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import * as yup from 'yup'
 import {routes} from '../../../../routes'
 import {useForm} from 'react-hook-form'
@@ -31,7 +23,6 @@ import {
     useYupValidationResolver,
 } from '../../../../constant'
 import GPTextarea from '../../../../components/GPTextarea'
-import {ImagePlaceholder} from '../../../../components/GPIcon'
 
 import ImageP from '../../../../assets/img/imagePlaceholder.PNG'
 import ImageP2 from '../../../../assets/img/imagePlaceholder2.PNG'

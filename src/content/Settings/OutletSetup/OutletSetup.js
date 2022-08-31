@@ -2,21 +2,14 @@ import React from 'react'
 import GPLayout from '../../../components/GPLayout'
 import {
     faBars,
-    faChevronRight,
-    faEllipsis,
-    faFaceGrinWide,
     faGrinBeamSweat,
-    faInr,
     faPager,
-    faPen,
     faPenToSquare,
     faPlus,
     faUserPen,
 } from '@fortawesome/free-solid-svg-icons'
 import GPIconButton from '../../../components/GPIconButton'
-import GPBlockButton from '../../../components/GPBlockButton'
 import './outlet-setup.css'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import OutletCard from './OutletCard'
 import {useNavigate} from 'react-router-dom'
 

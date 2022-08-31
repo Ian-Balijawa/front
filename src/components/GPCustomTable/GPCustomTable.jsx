@@ -61,12 +61,14 @@ const GPCustomTable = ({
     ...props
 }) => {
     return (
-        <>
-            {/* <GPPagination/> */}
-
+        <div
+            style={{
+                marginBottom: '20rem',
+            }}
+        >
             <MaterialTable
                 icons={tableIcons}
-                title={gppagination ? <GPPagination /> : ''}
+                title={gppagination ? <GPPagination /> : title}
                 columns={columns}
                 data={data}
                 actions={actions}
@@ -94,6 +96,7 @@ const GPCustomTable = ({
                     }),
 
                     search: false,
+                    toolbar: true,
                     toolbar: toolbar,
                     paging: false,
                     ...options,
@@ -105,7 +108,7 @@ const GPCustomTable = ({
                 }}
                 {...props}
             />
-        </>
+        </div>
     )
 }
 
