@@ -36,7 +36,7 @@ import CountsDashBoardPopulated from './content/Inventory/Counts/CountsDashBoard
 import InventoryStockDashboard from './content/Inventory/Stock/InventoryStockDashboard'
 import StockHistory from './content/Inventory/Stock/StockHistory'
 import CountsInventory from './content/Inventory/Stock/CountsInventory'
-import CountsEventsNtinda from './content/Inventory/Stock/CountsEventNtinda';
+import CountsEventsNtinda from './content/Inventory/Stock/CountsEventNtinda'
 
 function App() {
     return (
