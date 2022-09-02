@@ -104,6 +104,7 @@ const GPTable = ({
                         paddingTop: props.paddingTop,
                         paddingLeft: '5px',
                         paddingRight: '5px',
+                        marginLeft: '10px',
                         fontSize: '14px',
                         textTransform: 'uppercase',
                         fontWeight: 500,
@@ -112,7 +113,7 @@ const GPTable = ({
                         ...props.headerStyle,
                     },
                     cellStyle: {
-                        borderBottom: '1px solid #7a7a7a',
+                        // borderBottom: '1px solid #7a7a7a',
                         height: '40px !important',
                         fontSize: props.fontSize || '14px',
                         color: props.gpColor || 'inherit',
