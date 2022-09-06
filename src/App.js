@@ -36,7 +36,8 @@ import CountsDashBoardPopulated from './content/Inventory/Counts/CountsDashBoard
 import InventoryStockDashboard from './content/Inventory/Stock/InventoryStockDashboard'
 import StockHistory from './content/Inventory/Stock/StockHistory'
 import CountsInventory from './content/Inventory/Stock/CountsInventory'
-import CountsEventsNtinda from './content/Inventory/Stock/CountsEventNtinda';
+import CountsEventsNtinda from './content/Inventory/Stock/CountsEventNtinda'
+import {Counter} from './features/counter/counter'
 
 function App() {
     return (
@@ -119,6 +120,7 @@ function App() {
                     path="/inventory/preparation/new"
                     element={<NewPreparationRecord />}
                 />
+                <Route path="/counter" element={<Counter />} />
             </Routes>
         </div>
     )

@@ -92,7 +92,6 @@ const GPTable = ({
 
             <MaterialTable
                 icons={tableIcons}
-                title={gppagination ? <GPPagination /> : tableTitle}
                 columns={columns}
                 data={data}
                 actions={actions}

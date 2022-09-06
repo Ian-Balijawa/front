@@ -8,6 +8,7 @@ import {GPSearchFilterCardStock} from '../../../components/GPSearchFilterCard/GP
 import GPIconButton from '../../../components/GPBlockButton'
 import GPSelectInput from '../../../components/GPSelectInput.js/GPSelectInput'
 import CountsTable from '../Counts/CountsTable'
+import CustomCountButton from '../../../components/CustomCountButton/CustomCountButton'
 
 function CountsInventory() {
     const crumbs = [
@@ -20,77 +21,90 @@ function CountsInventory() {
             href: '#',
         },
     ]
-    const actionLinks = [
-        {
-            text: 'Edit',
-            icon: 'faPen',
-            href: '',
-        },
-        {
-            text: 'Delete',
-            icon: 'faTrashCan',
-            href: '',
-        },
-    ]
-    const navigate = useNavigate()
 
     const _columns = [
         {title: 'Product Name', field: 'name'},
         {title: 'Package size', field: 'package_size'},
         {title: 'Current stock Qty.', field: 'Current_stock_Qty'},
-        {title: 'count', field: 'count'},
+        {
+            title: 'Count',
+            field: 'count',
+            render: rowData =>
+                !['Avocado', 'lemon', 'Juice'].includes(rowData.name) ? (
+                    <CustomCountButton record={rowData} />
+                ) : null,
+        },
         {title: 'Count Total', field: 'count_total'},
         {title: 'Storage Location', field: 'storage_location'},
-        {
-            title: 'Actions',
-            field: 'actions',
-            render: rowData => (
-                <div className="d-flex justity-content-between">
-                    <div className="supplier-action-view-btn-cont">
-                        <div className="view-btn-action">
-                            <FontAwesomeIcon
-                                icon={faEye}
-                                style={{color: '#fff'}}
-                            />
-                            View
-                        </div>
-                    </div>
-                    <GPActionLinks actionLinks={actionLinks} record={rowData} />
-                </div>
-            ),
-        },
     ]
 
     const _data = [
         {
-            name: '001',
-            package_size: '600128393',
-            stock_value: 'Rice',
-            Current_stock_Qty: 'Nic&Nico Suppliers',
-            count: 'Dry Food',
-            count_total: 0,
-            storage_location: 0,
+            name: 'Avocado',
+            package_size: '',
+            Current_stock_Qty: '',
+            count: '',
+            count_total: '',
+            storage_location: '',
         },
         {
             name: '001',
-            package_size: '600128393',
-            stock_value: 'Rice',
-            Current_stock_Qty: 'Nic&Nico Suppliers',
+            package_size: 'piece',
+            Current_stock_Qty: '1',
             count: 'Dry Food',
-            count_total: 0,
-            storage_location: 0,
+            count_total: 'N/A',
+            storage_location: "k'la",
+        },
+
+        {
+            name: 'lemon',
+            package_size: '',
+            Current_stock_Qty: '',
+            count: '',
+            count_total: '',
+            storage_location: '',
         },
         {
             name: '001',
-            package_size: '600128393',
-            stock_value: 'Rice',
-            Current_stock_Qty: 'Nic&Nico Suppliers',
+            package_size: 'piece',
+            Current_stock_Qty: '1',
             count: 'Dry Food',
-            count_total: 0,
-            storage_location: 0,
+            count_total: 'N/A',
+            storage_location: "k'la",
+        },
+        {
+            name: '001',
+            package_size: 'piece',
+            Current_stock_Qty: '1',
+            count: 'Dry Food',
+            count_total: 'N/A',
+            storage_location: "k'la",
+        },
+        {
+            name: 'Juice',
+            package_size: '',
+            Current_stock_Qty: '',
+            count: '',
+            count_total: '',
+            storage_location: '',
+        },
+        {
+            name: '001',
+            package_size: 'piece',
+            Current_stock_Qty: '1',
+            count: 'Dry Food',
+            count_total: 'N/A',
+            storage_location: "k'la",
+        },
+        {
+            name: '001',
+            package_size: 'piece',
+            Current_stock_Qty: '1',
+            count: 'Dry Food',
+            count_total: 'N/A',
+            storage_location: "k'la",
         },
     ]
-
     return (
         <GPLayout breadIcon={faPager} crumbs={crumbs}>
             <div className="d-flex justify-content-start flex-wrap flex-md-nowrap align-items-center border-bottom">
@@ -113,7 +127,7 @@ function CountsInventory() {
             <GPSearchFilterCardStock />
 
             <div className="card card-main mt-4">
-                <CountsTable />
+                <CountsTable data={_data} columns={_columns} />
             </div>
         </GPLayout>
     )
