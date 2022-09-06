@@ -1,1 +1,10 @@
+.MuiIconButton-root,
+.MuiTableCell-root {
+    padding: 0 !important;
+}
 
+.MuiTableCell-paddingNone {
+    margin-right: 10px !important;
+    width: 2% !important;
+    padding: 0;
+}

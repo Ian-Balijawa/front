@@ -11,11 +11,11 @@ function GPDashCard({gpIcon, renderIcon, gpTitle, gpLink, gpClassName}) {
         <Link to={gpLink} className={gpClassName}>
             <div
                 className="card gbDashCard"
-                style={{marginTop: '6px', marginBottom: '6px'}}
+                // style={{marginTop: '6px', marginBottom: '6px'}}
             >
                 <div
                     className="card-body gbDashCardBody  p-0"
-                    style={{position: 'relative', width: '100%'}}
+                    // style={{position: 'relative', width: '100%'}}
                 >
                     {renderIcon ? (
                         <div>
@@ -25,17 +25,18 @@ function GPDashCard({gpIcon, renderIcon, gpTitle, gpLink, gpClassName}) {
                         <FontAwesomeIcon
                             className="dash-icon-bg"
                             icon={gpIcon}
-                            size="2x"
+                            size="3x"
+                            style={{width: '60px', height: '60px'}}
                         />
                     )}
                     <div
                         className="gp-card-title"
-                        style={{
-                            position: 'absolute',
-                            top: '30%',
-                            left: 0,
-                            width: '100%',
-                        }}
+                        // style={{
+                        //     position: 'absolute',
+                        //     top: '30%',
+                        //     left: 0,
+                        //     width: '100%',
+                        // }}
                     >
                         <span>{gpTitle}</span>
                     </div>

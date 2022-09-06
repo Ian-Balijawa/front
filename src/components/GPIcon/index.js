@@ -152,7 +152,7 @@ export const IngredientsIcon = () => {
 export const StockIcon = () => {
     return (
         <>
-            <img src={Stock} width={40} height={40} className="" alt="" />
+            <img src={Stock} width={60} height={60} className="" alt="" />
         </>
     )
 }
@@ -160,7 +160,7 @@ export const StockIcon = () => {
 export const CountIcon = () => {
     return (
         <>
-            <img src={Count} width={40} height={40} className="" alt="" />
+            <img src={Count} width={60} height={60} className="" alt="" />
         </>
     )
 }
@@ -168,7 +168,7 @@ export const CountIcon = () => {
 export const CreateIcon = () => {
     return (
         <>
-            <img src={Create} width={40} height={40} className="" alt="" />
+            <img src={Create} width={60} height={60} className="" alt="" />
         </>
     )
 }

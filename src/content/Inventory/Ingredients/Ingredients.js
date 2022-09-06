@@ -47,7 +47,7 @@ function Ingredients() {
         {title: 'EAN/UPC', field: 'code'},
         {title: 'Ingredient Name', field: 'ingredientName'},
         {title: 'Supplier', field: 'supplier'},
-        {title: 'Accounting Category', field: 'accCategory'},
+
         {title: 'Category', field: 'category'},
         {title: 'Sub Category', field: 'subCategory'},
         {title: 'Date Added', field: 'dateAdded'},
@@ -65,7 +65,13 @@ function Ingredients() {
                             View
                         </div>
                     </div>
-                    <GPActionLinks actionLinks={actionLinks} record={rowData} />
+                    <GPActionLinks
+                        actionLinks={actionLinks}
+                        record={rowData}
+                        paddingBottom="0px"
+                        paddingTop="0px"
+                        gppagination={true}
+                    />
                 </div>
             ),
         },
@@ -75,9 +81,9 @@ function Ingredients() {
         {
             id: '001',
             code: '600128393',
-            ingredientName: 'Rice',
+            ingredientName: 'Rice Rice Rice Rice Rice Rice Rice Rice ',
             supplier: 'Nic&Nico Suppliers',
-            accCategory: 'Dry Food',
+
             category: 0,
             subCategory: 0,
             dateAdded: '16/07/2022',
@@ -87,7 +93,7 @@ function Ingredients() {
             code: '600128393',
             ingredientName: 'Rice',
             supplier: 'Nic&Nico Suppliers',
-            accCategory: 'Dry Food',
+
             category: 0,
             subCategory: 0,
             dateAdded: '16/07/2022',
@@ -98,7 +104,7 @@ function Ingredients() {
             code: '600128393',
             ingredientName: 'Rice',
             supplier: 'Nic&Nico Suppliers',
-            accCategory: 'Dry Food',
+
             category: 0,
             subCategory: 0,
             dateAdded: '16/07/2022',
@@ -108,7 +114,7 @@ function Ingredients() {
             code: '600128393',
             ingredientName: 'Rice',
             supplier: 'Nic&Nico Suppliers',
-            accCategory: 'Dry Food',
+
             category: 0,
             subCategory: 0,
             dateAdded: '16/07/2022',
@@ -118,7 +124,7 @@ function Ingredients() {
             code: '600128393',
             ingredientName: 'Rice',
             supplier: 'Nic&Nico Suppliers',
-            accCategory: 'Dry Food',
+
             category: 0,
             subCategory: 0,
             dateAdded: '16/07/2022',
@@ -128,7 +134,7 @@ function Ingredients() {
             code: '600128393',
             ingredientName: 'Rice',
             supplier: 'Nic&Nico Suppliers',
-            accCategory: 'Dry Food',
+
             category: 0,
             subCategory: 0,
             dateAdded: '16/07/2022',
@@ -138,7 +144,7 @@ function Ingredients() {
             code: '600128393',
             ingredientName: 'Rice',
             supplier: 'Nic&Nico Suppliers',
-            accCategory: 'Dry Food',
+
             category: 0,
             subCategory: 0,
             dateAdded: '16/07/2022',
@@ -148,7 +154,7 @@ function Ingredients() {
             code: '600128393',
             ingredientName: 'Rice',
             supplier: 'Nic&Nico Suppliers',
-            accCategory: 'Dry Food',
+
             category: 0,
             subCategory: 0,
             dateAdded: '16/07/2022',

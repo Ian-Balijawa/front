@@ -461,14 +461,14 @@ function NewOutlet() {
                                             </div>
                                         </div>
 
-                                        <button
-                                            type="button"
-                                            onClick={handleShow}
-                                            className="btn btn-outline-secondary text-theme"
-                                        >
-                                            <FontAwesomeIcon icon={faPlus} />{' '}
-                                            Add New Custom Field
-                                        </button>
+                                        <GPIconButton
+                    icon={faPlus}
+                    onClick={handleShow}
+                    title="Add New Custom Field"
+                    gpClassName="cBtn bg-transparent text-theme "
+                />
+
+                                        
                                         <GPModal
                                             title={
                                                 'Add a custom field to Inventory'

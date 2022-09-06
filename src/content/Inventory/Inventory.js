@@ -9,7 +9,7 @@ import {
     faCartArrowDown,
     faCartFlatbed,
     faBagShopping,
-    faBox
+    faBox,
 } from '@fortawesome/free-solid-svg-icons'
 
 import './inventory.css'
@@ -24,14 +24,13 @@ import {
 } from '../../components/GPIcon'
 
 function Inventory() {
+    const crumbs = [
+        {
+            text: 'Inventroy',
+            href: '/inventory',
+        },
+    ]
 
-        const crumbs = [
-            {
-                text: 'Inventroy',
-                href: '/inventory',
-            },
-        ]
-    
     return (
         <GPLayout breadIcon={faBox} crumbs={crumbs}>
             <div className="row mb-4">
@@ -41,67 +40,68 @@ function Inventory() {
                         renderIcon={IngredientsIcon}
                         gpTitle={'Ingredients'}
                         gpLink={'/inventory/ingredients'}
+                        gpClassName={'mx-3'}
                     />
 
                     <GPDashCard
                         gpIcon={faSitemap}
                         gpTitle={'Recipes'}
                         gpLink={'/inventory/recipes'}
-                        gpClassName={'mx-4'}
+                        gpClassName={'mx-3'}
                     />
                 </div>
             </div>
 
             <div className="row mb-4">
                 <GPDashTitle gpTitle={'Procurement'} />
-                <div className="col-md-12 text-center d-flex" style={{flexWrap:"wrap"}}>
+                <div className="col-md-12 text-center d-flex">
                     <GPDashCard
                         gpIcon={faCartPlus}
                         gpTitle={'New Order'}
                         gpLink={'/orders'}
-                        gpClassName={'mx-4'}
+                        gpClassName={'mx-3'}
                     />
 
-<GPDashCard
+                    <GPDashCard
                         gpIcon={faCartShopping}
                         gpTitle={'Open Orders'}
                         gpLink={'/orders'}
-                        gpClassName={'mx-4'}
+                        gpClassName={'mx-3'}
                     />
 
                     <GPDashCard
                         gpIcon={faCartFlatbed}
                         gpTitle={'Sent Orders'}
                         gpLink={'/inventory/outlets'}
-                        gpClassName={'mx-4'}
+                        gpClassName={'mx-3'}
                     />
 
                     <GPDashCard
                         gpIcon={faBagShopping}
                         gpTitle={'Delivered'}
                         gpLink={'/delivered'}
-                        gpClassName={'mx-4'}
+                        gpClassName={'mx-3'}
                     />
 
-<GPDashCard
+                    <GPDashCard
                         gpIcon={faCartArrowDown}
                         gpTitle={'External Orders'}
                         gpLink={'/orders'}
-                        gpClassName={'mx-4'}
+                        gpClassName={'mx-3'}
                     />
 
                     <GPDashCard
                         gpIcon={faCartShopping}
                         gpTitle={'Suppliers'}
                         gpLink={'/suppliers'}
-                        gpClassName={'mx-4'}
+                        gpClassName={'mx-3'}
                     />
 
                     <GPDashCard
                         gpIcon={faCartShopping}
                         gpTitle={'All Concepts'}
                         gpLink={'/order-list'}
-                        gpClassName={'mx-4'}
+                        gpClassName={'mx-3'}
                     />
                 </div>
             </div>
@@ -113,35 +113,35 @@ function Inventory() {
                         renderIcon={StockIcon}
                         gpTitle={'Stock'}
                         gpLink={'#'}
-                        gpClassName={'mx-4'}
+                        gpClassName={'mx-3'}
                     />
 
                     <GPDashCard
                         renderIcon={CountIcon}
                         gpTitle={'Count'}
                         gpLink={'#'}
-                        gpClassName={'mx-4'}
+                        gpClassName={'mx-3'}
                     />
 
                     <GPDashCard
                         renderIcon={CreateIcon}
                         gpTitle={'Create'}
                         gpLink={'#'}
-                        gpClassName={'mx-4'}
+                        gpClassName={'mx-3'}
                     />
 
                     <GPDashCard
                         renderIcon={StockIcon}
                         gpTitle={'Transfer'}
                         gpLink={'#'}
-                        gpClassName={'mx-4'}
+                        gpClassName={'mx-3'}
                     />
 
                     <GPDashCard
                         renderIcon={StockIcon}
                         gpTitle={'Waste'}
                         gpLink={'#'}
-                        gpClassName={'mx-4'}
+                        gpClassName={'mx-3'}
                     />
                 </div>
             </div>

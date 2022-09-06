@@ -45,7 +45,6 @@
         "yarn": "^1.22.18",
         "yup": "^0.32.11"
     },
-    "GENERATE_SOURCEMAP": "false",
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
