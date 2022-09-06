@@ -15,6 +15,7 @@ import GPIconButton from '../../../components/GPIconButton'
 import GPImportExportButton from '../../../components/GPImportExportButton'
 import GPLayout from '../../../components/GPLayout'
 import GPSearchFilterCard from '../../../components/GPSearchFilterCard/GPSearchFilterCard'
+import GPCustomTable from '../../../components/GPCustomTable'
 
 function Ingredients() {
     const crumbs = [
@@ -55,19 +56,6 @@ function Ingredients() {
             field: 'ordering',
             render: rowData => (
                 <div className="d-flex justity-content-between">
-                    {/* <small>
-                        <GPIconButton
-                            icon={faEye}
-                            title="View"
-                            // style={{width: '50px'}}
-                            gpClassName="btn-sm bg-theme border-0"
-                            style={{
-                                fontSize: '.7rem',
-                                padding: '.15rem .4rem',
-                            }}
-                            onClick={() => {}}
-                        />
-                    </small> */}
                     <div className="supplier-action-view-btn-cont">
                         <div className="view-btn-action">
                             <FontAwesomeIcon
@@ -187,7 +175,7 @@ function Ingredients() {
             </div>
 
             <div className="card card-main mt-4">
-                <GPTable
+                <GPCustomTable
                     columns={_columns}
                     data={_data}
                     paddingBottom="0"
